@@ -16,7 +16,7 @@ I love ❤️ technology very much. Do with it a lot of different things. Have s
 
 Also have some closed "in-house" projects that may be published in future or discussed in some blog posts.
 
-I can say that I’m a developer in different ways, not only in software. I like to imagine things and then build them.
+I can say that I'm a developer in different ways, not only in software. I like to imagine things and then build them.
 
 I think, I'm a person with an interesting / creative vision on things. If you give me space to breath — I will come up with cool ideas and solutions.
 
@@ -29,7 +29,7 @@ I'm passioned about web technology and everything that surrounds it (and there i
 
 I'm happy to be part of it.
 
-I like to work with cool people (who don't? 😎). I like to share knowledge (you can find some of my [presentations here](https://speakerdeck.com/skibish)) as a talk or through workshops.
+I like to work with cool people (who don't? 😎). I like to share knowledge (you can find some of my [presentations here](https://speakerdeck.com/skibish)) through a talk or workshops.
 
 If you would like to know more about my vision / thinking – [ask me 🔮](#contact).
 
