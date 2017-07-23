@@ -1,0 +1,13 @@
+baseURL: "https://sergeykibish.com/"
+languageCode: "en-us"
+title: "Sergey Kibish - a person with not standard thinking"
+
+enableRobotsTXT: true
+enableEmoji: true
+googleAnalytics: "UA-103073257-1"
+taxonomies: []
+disableKinds: ["RSS", "sitemap"]
+
+params:
+  Author: "Sergey Kibish"
+  Description: "Creator, developer, a person with not standard thinking"
