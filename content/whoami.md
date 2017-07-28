@@ -18,7 +18,7 @@ Also, I have some closed "in-house" projects that may be published in the future
 
 I'm a person with an interesting / creative vision on things. If you give me space to breath — I will come up with cool ideas and solutions.
 
-I'm in web technologies and everything that surround them (and there is a lot, almost everything). Because they give us:
+I'm in web technologies and everything that surrounds them (and there is a lot, almost everything). Because they give us:
 
 - :trophy: more opportunities
 - :books: more things to discover
@@ -27,7 +27,7 @@ I'm in web technologies and everything that surround them (and there is a lot, a
 
 I'm happy to be part of tech-world.
 
-I like to work with cool people (who don't? :sunglasses:). I like to share knowledge (you can find some of my [presentations here](https://speakerdeck.com/skibish)) through the talks or workshops.
+I like to work with cool people (who doesn't? :sunglasses:). I like to share knowledge (you can find some of my [presentations here](https://speakerdeck.com/skibish)) through the talks or workshops.
 
 Do you want to know more about my vision/thinking? [Ask me :crystal_ball:](#contact).
 
