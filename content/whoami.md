@@ -4,7 +4,7 @@ date: 2017-07-15T21:52:44+03:00
 draft: false
 ---
 
-I'm a creator with a Master of Computer Science degree :mortar_board: (I'm proud of this :tada: :tada: :tada:), Software Developer at [Transact Pro](https://transactpro.lv) and [GDG Riga](https://gdgriga.lv/) Organizer.
+I'm a creator with a Master of Computer Science degree :mortar_board: (I'm proud of this :tada: :tada: :tada:), Software Engineer at [Neueda](http://labs.neueda.com/) and [GDG Riga](https://gdgriga.lv/) Organizer.
 
 I have some [open source projects on GitHub](https://github.com/skibish) that are used/stared by others:
 
