@@ -1,0 +1,29 @@
+.clock {
+  width: 150px;
+  height: 150px;
+  animation-name: fade-in;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+
+.clock-hand {
+  transform-origin: 50% 50%;
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.clock-hands_second {
+  fill: color($key: "gold");
+}
+
+.clock-hands_minute {
+  fill: #FFF;
+}
+
+.clock-hands_hour {
+  fill: #FFF;
+}
+
+.clock-ticks {
+  fill: #FFF;
+}

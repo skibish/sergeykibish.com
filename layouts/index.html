@@ -1,124 +1,121 @@
-<!DOCTYPE html>
-<html class="no-js" lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#">
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
 
-<head>
-  <meta charset="utf-8">
+<section>
+  <div class="col-md-4">
+    <img src="img/me.jpg" class="profile-pic img-fluid" alt="Sergey Kibish">
+  </div>
+  <div class="col-md-8 col-lg-4 bio">
+    Skilled in different languages / tools / technologies. Strong engineering professional with a Master of Science (Mg.Sc.Comp.)
+    focused in Computer Science. Natural-born leader, full of passion and charisma. A hobby is music in all of its manifestations
+    (listening, playing, writing).
+  </div>
+  <div class="col-md-4 d-none d-lg-block text-center">
+    <img src="img/splash.svg" class="img-fluid">
+  </div>
+</section>
 
-  {{ partial "meta.html" . }}
+<section>
+  <div class="col-md-4">
+    <h4>What I’m looking to do next</h4>
 
-  <title>{{ .Site.Title }}</title>
+    <p>I'm interested not only in writing code and solve technical problems, but additionally to communicate with people, teach
+      them, create teams that could solve
+      <span class="strike">some</span> any problems and make the world a better place.</p>
 
-  <link rel="manifest" href="manifest.json?v=1">
-  <link rel="shortcut icon" href="favicon.ico?v=1" type="image/x-icon">
-  <link rel="icon" sizes="128x128" href="/img/touch/icon-128x128.png">
-  <link rel="canonical" href="{{ .Permalink }}">
+    <p>Additionally:</p>
+    <ul class="list-aligned">
+      <li>speak at the local conferences, meetups</li>
+      <li>grow communities</li>
+      <li>share knowledge with others</li>
+    </ul>
 
-  <link rel="stylesheet" href="/css/vendor.css?v={{ readFile "public/css/vendor.css" | md5 }}">
-  <style>
-    .social-links li + li:before {
-      padding-right: .5rem;
-      color: #636c72;
-      content: "/";
-    }
-    body {
-      padding-top: 60px;
-      position: relative;
-      background-color: #ffb13b;
-    }
-    .card {
-      box-shadow: 0 1px 8px 0 rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12);
-    }
-    .navbar {
-      -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,.2);
-      -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,.2);
-      box-shadow: 0px 3px 10px 0px rgba(0,0,0,.2);
-      background-color: #ff9900;
-    }
-    footer {
-      background-color: #898176;
-      margin-top: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-    section {
-      margin-top: 10px;
-    }
-  </style>
-</head>
+    <p class="underline">Just imagine, what I can bring you.</p>
+  </div>
+  <div class="col-md-4">
+    <h4>I'm really good at</h4>
 
-<body data-spy="scroll" data-target="#navbar-main" data-offset="70">
+    <ul class="list-aligned">
+      <li>solving different problems (not only tech related)</li>
+      <li>explaining complicated stuff in simple words</li>
+      <li>presenting information to the broad audience (e.g. speaking at conferences)</li>
+      <li>finding a common language with different people</li>
+    </ul>
 
-  {{ partial "nav.html" . }}
+  </div>
+  <div class="col-md-4">
+    <h4>How people describe me (strongest sides)</h4>
+    <ul class="strong-sides">
+      <li>smart</li>
+      <li>reliable</li>
+      <li>inventive</li>
+    </ul>
+  </div>
+</section>
 
-  <section id="about">
-    <div class="container">
-      <div class="card border-0">
-        <h1 class="card-header text-white" style="background-color:#9900ff">Who am I</h1>
-        <div class="card-block">
-          <div class="row">
-            <div class="col-md-4 text-center">
-              <img class="img-fluid img-thumbnail" src="/img/me.jpg" alt="{{ .Site.Params.Author }}" />
-              {{ partial "social-links.html" . }}
-            </div>
-            <div class="col-md-8">
-              {{ range where .Data.Pages "TranslationBaseName" "whoami" }}{{ .Content }}{{end}}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section>
+  <div class="col-md-4">
+    <h4>Side projects</h4>
+    <p>Side projects, which I'm happy to show are:</p>
+    <ul class="list-aligned">
+      <li>
+        <a class="text-white" href="https://github.com/skibish/ddns" target="_blank">DDNS</a>
+      </li>
+      <li>
+        <a class="text-white" href="https://github.com/skibish/dockerized" target="_blank">Dockerized</a>
+      </li>
+    </ul>
 
-  <section id="tech">
-    <div class="container">
-      <div class="card border-0">
-        <h1 class="card-header text-white" style="background-color:#00e6ff">Tech using often</h1>
-        <div class="card-block">
-          {{ partial "tech.html" . }}
-        </div>
-      </div>
-    </div>
-  </section>
+    <p>They are quite popular and blog posts about these are also popular on medium (in total more than 4K reads).</p>
 
-  <section id="testimonials">
-    <div class="container">
-      <div class="card border-0">
-        <h1 class="card-header text-white" style="background-color:#ff0066">What others say about me</h1>
-        <div class="card-block">
-          {{ partial "testimonials.html" . }}
-        </div>
-      </div>
-    </div>
-  </section>
+    <p>For other projects and what I explore, you can check my
+      <a class="text-white" href="https://github.com/skibish" target="_blank">GitHub.</a>
+    </p>
+  </div>
+  <div class="col-md-4">
+    <h4>Achievements</h4>
 
-  <section id="contact">
-    <div class="container-fluid">
-      <div class="container">
-        <div class="card border-0">
-          <h1 class="card-header text-white" style="background-color:#00ff99">Ask / Hire / Help needed / &lt;Your here&gt;</h1>
-          <div class="card-block text-center">
-            <h1 class="display-3">Just <a href="mailto:sergey@kibish.com">email me</a></h1>
-          </div>
-        </div>
+    <h5>1st developer in Latvia who spoke publicly about Docker (2015)</h5>
+    <p>At conference “WebConf Riga 2015” talked about Docker and how to use it in the development</p>
 
-      </div>
-    </div>
+    <h5>Ran in “Nike Riga Run” 10km marathons (2012, 2015)</h5>
+    <p>Completed them faster each time</p>
 
-  </section>
+    <h5>Lost 30kg (2014)</h5>
+    <p>Realized, that it is time to change something in myself. Continue to do sport.</p>
 
-  {{ partial "footer.html" . }}
+    <h5>No smoking, No drinking (from the beginning of life — Present)</h5>
+    <p>Yes, it is possible</p>
 
-  <script src="/js/vendor.js?v={{ readFile "public/js/vendor.js" | md5 }}"></script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  </div>
+  <div class="col-md-4 d-none d-md-block">
+    <span class="ten">10 km</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="map" viewBox="0 0 347.57 358.71">
+      <circle r="10" fill="#AB966D">
+        <animateMotion dur="30s" repeatCount="indefinite">
+          <mpath xlink:href="#mapPath" />
+        </animateMotion>
+      </circle>
 
-  ga('create', '{{ .Site.GoogleAnalytics }}', 'auto');
-  ga('send', 'pageview');
+      <path d="M170.2 25.6c-7.1 0-12.8-5.8-12.8-12.8S163.1 0 170.2 0c7.1 0 12.8 5.8 12.8 12.8s-5.7 12.8-12.8 12.8zm0-23c-5.6 0-10.2 4.6-10.2 10.2S164.6 23 170.2 23s10.2-4.6 10.2-10.2-4.6-10.2-10.2-10.2z"
+        class="map-path" />
+      <path d="M149.6 358.7c-3.9 0-7.8-.9-11.5-2.6l-8.4-4a26.8 26.8 0 0 1-14.8-18.7l-3.3-15.2c-.9-4-2.7-7.6-5.5-10.6l-9.3-10.3c-3.4-3.8-5.6-8.5-6.4-13.5l-2.9-19.9a23.2 23.2 0 0 0-7.6-14L59.6 232a23.3 23.3 0 0 0-15.3-5.8h-17c-6.1 0-12.1-2.2-16.8-6.2L9 218.8c-5.4-4.7-8.6-11.2-9-18.3s2.2-13.9 7.1-19.1l6.7-7c4.1-4.3 9.6-7 15.5-7.8l34.8-4.2c3.6-.4 7.2-1.8 10.2-3.8l28.2-19.2c1.4-.9 2.7-2 3.8-3.2l14-14.8a23.5 23.5 0 0 0 6.3-17.8l-2-24.3c-.7-9 1.8-18 7.3-25.2l5.8-7.8 2.1 1.6-5.8 7.8c-5 6.7-7.4 15.1-6.7 23.5l2 24.3c.6 7.3-1.9 14.5-7 19.8l-14 14.8c-1.3 1.3-2.7 2.6-4.2 3.6l-28.2 19.2c-3.4 2.3-7.3 3.8-11.4 4.3l-34.8 4.2c-5.3.6-10.2 3.1-13.9 7l-6.7 7c-4.5 4.6-6.7 10.7-6.4 17.2.3 6.4 3.2 12.3 8.1 16.5l1.5 1.3c4.2 3.6 9.6 5.6 15.1 5.6h17.1c6.3 0 12.3 2.3 17 6.4l20.3 17.8c4.6 4 7.6 9.6 8.5 15.6l2.9 19.9c.7 4.5 2.6 8.7 5.7 12.1l9.3 10.3c3 3.3 5.1 7.4 6.1 11.8l3.3 15.2c1.6 7.3 6.6 13.6 13.4 16.9l8.4 4c4.4 2.1 9.2 2.8 13.9 2.1l14.7-2.2c8-1.2 14.8-6.2 18.3-13.5l.2-.4c3.8-7.9 11.3-13.5 19.9-14.8l13.9-2.2c6.7-1.1 12.5-5 16.1-10.8l8.4-13.7c3.8-6.3 10.2-10.6 17.4-11.9l49.6-9c5.9-1.1 11.1-4.3 14.6-9.2l14.3-19.6c5-6.9 5.9-16 2.1-23.7l-20.1-41.5a22.3 22.3 0 0 0-5.8-7.5l-23-19.7c-4.4-3.8-7.5-9.1-8.5-14.8l-4-21.2c-1.4-7.7-6.6-14.1-13.9-17.1L235 89.6c-4.6-1.9-8.5-5.1-11.2-9.2l-12.4-18.5c-3.3-5-4.2-11.4-2.2-17.1 1.7-5 1.2-10.5-1.3-15.1s-6.9-8-12-9.2l-14.8-3.6.6-2.5 14.8 3.6a21.35 21.35 0 0 1 15.2 27.6c-1.7 4.9-1 10.5 1.9 14.8L226 78.9c2.5 3.7 6 6.6 10.1 8.3l32.5 13.5c8.1 3.3 13.8 10.5 15.4 19l4 21.2c1 5.2 3.7 9.9 7.7 13.3l23 19.7c2.7 2.3 4.9 5.1 6.4 8.3l20.1 41.5c4.1 8.6 3.2 18.7-2.4 26.4l-14.3 19.6c-3.9 5.4-9.7 9-16.2 10.2l-49.6 9c-6.5 1.2-12.2 5.1-15.6 10.7l-8.4 13.7a25.66 25.66 0 0 1-17.9 12l-13.9 2.2c-7.8 1.3-14.6 6.3-18 13.4l-.2.4c-3.9 8-11.5 13.6-20.3 14.9l-14.7 2.2c-1.4.2-2.8.3-4.1.3z"
+        class="map-path" id="mapPath" />
+      <path d="M145.7 50.5c-7.1 0-12.8-5.8-12.8-12.8s5.8-12.8 12.8-12.8c7.1 0 12.8 5.8 12.8 12.8s-5.7 12.8-12.8 12.8zm0-23c-5.6 0-10.2 4.6-10.2 10.2s4.6 10.2 10.2 10.2 10.2-4.6 10.2-10.2-4.5-10.2-10.2-10.2z"
+        class="map-path" />
+    </svg>
 
-</script>
-</body>
+  </div>
+</section>
 
-</html>
+<section>
+  <div class="col-md-12 latest-articles">
+    My latest articles
+  </div>
+</section>
+
+{{ partial "articles.html" . }}
+
+{{ partial "testimonials.html" . }}
+
+{{ partial "footer.html" . }}

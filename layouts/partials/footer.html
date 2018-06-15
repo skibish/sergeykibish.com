@@ -1,35 +1,53 @@
 <footer>
-<div class="container-fluid">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h6 class="text-white">Social</h6>
-        <ul class="list list-unstyled">
-          <li class="list-item"><a class="text-white" href="https://twitter.com/s_kibish" rel="me"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i>Twitter</a></li>
-          <li class="list-item"><a class="text-white" href="https://github.com/skibish" rel="me"><i class="fa fa-fw fa-github" aria-hidden="true"></i>GitHub</a></li>
-          <li class="list-item"><a class="text-white" href="https://linkedin.com/in/kibish" rel="me"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <h6 class="text-white">Talks / Workshops / Music</h6>
-        <ul class="list list-unstyled">
-          <li class="list-item"><a class="text-white" href="https://speakerdeck.com/skibish" rel="me"><i class="fa fa-fw fa-slideshare" aria-hidden="true"></i>Speaker Deck</a></li>
-          <li class="list-item"><a class="text-white" href="https://soundcloud.com/kibish" rel="me"><i class="fa fa-fw fa-soundcloud" aria-hidden="true"></i>SoundCloud</a></li>
-          <li class="list-item"><a class="text-white" href="https://allihoopa.com/kibish" rel="me">Allihoopa</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <h6 class="text-white">Part of</h6>
-        <ul class="list list-unstyled">
-          <li class="list-item"><a class="text-white" href="https://gdgriga.lv"><i class="fa fa-fw fa-google" aria-hidden="true"></i>GDG Riga</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <small class="text-white">{{ dateFormat "2006" now }} &copy; {{ .Site.Params.Author }}. All rights reserved.</small>
-      </div>
-    </div>
+  <div class="col-md-3 ask-help">
+    <div>Ask / Hire / Help needed / &lt;Your here&gt;</div>
+    <a class="contact-me" href="mailto:sergey@kibish.com">Just email me</a>
   </div>
-</div>
+
+  <div class="col-md-2 offset-md-2">
+    <h3>Social</h3>
+
+    <ul class="list list-unstyled">
+      {{ range .Site.Data.footerLinks.social }}
+      <li class="list-item">
+        <a class="text-white" href="{{ .link }}" target="_blank" rel="me">
+          <i class="fab fa-{{ .icon }}"></i> {{ .title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div class="col-md-3">
+    <h3>Talks / Workshops / Music</h3>
+
+    <ul class="list list-unstyled">
+      {{ range .Site.Data.footerLinks.hobby }}
+      <li class="list-item">
+        <a class="text-white" href="{{ .link }}" target="_blank" rel="me">
+          <i class="fab fa-{{ .icon }}"></i> {{ .title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div class="col-md-2">
+    <h3>Part of</h3>
+
+    <ul class="list list-unstyled">
+      {{ range .Site.Data.footerLinks.partOf }}
+      <li class="list-item">
+        <a class="text-white" href="{{ .link }}" target="_blank" rel="me">
+          <i class="fab fa-{{ .icon }}"></i> {{ .title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
 </footer>
+
+</div>
+{{ template "_internal/google_analytics_async.html" . }}
+<script src="js/app.js?v={{ readFile "static/js/app.js" | md5 }}"></script>
+
+</body>
+
+</html>

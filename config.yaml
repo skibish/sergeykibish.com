@@ -1,6 +1,6 @@
 baseURL: "https://sergeykibish.com/"
 languageCode: "en-us"
-title: "Sergey Kibish - a person with not standard thinking"
+title: "Sergey Kibish - Experienced Mutlifunctional Software Engineer"
 
 enableRobotsTXT: true
 enableEmoji: true
@@ -10,4 +10,4 @@ disableKinds: ["RSS", "sitemap"]
 
 params:
   Author: "Sergey Kibish"
-  Description: "Creator, developer, a person with not standard thinking"
+  Description: "Creator, developer, a person with not a standard thinking"

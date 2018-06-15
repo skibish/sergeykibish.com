@@ -1,0 +1,9 @@
+<section>
+  {{ range first 3 .Site.Data.articles }}
+  <div class="col-md-4 article">
+    <div class="date">
+      <i class="fab fa-medium"></i> {{ dateFormat "Jan 2, 2006" .date }}</div>
+    <a href="{{ .link }}" class="article-title" target="_blank">{{ .title }}</a>
+  </div>
+  {{ end }}
+</section>
