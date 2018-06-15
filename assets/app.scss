@@ -1,0 +1,101 @@
+// bootstrap and it overwrites
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
+// page styles
+@import "styles/articles";
+@import "styles/text";
+@import "styles/testimonial";
+@import "styles/clock";
+@import "styles/map";
+
+body {
+  margin-top: 20px;
+}
+
+section, header {
+  @include make-row();
+  margin-bottom: 50px;
+}
+
+@include media-breakpoint-down(lg) {
+  section, header {
+    @include make-row();
+    margin-bottom: 20px;
+  }
+}
+
+footer {
+  @include make-row();
+}
+
+.strong-sides {
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 24px;
+  list-style: none;
+  padding-left: 0px;
+
+  li:before {
+    content: url('/img/tick.svg');
+    margin-right: 10px;
+  }
+}
+
+.bio {
+  font-weight: normal;
+  font-style: normal;
+  line-height: 34px;
+  font-size: 20px;
+}
+
+.date {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 23px;
+  font-size: 16px;
+}
+
+.ask-help {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 34px;
+  font-size: 22px;
+}
+
+@include media-breakpoint-down(lg) {
+  .ask-help {
+    margin-bottom: 20px;
+  }
+}
+
+.profile-pic {
+  filter: grayscale(100%);
+}
+
+.contact-me {
+  font-style: normal;
+  font-weight: bold;
+  color: color($key: "gold");
+  
+  &:hover {
+    text-decoration-line: underline;
+    color: color($key: "gold");
+  }
+}
+
+.list-aligned {
+  padding-left: 16px;
+}
+
+.ten {
+  color: color($key: "gold");
+  font-size: 40px;
+}
+
+@include media-breakpoint-down(lg) {
+  .ten {
+    font-size: 26px;
+  }
+}

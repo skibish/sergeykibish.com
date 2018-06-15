@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+  {{ partial "meta.html" . }}
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/app.css?v={{ readFile "static/css/app.css" | md5 }}">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+
+  <title>{{ .Site.Title }}</title>
+</head>
+
+<body>
+  <div class="container">

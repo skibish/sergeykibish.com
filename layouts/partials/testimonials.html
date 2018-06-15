@@ -1,11 +1,11 @@
-<div class="card-columns">{{ range where .Data.Pages "Section" "testimonial" }}
-  <div class="card border-0">
-    <div class="card-block">
-      <h4 class="card-title">{{ .Title }}</h4>
-      <h6 class="card-subtitle mb-2 text-muted">{{ .Params.fullName }} &bull; {{ .Params.headline }}</h6>
-      <img src="{{ .Params.profilePictureURL }}" class="rounded img-thumbnail" alt="{{ .Title }}" style="max-width:130px;"/>
-      <p class="card-text">{{ .Content }}</p>
-      <p class="card-text"><small class="text-muted">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</small></p>
+<section>
+  {{ range where .Data.Pages "Section" "testimonial" }}
+  <div class="col-lg-3">
+    <div class="testimonial">
+      <div class="testimonial-text">{{ .Params.pitchLine }}</div>
+      <div class="testimonial-author">{{ .Params.fullName }}</div>
+      <div class="testimonial-author-position">{{ .Params.headline }}</div>
     </div>
-  </div>{{ end }}
-</div>
+  </div>
+  {{end}}
+</section>

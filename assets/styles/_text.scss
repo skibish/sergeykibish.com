@@ -1,0 +1,49 @@
+h1 {
+  font-weight: $font-weight-bold;
+}
+
+.subtitle {
+  font-weight: $font-weight-normal;
+  text-decoration: underline color($key: "gold");
+}
+
+h3 {
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+@include media-breakpoint-down(lg) {
+  h3 {
+    margin-bottom: 0px;
+  }
+}
+
+h4 {
+  font-weight: $font-weight-bold;
+  font-size: $h5-font-size;
+}
+
+h5 {
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 16px;
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 16px;
+}
+
+.strike {
+  text-decoration: line-through color($key: "gold");
+}
+
+.underline {
+  text-decoration: underline color($key: "gold");
+}

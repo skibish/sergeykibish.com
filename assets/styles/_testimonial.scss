@@ -1,0 +1,13 @@
+.testimonial {
+  border: 1px solid color($key: "gold");
+  margin: 10px;
+  padding: 15px;
+}
+
+.testimonial-text {
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-weight: $font-weight-bold;
+}

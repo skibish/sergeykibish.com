@@ -1,0 +1,29 @@
+.article {
+  margin-bottom: 20px;
+}
+
+.latest-articles {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 35px;
+  font-size: 24px;
+}
+
+.article-title {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 59px;
+  font-size: 40px;
+  color: $white !important;
+
+  &:hover {
+      text-decoration-color: color($key: "gold")
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .article-title {
+    line-height: 30px;
+    font-size: 20px;
+  }
+}
