@@ -16,10 +16,8 @@ body {
 section, header {
   @include make-row();
   margin-bottom: 50px;
-}
 
-@include media-breakpoint-down(lg) {
-  section, header {
+  @include media-breakpoint-down(lg) {
     @include make-row();
     margin-bottom: 20px;
   }
@@ -62,10 +60,8 @@ footer {
   font-weight: normal;
   line-height: 34px;
   font-size: 22px;
-}
 
-@include media-breakpoint-down(lg) {
-  .ask-help {
+  @include media-breakpoint-down(lg) {
     margin-bottom: 20px;
   }
 }
@@ -92,10 +88,8 @@ footer {
 .ten {
   color: color($key: "gold");
   font-size: 40px;
-}
 
-@include media-breakpoint-down(lg) {
-  .ten {
+  @include media-breakpoint-down(lg) {
     font-size: 26px;
   }
 }

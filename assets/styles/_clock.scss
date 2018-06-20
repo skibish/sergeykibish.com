@@ -16,14 +16,6 @@
   fill: color($key: "gold");
 }
 
-.clock-hands_minute {
-  fill: #FFF;
-}
-
-.clock-hands_hour {
-  fill: #FFF;
-}
-
-.clock-ticks {
-  fill: #FFF;
+.clock-hands_minute, .clock-hands_hour, .clock-ticks {
+  fill: color($key: "white");
 }

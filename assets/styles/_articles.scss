@@ -16,14 +16,12 @@
   font-size: 40px;
   color: $white !important;
 
-  &:hover {
-      text-decoration-color: color($key: "gold")
-  }
-}
-
-@include media-breakpoint-down(lg) {
-  .article-title {
+  @include media-breakpoint-down(lg) {
     line-height: 30px;
     font-size: 20px;
+  }
+
+  &:hover {
+      text-decoration-color: color($key: "gold")
   }
 }
