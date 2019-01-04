@@ -4,19 +4,19 @@
   },
   "devDependencies": {
     "autoprefixer": "^8.6.2",
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.2.1",
     "css-loader": "^0.28.11",
-    "firebase-tools": "^3.9.1",
+    "firebase-tools": "^6.2.2",
     "install": "^0.10.1",
     "mini-css-extract-plugin": "^0.4.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^4.0.2",
     "postcss-loader": "^2.1.5",
     "precss": "^3.1.2",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack": "^4.12.0",
+    "webpack": "^4.28.3",
     "webpack-cli": "^3.0.4"
   }
 }
