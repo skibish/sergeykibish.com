@@ -18,6 +18,11 @@
   ],
   "hobby": [
     {
+      "title": "Talks",
+      "icon": "youtube",
+      "link": "https://www.youtube.com/playlist?list=PL6U6iDFrKTE2ySiMLs2O77WOIpk3WepiZ"
+    },
+    {
       "title": "Speaker Deck",
       "icon": "slideshare",
       "link": "https://speakerdeck.com/skibish"
