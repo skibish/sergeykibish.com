@@ -10,8 +10,8 @@ pitchLine: "Sergey is an exceptionally talented developer who understands what i
 
 Sergey is an exceptionally talented developer who understands what it takes to put an overall solution/architecture in place. He brings the following skills to every project:
 
-- Deep technical expertise 
+- Deep technical expertise
 - Customer focus, collaboration and clear communication
-- Curiosity and practical problem solving 
+- Curiosity and practical problem solving
 
 I look forward to continuing to work with him on future projects.

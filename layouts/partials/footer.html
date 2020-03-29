@@ -1,7 +1,7 @@
 <footer>
   <div class="col-md-3 ask-help">
-    <div>Ask / Hire / Help needed / &lt;Your here&gt;</div>
-    <a class="contact-me" href="mailto:sergey@kibish.com">Just email me</a>
+    <div>Ask / Hire</div>
+    <a class="contact-me" href="mailto:{{.Site.Params.Email}}">Just email me</a>
   </div>
 
   <div class="col-md-2 offset-md-2">
@@ -18,7 +18,7 @@
   </div>
 
   <div class="col-md-3">
-    <h3>Talks / Workshops / Music</h3>
+    <h3>Different</h3>
 
     <ul class="list list-unstyled">
       {{ range .Site.Data.footerLinks.hobby }}
@@ -30,6 +30,7 @@
     </ul>
   </div>
 
+  {{ if isset .Site.Data.footerLinks "partOf" }}
   <div class="col-md-2">
     <h3>Part of</h3>
 
@@ -42,6 +43,7 @@
       {{ end }}
     </ul>
   </div>
+  {{end}}
 </footer>
 
 </div>

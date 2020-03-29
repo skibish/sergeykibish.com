@@ -1,0 +1,22 @@
+# Footer links.
+# Can be social, hobby or partOf
+social:
+- title: LinkedIn
+  icon: linkedin
+  link: https://linkedin.com/in/kibish
+- title: GitHub
+  icon: github
+  link: https://github.com/skibish
+- title: Twitter
+  icon: twitter
+  link: https://twitter.com/s_kibish
+hobby:
+- title: Talks
+  icon: youtube
+  link: https://www.youtube.com/playlist?list=PL6U6iDFrKTE2ySiMLs2O77WOIpk3WepiZ
+- title: Speaker Deck
+  icon: slideshare
+  link: https://speakerdeck.com/skibish
+- title: SoundCloud
+  icon: soundcloud
+  link: https://soundcloud.com/kibish

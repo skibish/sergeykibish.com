@@ -1,5 +1,5 @@
 <section>
-  {{ range where .Site.Pages "Section" "testimonials" }}
+  {{ range where .Site.RegularPages "Section" "testimonials" }}
   <div class="col-lg-3">
     <div class="testimonial">
       <div class="testimonial-text">{{ .Params.pitchLine }}</div>
