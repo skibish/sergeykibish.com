@@ -1,0 +1,10 @@
+## https://github.com/alexkaratarakis/gitattributes/blob/master/Web.gitattributes
+*                 text=auto
+
+# Graphics
+*.png             binary
+*.jpg             binary
+
+# Build static files
+static/css/*.css      binary
+static/js/*.js        binary

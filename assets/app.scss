@@ -67,7 +67,21 @@ footer {
 }
 
 .profile-pic {
-  filter: grayscale(100%);
+  position:relative;
+
+  img {
+    position:absolute;
+    transition: opacity 1s ease-in-out;
+    filter: grayscale(100%);
+  }
+
+  .top {
+    position: relative;
+    &:hover {
+      opacity:0;
+    }
+  }
+
 }
 
 .contact-me {

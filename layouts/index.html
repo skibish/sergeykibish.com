@@ -3,7 +3,10 @@
 
 <section>
   <div class="col-md-4">
-    <img src="img/me.jpg?v={{ readFile "static/img/me.jpg" | md5 }}" class="profile-pic img-fluid" alt="{{ .Site.Params.Author }}">
+    <div class="profile-pic">
+      <img src="img/me.hover.jpg?v={{ readFile "static/img/me.hover.jpg" | md5 }}" class="img-fluid" alt="{{ .Site.Params.Author }}">
+      <img src="img/me.jpg?v={{ readFile "static/img/me.jpg" | md5 }}" class="top img-fluid " alt="{{ .Site.Params.Author }}">
+    </div>
   </div>
   <div class="col-md-8 col-lg-4 bio">
     Skilled in different languages / tools / technologies. Strong engineering professional with a Master of Science (Mg.Sc.Comp.)
