@@ -1,6 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -15,7 +15,7 @@ module.exports = {
             filename: "css/app.css",
         }),
         new OptimizeCSSAssetsPlugin({}),
-        new UglifyJsPlugin()
+        new TerserPlugin()
     ],
     module: {
         rules: [
