@@ -9,9 +9,7 @@
     </div>
   </div>
   <div class="col-md-8 col-lg-4 bio">
-    Skilled in different languages / tools / technologies. Strong engineering professional with a Master of Science (Mg.Sc.Comp.)
-    focused in Computer Science. Natural-born leader, full of passion and charisma. A hobby is music in all of its manifestations
-    (listening, playing, writing).
+    {{.Site.Params.About}}
   </div>
   <div class="col-md-4 d-none d-lg-block text-center">
     <img src="img/splash.svg" class="img-fluid">
@@ -79,17 +77,10 @@
   <div class="col-md-4">
     <h4>Achievements</h4>
 
-    <h5>1st developer in Latvia who spoke publicly about Docker (2015)</h5>
-    <p>At conference “WebConf Riga 2015” talked about Docker and how to use it in the development</p>
-
-    <h5>Ran in “Nike Riga Run” 10km marathons (2012, 2015)</h5>
-    <p>Completed them faster each time</p>
-
-    <h5>Lost 30kg (2014)</h5>
-    <p>Realized, that it is time to change something in myself. Continue to do sport.</p>
-
-    <h5>No smoking, No drinking (from the beginning of life — Present)</h5>
-    <p>Yes, it is possible</p>
+    {{ range $.Site.Data.achievements }}
+      <h5>{{ .title }}</h5>
+      <p>{{ .description }}</p>
+    {{ end }}
 
   </div>
   <div class="col-md-4 d-none d-md-block">
