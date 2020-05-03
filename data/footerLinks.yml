@@ -11,12 +11,15 @@ social:
   icon: twitter
   link: https://twitter.com/s_kibish
 hobby:
+- title: Blog
+  icon: medium
+  link: /blog/
 - title: Talks
   icon: youtube
   link: https://www.youtube.com/playlist?list=PL6U6iDFrKTE2ySiMLs2O77WOIpk3WepiZ
-- title: Speaker Deck
+- title: Presentations
   icon: speaker-deck
   link: https://speakerdeck.com/skibish
-- title: SoundCloud
+- title: Music
   icon: soundcloud
   link: https://soundcloud.com/kibish

@@ -8,6 +8,18 @@ googleAnalytics: "UA-103073257-1"
 taxonomies: []
 disableKinds: ["RSS", "sitemap"]
 
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: solarized-light
+    tabWidth: 4
+
 params:
   Author: "Sergey Kibish"
   Description: "Creator, developer, a person with not a standard thinking"

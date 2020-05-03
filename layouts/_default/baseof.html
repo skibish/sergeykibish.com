@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+  {{ partial "meta.html" . }}
+
+  <link rel="stylesheet" href="/css/app.css?v={{ readFile "static/css/app.css" | md5 }}">
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+</head>
+
+<body>
+  <div class="container">
+    {{ block "main" . }}
+    <!-- The part of the page that begins to differ between templates -->
+    {{ end }}
+
+    <hr/>
+    {{ partial "footer.html" . }}
+
+  </div>
+  {{ template "_internal/google_analytics_async.html" . }}
+
+  {{ block "scripts" . }}
+  {{ end }}
+</body>

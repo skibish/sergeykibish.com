@@ -1,18 +1,21 @@
-{{ partial "head.html" . }}
+{{define "main"}}
+
 {{ partial "header.html" . }}
 
 <section>
   <div class="col-md-4">
     <div class="profile-pic">
-      <img src="img/me.hover.jpg?v={{ readFile "static/img/me.hover.jpg" | md5 }}" class="img-fluid" alt="{{ .Site.Params.Author }}">
-      <img src="img/me.jpg?v={{ readFile "static/img/me.jpg" | md5 }}" class="top img-fluid " alt="{{ .Site.Params.Author }}">
+      <img src="/img/me.hover.jpg?v={{ readFile "static/img/me.hover.jpg" | md5 }}" class="img-fluid"
+        alt="{{ .Site.Params.Author }}">
+      <img src="/img/me.jpg?v={{ readFile "static/img/me.jpg" | md5 }}" class="top img-fluid "
+        alt="{{ .Site.Params.Author }}">
     </div>
   </div>
   <div class="col-md-8 col-lg-4 bio">
     {{.Site.Params.About}}
   </div>
   <div class="col-md-4 d-none d-lg-block text-center">
-    <img src="img/splash.svg" class="img-fluid">
+    <img src="/img/splash.svg" class="img-fluid">
   </div>
 </section>
 
@@ -78,8 +81,8 @@
     <h4>Achievements</h4>
 
     {{ range $.Site.Data.achievements }}
-      <h5>{{ .title }}</h5>
-      <p>{{ .description }}</p>
+    <h5>{{ .title }}</h5>
+    <p>{{ .description }}</p>
     {{ end }}
 
   </div>
@@ -112,5 +115,8 @@
 {{ partial "articles.html" . }}
 
 {{ partial "testimonials.html" . }}
+{{ end }}
 
-{{ partial "footer.html" . }}
+{{ define "scripts" }}
+  <script src="/js/app.js?v={{ readFile "static/js/app.js" | md5 }}"></script>
+{{ end }}

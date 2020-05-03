@@ -1,7 +1,8 @@
 ---
-title: "The never-ending search for an interview process that works"
+title: "The Never-Ending Search For An Interview Process That Works"
 date: 2020-04-28T00:00:00+02:00
-draft: true
+canonical: "https://medium.com/@kibish/the-never-ending-search-for-an-interview-process-that-works-3af3faa4d29d"
+draft: false
 ---
 
 If, by any chance, a comprehensive analysis of interview processes already exists somewhere on the internet, then this is the next best thing.
@@ -55,7 +56,7 @@ The first metric is cost.
 How much does the interview process cost to a company?
 We can make certain assumptions based on the employees involved in the process:
 
-![Cost table](https://cdn-images-1.medium.com/max/800/1*OIiDWfj1nJt9NtuuwhWaGQ.png)
+![Cost table](images/costs_table.png)
 
 Unsurprisingly, lower cost is preferred, so less points is better.
 
@@ -82,9 +83,9 @@ Let's take a look at the following real-life processes:
 
 ### 1.1. Process
 
-![1.1. Process graph](https://cdn-images-1.medium.com/max/800/1*Oad6hn3onPFxv9X9FSjLfw.png)
+![1.1. Process graph](images/process_1.1.png)
 
-![1.1. Process summary](https://cdn-images-1.medium.com/max/800/1*S_Rx3KILuWCAhyaNGePweQ.png)
+![1.1. Process summary](images/summary_1.1.png)
 
 During this process, the candidates need to face three main challenges:
 
@@ -108,9 +109,9 @@ But this is just as bad for the company, because chances are high that a good ca
 
 ### 1.2. Process
 
-![1.2. Process graph](https://cdn-images-1.medium.com/max/800/1*ej0a0Fad8CbYSqA2DMn5MA.png)
+![1.2. Process graph](images/process_1.2.png)
 
-![1.2. Process summary](https://cdn-images-1.medium.com/max/800/1*x3L6rPAvMK47EgnYDmuZ-A.png)
+![1.2. Process summary](images/summary_1.2.png)
 
 This process is an extension of the previous example.
 I catch myself thinking that this is a process for the sake of a process with no actual understanding of the process.
@@ -134,9 +135,9 @@ The company has already invested a lot, so why ask the question? Push till the e
 
 ### 1.3. Process
 
-![1.3. Process graph](https://cdn-images-1.medium.com/max/800/1*580HN3DM2gk5OCe-mqaU6w.png)
+![1.3. Process graph](images/process_1.3.png)
 
-![1.3. Process summary](https://cdn-images-1.medium.com/max/800/1*2Tq9CByPIgeA2HgAg9FmTA.png)
+![1.3. Process summary](images/summary_1.3.png)
 
 This one is interesting.
 It involves personality tests.
@@ -152,9 +153,9 @@ A comprehensive conversation is the single best way for the company and the cand
 
 ### 1.4. Process
 
-![1.4. Process graph](https://cdn-images-1.medium.com/max/800/1*sDCX8d557tOAkyNs2DUxfA.png)
+![1.4. Process graph](images/process_1.4.png)
 
-![1.4. Process summary](https://cdn-images-1.medium.com/max/800/1*9a2vxq-UG5Cy2DTveOyoUw.png)
+![1.4. Process summary](images/summary_1.4.png)
 
 Calling this an exam is not an exaggeration.
 From my personal experience, I can attest that it was, indeed, an intense exam.
@@ -170,9 +171,9 @@ While the prospect of having a lot of hands-on experience is tempting, the prosp
 
 ### 1.5. Process
 
-![1.5. Process graph](https://cdn-images-1.medium.com/max/800/1*Z9wnFKRsJoh0DBrzU1l1Wg.png)
+![1.5. Process graph](images/process_1.5.png)
 
-![1.5. Process summary](https://cdn-images-1.medium.com/max/800/1*I6mMFtly7MdKZfqAkdTxxg.png)
+![1.5. Process summary](images/summary_1.5.png)
 
 I would place them in the middle.
 Technically, this company is mature enough to fall under the adult category.
@@ -190,9 +191,9 @@ While this may work well for students, a more experienced candidate is likely to
 
 ### 2.1. Process
 
-![2.1. Process graph](https://cdn-images-1.medium.com/max/800/1*7PHyHF2WqCVjOPLjlz06yw.png)
+![2.1. Process graph](images/process_2.1.png)
 
-![2.1. Process summary](https://cdn-images-1.medium.com/max/800/1*EffQCWejIQSQ6ktb4lkpZA.png)
+![2.1. Process summary](images/summary_2.1.png)
 
 Here is an innovative approach from a Scandinavian country.
 After the welcome interview, the candidate is given homework in the form of a quiz.
@@ -204,9 +205,9 @@ The only thing left to check is whether the candidate fits in well with the cult
 
 ### 2.2. Process
 
-![2.2. Process graph](https://cdn-images-1.medium.com/max/800/1*SV_G3BmEtQkcp8gM1UrAUg.png)
+![2.2. Process graph](images/process_2.2.png)
 
-![2.2. Process summary](https://cdn-images-1.medium.com/max/800/1*UqMqK-YOZPr6ScCxpWOMJw.png)
+![2.2. Process summary](images/summary_2.2.png)
 
 Here is another quiz-based approach. Notice the absence of on-site interviews, which saves the company a ton of money.
 And no live coding.
@@ -214,9 +215,9 @@ No! Live! Coding! See? It's possible :)
 
 ### 2.3. Process
 
-![2.3. Process graph](https://cdn-images-1.medium.com/max/800/1*T1DcNIx9ynMgtCWQEsCBdw.png)
+![2.3. Process graph](images/process_2.3.png)
 
-![2.3. Process summary](https://cdn-images-1.medium.com/max/800/1*NsTjB33i4c0lECpKWWwxIw.png)
+![2.3. Process summary](images/summary_2.3.png)
 
 This one is almost unbelievable.
 Once again, no live coding.
@@ -232,9 +233,9 @@ But to benefit from this type of interview process, the company truly needs to k
 
 ### 2.4. Process
 
-![2.4. Process graph](https://cdn-images-1.medium.com/max/800/1*dwYB9vhTXOM6koip3zqlBQ.png)
+![2.4. Process graph](images/process_2.4.png)
 
-![2.4. Process summary](https://cdn-images-1.medium.com/max/800/1*8__EWGH2bxYiQpzpMW9q_Q.png)
+![2.4. Process summary](images/summary_2.4.png)
 
 A nice and short interview experience.
 Live coding is less stressful because the candidate is allowed to google.
@@ -243,7 +244,7 @@ In this case as well, both interviews mostly involve conversations.
 
 ## Summary
 
-![Summary](https://cdn-images-1.medium.com/max/800/1*fTZNW20JFVGf6P4cLkkzvw.png)
+![Summary](images/summary.png)
 
 After going through 9 different processes, we can conclude that 4 rounds of interviews are conducted on average.
 One round usually involves a whiteboard or a live coding challenge.
@@ -402,7 +403,18 @@ For example: good at explaining concepts and ideas.
 I highly recommend adding some "quiz" questions to your first interview.
 Here is a short example of such a question:
 
-![Quiz question](https://cdn-images-1.medium.com/max/800/1*MmaSf_YsgGciUZRT20t5MA.png)
+```js
+// Code review. How does the following function violate good design principles?
+
+function getDepositHistorySum(user) {
+  let deposits = user.transactions.history.deposits;
+  let sum = 0;
+  for (let i = 0; i < deposits.length; i += 1) {
+    sum += deposits[i].amount;
+  }
+  return sum;
+}
+```
 
 ### Conclusion
 
@@ -412,6 +424,6 @@ And switch to adult companies ;)
 
 You can also listen to [my talk here](https://www.youtube.com/watch?v=1u5griKyxzc) for additional thoughts on the interview process.
 
-If you want me to help you analyze and improve your interview process, feel free to [contact me](https://sergeykibish.com/)
+If you want me to help you analyze and improve your interview process, feel free to [contact me](https://sergeykibish.com/).
 
-P.S. By the way, if you are looking for companies that don't practice whiteboard interviews, you will definitely appreciate [this repository](https://github.com/poteto/hiring-without-whiteboards)
+P.S. By the way, if you are looking for companies that don't practice whiteboard interviews, you will definitely appreciate [this repository](https://github.com/poteto/hiring-without-whiteboards).

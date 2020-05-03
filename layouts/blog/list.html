@@ -1,0 +1,20 @@
+{{define "title"}}
+Posts
+{{end}}
+
+{{define "main" }}
+  {{ range (.Pages.GroupByDate "2006") }}
+  <h1>{{ .Key }}</h1>
+  <ul class="list-unstyled">
+    {{ range .Pages.ByDate.Reverse }}
+    <li>
+      <span class="article-title">
+        <a href="{{.Permalink}}">{{.Title}}</a>
+      </span>
+      <p>{{ dateFormat "Jan 2" .Date }} ({{.ReadingTime}} minutes read)</p>
+
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+{{end}}

@@ -1,10 +1,9 @@
 ---
 title: "Your Personal DDNS"
-date: 2017-10-13T18:27:03+03:00
-draft: true
+date: 2017-10-12T18:27:03+03:00
+canonical: "https://hackernoon.com/your-personal-ddns-4ef7bbb189de"
+draft: false
 ---
-
-## Your own DDNS
 
 According to the Wikipedia, DDNS is:
 
@@ -43,7 +42,7 @@ To make everything to work you need to have a DigitalOcean account and setup you
 You can follow [this tutorial to setup your domain](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-host-name-with-digitalocean).
 But we will continue.
 
-## How to setup DDNS client?
+## How to setup DDNS client
 
 This example will use Ubuntu Linux.
 You can apply the same approach to whatever distribution you like.
@@ -119,7 +118,7 @@ A good solution would be to register a new service on your linux machine.
 Create a file `/etc/systemd/system/ddns.service` (you want to create this file under `sudo` user).
 Paste in it the configuration that is specified bellow:
 
-```text
+```ini
 [Unit]
 Description=DDNS client with DigitalOcean as backend
 After=network.target

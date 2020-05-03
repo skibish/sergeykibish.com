@@ -1,55 +1,53 @@
 <footer>
-  <div class="col-md-3 ask-help">
-    <div>Ask / Hire</div>
-    <a class="contact-me" href="mailto:{{.Site.Params.Email}}">Just email me</a>
-  </div>
+    <div class="col-md-3 ask-help">
+      <div>Ask / Hire</div>
+      <a class="contact-me" href="mailto:{{.Site.Params.Email}}">Just email me</a>
+    </div>
 
-  <div class="col-md-2 offset-md-2">
-    <h3>Social</h3>
+    <div class="col-md-2 offset-md-2">
+      <h3>Social</h3>
 
-    <ul class="list list-unstyled">
-      {{ range .Site.Data.footerLinks.social }}
-      <li class="list-item">
-        <a class="text-white" href="{{ .link }}" target="_blank" rel="me noopener">
-          <i class="fab fa-{{ .icon }}"></i> {{ .title }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
+      <ul class="list list-unstyled">
+        {{ range .Site.Data.footerLinks.social }}
+        <li class="list-item">
+          <i class="fab fa-{{ .icon }}"></i> 
+          <a class="text-white" href="{{ .link }}" rel="me">
+            {{ .title }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
 
-  <div class="col-md-3">
-    <h3>Different</h3>
+    <div class="col-md-3">
+      <h3>Different</h3>
 
-    <ul class="list list-unstyled">
-      {{ range .Site.Data.footerLinks.hobby }}
-      <li class="list-item">
-        <a class="text-white" href="{{ .link }}" target="_blank" rel="me noopener">
-          <i class="fab fa-{{ .icon }}"></i> {{ .title }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
+      <ul class="list list-unstyled">
+        {{ range .Site.Data.footerLinks.hobby }}
+        <li class="list-item">
+          <i class="fab fa-{{ .icon }}"></i>
+          <a class="text-white" href="{{ .link }}" rel="me">
+            {{ .title }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
 
-  {{ if isset .Site.Data.footerLinks "partOf" }}
-  <div class="col-md-2">
-    <h3>Part of</h3>
+    {{ if isset .Site.Data.footerLinks "partOf" }}
+    <div class="col-md-2">
+      <h3>Part of</h3>
 
-    <ul class="list list-unstyled">
-      {{ range .Site.Data.footerLinks.partOf }}
-      <li class="list-item">
-        <a class="text-white" href="{{ .link }}" target="_blank" rel="me noopener">
-          <i class="fab fa-{{ .icon }}"></i> {{ .title }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-  {{end}}
-</footer>
-
-</div>
-{{ template "_internal/google_analytics_async.html" . }}
-<script src="js/app.js?v={{ readFile "static/js/app.js" | md5 }}"></script>
-
-</body>
-
-</html>
+      <ul class="list list-unstyled">
+        {{ range .Site.Data.footerLinks.partOf }}
+        <li class="list-item">
+          <i class="fab fa-{{ .icon }}"></i> 
+          <a class="text-white" href="{{ .link }}" rel="me">
+            {{ .title }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{end}}
+  </footer>

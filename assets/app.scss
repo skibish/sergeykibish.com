@@ -9,6 +9,7 @@ $fa-font-path : '/webfonts';
 
 // page styles
 @import "styles/articles";
+@import "styles/article";
 @import "styles/text";
 @import "styles/testimonial";
 @import "styles/clock";
@@ -30,6 +31,10 @@ section, header {
 
 footer {
   @include make-row();
+
+  li {
+    margin-bottom: 0.5em;
+  }
 }
 
 .strong-sides {
@@ -72,10 +77,10 @@ footer {
 }
 
 .profile-pic {
-  position:relative;
+  position: relative;
 
   img {
-    position:absolute;
+    position: absolute;
     transition: opacity 1s ease-in-out;
     filter: grayscale(100%);
   }
@@ -110,5 +115,13 @@ footer {
 
   @include media-breakpoint-down(lg) {
     font-size: 26px;
+  }
+}
+
+.container {
+  hr {
+    background-color: color($key: "gold");
+    border: none;
+    height: 3px;
   }
 }

@@ -1,7 +1,8 @@
 ---
-title: "A note about finding anomalies"
+title: "A Note About Finding Anomalies"
 date: 2018-04-10T00:00:00+02:00
-draft: true
+canonical: "https://towardsdatascience.com/a-note-about-finding-anomalies-f9cedee38f0b"
+draft: false
 ---
 
 ## Prologue
@@ -27,10 +28,10 @@ Anomaly detection is an actual problem in various areas, such as:
 
 ## What is anomaly
 
-Unfortunately, there is no clear definition of the anomaly that's why I've chosen the following one --- anomalies are patterns in the data that do not conform to a well-defined notion of normal behaviour \[1\].
+Unfortunately, there is no clear definition of the anomaly that's why I've chosen the following one  ---  anomalies are patterns in the data that do not conform to a well-defined notion of normal behaviour \[1\].
 We can illustrate anomalies in a simple two-dimensional space (Figure 1).
 
-![Figure 1. Illustration of simple anomalies in two-dimensional space](https://cdn-images-1.medium.com/max/800/1*cY9PvTtR_B2NdJEo0WOUvA.png)
+![Figure 1. Illustration of simple anomalies in two-dimensional space](images/figure_1.png)
 
 N₁ and N₂ are regions with normal data because the majority of observations are in these areas.
 Points that are far away from normal areas, like points O₁, O₂ and region O₃ are anomalies.
@@ -56,7 +57,7 @@ In this case point O₁ is anomaly, because it differs from periodic context
 If some linked objects can be observed against other objects as anomaly.
 Individual object can't be anomalous in this case, only collection of objects.
 
-![Figure 2. Contextual anomaly example](https://cdn-images-1.medium.com/max/800/1*S71DxIBRWwr_3vqRHqBoyg.png)
+![Figure 2. Contextual anomaly example](images/figure_2.png)
 
 We need to understand, that these anomalies can be connected.
 Point anomaly could become contextual if we apply context to it.
@@ -82,7 +83,7 @@ They will be ineffective in most cases
 Bellow I will give some dataset examples. Your goal is to scroll slowly
 (example by example) and try to determine anomalies by eye.
 
-<script async class="speakerdeck-embed" data-id="eba645f19889412b8e0799ab93b02ede" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+{{<speakerdeck eba645f19889412b8e0799ab93b02ede>}}
 
 Figure 3. Little game
 
@@ -103,7 +104,7 @@ For example, some types of decision trees cannot deal well with unbalanced data.
 However, this setup is not relevant, because we need to know all anomalies and label data correctly.
 For many cases anomalies are not known in advance or may occur as novelties during the test phase.
 
-![Figure 4. Supervised anomaly detection](https://cdn-images-1.medium.com/max/800/1*yMsLxZ5jG-rE-JQvIxe8sQ.png)
+![Figure 4. Supervised anomaly detection](images/figure_4.png)
 
 *Semi-supervised Anomaly Detection.*
 In the beginning*,* when we do not have any knowledge, we gather it from training results.
@@ -113,7 +114,7 @@ This approach is also known as "one-class" classification.
 Well-known approaches are One-class SVMs and [autoencoders](https://en.wikipedia.org/wiki/Autoencoder).
 In general, any density estimation approach can be applied to model the probability density function of the normal classes, such as [Gaussian Mixture](https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model) approaches or [Kernel Density Estimation](https://en.wikipedia.org/wiki/Kernel_density_estimation).
 
-![Figure 5. Semi-Supervised anomaly detection](https://cdn-images-1.medium.com/max/800/1*AAW5QUPKDcwSaPx5sb6COw.png)
+![Figure 5. Semi-Supervised anomaly detection](images/figure_5.png)
 
 *Unsupervised Anomaly Detection.*
 A setup, when we do not know, what is normal in the data and what is not.
@@ -123,7 +124,7 @@ The concept is that an unsupervised anomaly detection approaches score the data 
 Typically, distances or densities are used to give an evaluation what is normal and what is an outlier.
 The visual representation can be found in Figure 6.
 
-![Figure 6. Unsupervised anomaly detection](https://cdn-images-1.medium.com/max/800/1*tozkI77PBRijJhSqnRBlvw.png)
+![Figure 6. Unsupervised anomaly detection](images/figure_6.png)
 
 Most approaches as output will give score or label.
 The difference between scoring and labelling is in flexibility.
@@ -133,7 +134,7 @@ Labelling is a classification.
 No approaches by now can be used in all domains with the same success without research about the domain and feature extraction.
 Most of the unsupervised anomaly detection approaches are shown in Figure 7.
 
-![Figure 7. Unsupervised anomaly detection approaches classification diagram](https://cdn-images-1.medium.com/max/800/1*xePzgqq3cpFd66h9CvZ8dg.png)
+![Figure 7. Unsupervised anomaly detection approaches classification diagram](images/figure_7.png)
 
 ## Real life is dynamic
 
@@ -161,9 +162,9 @@ Most of the approaches to use in such case should be unsupervised.
 
 Solutions that currently are progressive and give hope include Neural Networks (NN), some of them in combination with statistical approaches.
 
-Popular NN used now for time-series is Long-Short Term Memory (LSTM) --- it gained popularity in the Deep Learning field because of their possibility to remember long running dependencies.
+Popular NN used now for time-series is Long-Short Term Memory (LSTM)  ---  it gained popularity in the Deep Learning field because of their possibility to remember long running dependencies.
 
-Another one interesting kind of network which is new, not mentioned a lot, is a Hierarchical Temporal Memory (HTM) --- it is a neural network that is based on researches in the neuro-science which also has ability to learn and remember long running dependencies.
+Another one interesting kind of network which is new, not mentioned a lot, is a Hierarchical Temporal Memory (HTM)  ---  it is a neural network that is based on researches in the neuro-science which also has ability to learn and remember long running dependencies.
 Will tell a little bit more about it.
 
 ### Hierarchical Temporal Memory (HTM)
@@ -173,7 +174,7 @@ It is a technology that aims to capture the structural and algorithmic propertie
 HTM is a theory of the neocortex and has few similar brain structures.
 The neocortex comprises about 75% of volume of the human brain, and it is the core of most of what we think of as intelligence.
 HTM is a biological theory, meaning it is derived from neuroanatomy and neurophysiology and explains how the biological neocortex works.
-They say, that HTM theory is "biologically constrained" as opposite to "biologically inspired" --- term used in machine learning.
+They say, that HTM theory is "biologically constrained" as opposite to "biologically inspired"  ---  term used in machine learning.
 
 The HTM learning method is designed to work with the dynamic environment as sensor and motor data.
 Sensor input can change depending on different obstacles as metrics from a server.
@@ -198,14 +199,14 @@ More details can be found on their website, referring to the following source \[
 
 Okay, you invented new approach to solve this problem. How to prove, that your approach works and is better than others?
 
-Many researchers, investigating unsupervised anomaly detection methods, encounter the problem --- there is no defined framework to evaluate their performance.
+Many researchers, investigating unsupervised anomaly detection methods, encounter the problem  ---  there is no defined framework to evaluate their performance.
 Many scientists only make theoretical assumptions.
 Currently, some attempts to create such framework appeared.
 
 Markus Goldstein and Seiichi Uchida in their work \[5\] propose, how evaluation should be done for anomaly detection approaches.
 But their assessment methodology is oriented on methods that work with tabular data.
 
-On the 14th International Conference on Machine Learning and Applications (IEEE ICMLA) 2015 Alexander Lavin and Subutai Ahmad proposed their methodology for real-time anomaly detection procedures evaluation --- the Numenta Anomaly Benchmark (NAB)\[6\].
+On the 14th International Conference on Machine Learning and Applications (IEEE ICMLA) 2015 Alexander Lavin and Subutai Ahmad proposed their methodology for real-time anomaly detection procedures evaluation  ---  the Numenta Anomaly Benchmark (NAB)\[6\].
 
 ### NAB
 
@@ -257,8 +258,8 @@ May the force be with you.
 
 \[3\] Kawano, H., Nishio, S., Han, J. & Hasegawa, T., 1994. How does knowledge discovery cooperate with active database techniques in controlling dynamic environment?. Athens, Greece, Springer-Verlag Berlin Heidelberg.
 
-\[4\] Hawkins, J., Ahmad, S. & Lavin, A., 2016. Biological and Machine Intelligence. Available at: http://bit.ly/2qJzvjO
+\[4\] Hawkins, J., Ahmad, S. & Lavin, A., 2016. Biological and Machine Intelligence. [Available here](http://bit.ly/2qJzvjO).
 
 \[5\] Goldstein, M. & Uchida, S., 2016. A Comparative Evaluation of Unsupervised Anomaly Detection Algorithms for Multivariate Data. PLoS ONE, 11(4), p. 31.
 
-\[6\] Lavin, A. & Ahmad, S., 2015. Evaluating Real-time Anomaly Detection Algorithms --- the Numenta Anomaly Benchmark. Miami, IEEE.
+\[6\] Lavin, A. & Ahmad, S., 2015. Evaluating Real-time Anomaly Detection Algorithms  ---  the Numenta Anomaly Benchmark. Miami, IEEE.

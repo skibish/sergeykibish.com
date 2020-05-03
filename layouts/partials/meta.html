@@ -2,9 +2,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="theme-color" content="#000000">
 
+{{if .IsPage}}
+<meta name="description" content="{{ .Summary }}"/>
+{{else}}
 <meta name="description" content="{{ .Site.Params.Description }}"/>
+{{end}}
 
-<link rel="manifest" href="manifest.json?v={{ readFile "static/manifest.json" | md5 }}">
+<link rel="manifest" href="/manifest.json?v={{ readFile "static/manifest.json" | md5 }}">
 
 <link rel="apple-touch-icon" sizes="57x57" href="/img/touch/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon" sizes="114x114" href="/img/touch/apple-touch-icon-114x114.png" />
@@ -19,15 +23,30 @@
 <link rel="icon" type="image/png" href="/img/touch/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="/img/touch/favicon-16x16.png" sizes="16x16" />
 <link rel="icon" type="image/png" href="/img/touch/favicon-128.png" sizes="128x128" />
-<link rel="shortcut icon" href="favicon.ico?v={{ readFile "static/favicon.ico" | md5 }}" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico?v={{ readFile "static/favicon.ico" | md5 }}" type="image/x-icon">
 
-<meta property="og:title" content="{{ .Site.Title }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:image" content="/img/social-share.png?v={{ readFile "static/img/social-share.png" | md5 }}" />
+{{if .IsPage}}
+<meta property="og:title" content="{{ .Params.Title }}" />
+<meta property="og:description" content="{{ .Summary }}" />
+{{else}}
+<meta property="og:title" content="{{ .Site.Title }}" />
 <meta property="og:description" content="{{ .Site.Params.Description }}" />
+<meta property="og:image" content="/img/social-share.png?v={{ readFile "static/img/social-share.png" | md5 }}" />
+{{end}}
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@s_kibish" />
+
+{{if .IsPage}}
+<meta name="twitter:title" content="{{ .Params.Title }}" />
+<meta name="twitter:description" content="{{ .Summary }}" />
+{{else}}
 <meta name="twitter:title" content="{{ .Site.Title }}" />
 <meta name="twitter:description" content="{{ .Site.Params.Description }}" />
 <meta name="twitter:image" content="/img/social-share.png?v={{ readFile "static/img/social-share.png" | md5 }}" />
+{{end}}
+
+{{if .Params.canonical}}
+<link rel="canonical" href="{{.Params.canonical}}" />
+{{end}}

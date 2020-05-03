@@ -18,7 +18,7 @@ module.exports = {
             filename: "css/app.css",
         }),
         new PurgecssPlugin({
-            paths: glob.sync(`${path.join(__dirname, 'public')}/index.html`,  { nodir: true }),
+            paths: glob.sync(`${path.join(__dirname, 'public')}/**/*.html`,  { nodir: true }),
         }),
         new OptimizeCSSAssetsPlugin({}),
         new TerserPlugin()
