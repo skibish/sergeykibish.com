@@ -4,7 +4,7 @@
     <div class="date">
       <i class="fab fa-medium"></i> {{ dateFormat "Jan 2, 2006" .date }}</div>
       <span class="article-title">
-        <a href="{{ .link }}" target="_blank">{{ .title }}</a>
+        <a href="{{ .link }}" target="_blank" rel="me noopener">{{ .title }}</a>
       </span>
   </div>
   {{ end }}
