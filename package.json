@@ -3,6 +3,7 @@
     "build": "webpack --config webpack.config.js"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "autoprefixer": "^9.7.6",
     "bootstrap": "^4.4.1",
     "css-loader": "^3.5.3",

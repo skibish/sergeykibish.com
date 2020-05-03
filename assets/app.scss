@@ -2,6 +2,11 @@
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 
+// icons
+$fa-font-path : '/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
 // page styles
 @import "styles/articles";
 @import "styles/text";
