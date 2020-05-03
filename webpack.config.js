@@ -1,6 +1,9 @@
+const path = require('path');
+const glob = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 
 module.exports = {
     mode: 'production',
@@ -13,6 +16,9 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/app.css",
+        }),
+        new PurgecssPlugin({
+            paths: glob.sync(`${path.join(__dirname, 'layouts')}/**/*`,  { nodir: true }),
         }),
         new OptimizeCSSAssetsPlugin({}),
         new TerserPlugin()
