@@ -5,6 +5,7 @@
   {{ partial "meta.html" . }}
 
   <link rel="stylesheet" href="/css/app.css?v={{ readFile "static/css/app.css" | md5 }}">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
   <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 </head>
 
