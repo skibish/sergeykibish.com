@@ -36,3 +36,27 @@ function setTime() {
 
 setTime();
 setInterval(setTime, 1000);
+
+const trackList = [
+  // David Guetta - I Can Only Imagine ft. Chris Brown, Lil Wayne (Official Video)
+  "https://www.youtube.com/watch?v=TSNerxNwWtU",
+
+  // Gandalf Sax Guy 10 Hours HD
+  "https://www.youtube.com/watch?v=G1IbRujko-A",
+
+  // 10 Hours of Nothing
+  "https://www.youtube.com/watch?v=fx2Z5ZD_Rbo",
+
+  // Counting To 100,000 In One Video
+  "https://www.youtube.com/watch?v=xWcldHxHFpo&t=20",
+
+  // Tom Cruise Running for 10 HOURS
+  "https://www.youtube.com/watch?v=-2aU5Yq0u3E",
+
+  // 10 Hours of *ODDLY SATISFYING* Videos - Compilation / Loop
+  "https://www.youtube.com/watch?v=fwYEREqQCHc",
+];
+
+document.querySelector("[data-play-video]").addEventListener("click", () => {
+  document.querySelector("[data-play-video]").href = trackList[Math.floor(Math.random() * trackList.length)];
+});

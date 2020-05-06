@@ -47,4 +47,5 @@ p {
 .underline {
   border-bottom: 1px solid color($key: "gold");
   padding-bottom: 3px;
+  text-decoration: none !important;
 }

@@ -2,24 +2,24 @@
 # Can be social, hobby or partOf
 social:
 - title: LinkedIn
-  icon: linkedin
+  icon: fab fa-linkedin
   link: https://linkedin.com/in/kibish
 - title: GitHub
-  icon: github
+  icon: fab fa-github
   link: https://github.com/skibish
 - title: Twitter
   icon: twitter
   link: https://twitter.com/s_kibish
 hobby:
 - title: Blog
-  icon: medium
+  icon: far fa-newspaper
   link: /blog/
 - title: Talks
-  icon: youtube
+  icon: fab fa-youtube
   link: https://www.youtube.com/playlist?list=PL6U6iDFrKTE2ySiMLs2O77WOIpk3WepiZ
 - title: Presentations
-  icon: speaker-deck
+  icon: fab fa-speaker-deck
   link: https://speakerdeck.com/skibish
 - title: Music
-  icon: soundcloud
+  icon: fab fa-soundcloud
   link: https://soundcloud.com/kibish

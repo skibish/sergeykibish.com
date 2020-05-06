@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="col-md-8 col-lg-4 bio">
-    {{.Site.Params.About}}
+    {{.Params.about}}
   </div>
   <div class="col-md-4 d-none d-lg-block text-center">
     <img src="/img/splash.svg" class="img-fluid">
@@ -23,37 +23,36 @@
   <div class="col-md-4">
     <h4>What I’m looking to do next</h4>
 
-    <p>I'm interested in creating products, solve technical problems, communicate with people, teach
-      them, create teams that could solve
-      <span class="strike">some</span> any problems and make the world a better place.</p>
+    <p>{{ .Params.todo_next }}</p>
 
     <p>Additionally:</p>
     <ul class="list-aligned">
-      <li>share knowledge with others</li>
-      <li>speak at conferences, meetups</li>
-      <li>grow communities</li>
+    {{range .Params.additionally}}
+      <li>{{ . }}</li>
+    {{end}}
     </ul>
 
-    <span class="underline">Just imagine, what I can bring you.</span>
+    <a class="text-white underline" href="https://www.youtube.com/watch?v=TSNerxNwWtU" target="_blank" rel="noopener" data-play-video>
+      Just imagine what I can bring you.
+    </a>
     <p></p>
   </div>
   <div class="col-md-4">
     <h4>I'm really good at</h4>
 
     <ul class="list-aligned">
-      <li>solving different problems (not only tech related)</li>
-      <li>explaining complicated stuff in simple words</li>
-      <li>presenting information to the broad audience (e.g. speaking at conferences)</li>
-      <li>finding a common language with different people</li>
+    {{ range .Params.good_at}}
+      <li>{{ . }}</li>
+    {{ end }}
     </ul>
 
   </div>
   <div class="col-md-4">
     <h4>How people describe me (strongest sides)</h4>
     <ul class="strong-sides">
-      <li>smart</li>
-      <li>reliable</li>
-      <li>inventive</li>
+    {{ range .Params.strong_sides}}
+    <li>{{ . }}</li>
+    {{ end }}
     </ul>
   </div>
 </section>
@@ -63,24 +62,29 @@
     <h4>Side projects</h4>
     <p>Side projects, which I'm happy to show are:</p>
     <ul class="list-aligned">
+    {{ range .Params.side_projects}}
       <li>
-        <a class="text-white" href="https://github.com/skibish/ddns" target="_blank" rel="noopener">DDNS</a>
+        <a class="text-white" href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
       </li>
-      <li>
-        <a class="text-white" href="https://github.com/skibish/dockerized" target="_blank" rel="noopener">Dockerized</a>
-      </li>
+    {{ end }}
     </ul>
 
-    <p>They are quite popular and blog posts about these are also popular on medium (in total more than 15K reads).</p>
+    <p>
+      They are quite popular.
+      But I don't have so many of them.
+      Because a lot is happening at work.
+      And they are not open source.
+      Take a look at my talks, presentations, thoughts and music that I've made down below.
+    </p>
 
-    <p>For other projects and what I explore, you can check my
-      <a class="text-white" href="https://github.com/skibish" target="_blank" rel="noopener">GitHub.</a>
+    <p>For other projects and what I explore in the IT world you can 
+      <a class="text-white" href="https://github.com/skibish" target="_blank" rel="noopener">check my GitHub</a>.
     </p>
   </div>
   <div class="col-md-4">
     <h4>Achievements</h4>
 
-    {{ range $.Site.Data.achievements }}
+    {{ range .Params.achievements }}
     <h5>{{ .title }}</h5>
     <p>{{ .description }}</p>
     {{ end }}

@@ -10,7 +10,7 @@
       <ul class="list list-unstyled">
         {{ range .Site.Data.footerLinks.social }}
         <li class="list-item">
-          <i class="fab fa-{{ .icon }}"></i> 
+          <i class="{{ .icon }}"></i> 
           <a class="text-white" href="{{ .link }}" rel="me">
             {{ .title }}
           </a>
@@ -25,7 +25,7 @@
       <ul class="list list-unstyled">
         {{ range .Site.Data.footerLinks.hobby }}
         <li class="list-item">
-          <i class="fab fa-{{ .icon }}"></i>
+          <i class="{{ .icon }}"></i>
           <a class="text-white" href="{{ .link }}" rel="me">
             {{ .title }}
           </a>
@@ -41,7 +41,7 @@
       <ul class="list list-unstyled">
         {{ range .Site.Data.footerLinks.partOf }}
         <li class="list-item">
-          <i class="fab fa-{{ .icon }}"></i> 
+          <i class="{{ .icon }}"></i> 
           <a class="text-white" href="{{ .link }}" rel="me">
             {{ .title }}
           </a>
