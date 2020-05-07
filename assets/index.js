@@ -1,8 +1,8 @@
 import './app.scss';
 
-const secondHand = document.querySelector('.clock-hands_second');
-const minsHand = document.querySelector('.clock-hands_minute');
-const hourHand = document.querySelector('.clock-hands_hour');
+const secondHand = document.querySelector('.clock__hand-seconds');
+const minsHand = document.querySelector('.clock__hand-minutes');
+const hourHand = document.querySelector('.clock__hand-hours');
 
 let rotations = [0, 0, 0] // [second, minutes, hours]
 

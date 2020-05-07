@@ -3,18 +3,17 @@ Sergey's Blog
 {{end}}
 
 {{define "main" }}
+<div class="blog-posts">
   {{ range (.Pages.GroupByDate "2006") }}
   <h1>{{ .Key }}</h1>
-  <ul class="list-unstyled">
+  <ul>
     {{ range .Pages.ByDate.Reverse }}
     <li>
-      <span class="article-title">
-        <a href="{{.Permalink}}">{{.Title}}</a>
-      </span>
+      <a class="blog-posts__title" href="{{.Permalink}}">{{.Title}}</a>
       <p>{{ dateFormat "Jan 2" .Date }} ({{.ReadingTime}} minutes read)</p>
-
     </li>
     {{ end }}
   </ul>
   {{ end }}
+</div>
 {{end}}

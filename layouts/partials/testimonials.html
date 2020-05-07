@@ -1,10 +1,10 @@
-<section>
+<section class="testimonials">
   {{ range where .Site.RegularPages "Section" "testimonials" }}
-  <div class="col-lg-3">
-    <div class="testimonial">
-      <div class="testimonial-text">{{ .Params.pitchLine }}</div>
-      <div class="testimonial-author">{{ .Params.fullName }}</div>
-      <div class="testimonial-author-position">{{ .Params.headline }}</div>
+  <div>
+    <div class="testimonials__testimonial">
+      <div class="testimonials__testimonial__text">{{ .Params.pitchLine }}</div>
+      <div class="testimonials__testimonial__author">{{ .Params.fullName }}</div>
+      <div>{{ .Params.headline }}</div>
     </div>
   </div>
   {{end}}

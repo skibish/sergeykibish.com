@@ -1,5 +1,6 @@
-// bootstrap and it overwrites
-@import "custom";
+// Theme setup
+// ---------------------------
+@import "variables";
 @import "~bootstrap/scss/bootstrap";
 
 // icons
@@ -8,19 +9,14 @@ $fa-font-path : '/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 
-// page styles
-@import "styles/articles";
-@import "styles/article";
-@import "styles/text";
-@import "styles/testimonial";
-@import "styles/clock";
-@import "styles/map";
-
+// Rules that apply to whole website
+// ---------------------------
 body {
   margin-top: 20px;
 }
 
-section, header {
+section,
+header {
   @include make-row();
   margin-bottom: 50px;
 
@@ -38,6 +34,187 @@ footer {
   }
 }
 
+h1 {
+  font-weight: $font-weight-bold;
+}
+
+.subtitle {
+  font-weight: $font-weight-normal;
+  font-size: $h1-font-size;
+  border-bottom: 1px solid $theme-second-color;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-weight: $font-weight-bold;
+  font-size: $h5-font-size;
+  margin-bottom: $headings-margin-bottom + 1.5;
+}
+
+h5 {
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 16px;
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  line-height: inherit;
+  font-size: 16px;
+}
+
+.underline {
+  border-bottom: 1px solid $theme-second-color;
+  padding-bottom: 3px;
+  text-decoration: none !important;
+}
+
+hr {
+  background-color: $theme-second-color;
+  border: none;
+  height: 3px;
+}
+
+ul {
+  padding-left: 16px;
+}
+
+// Header
+// ---------------------------
+header>div {
+  &:first-child {
+    @include make-col-ready();
+
+    // col-md-8
+    @include media-breakpoint-up(md) {
+      @include make-col(8);
+    }
+  }
+
+  &:last-child {
+    @include make-col-ready();
+
+    // col-md-8
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none !important; // .d-lg-block
+    }
+
+    text-align: center; // text-center
+  }
+}
+
+// Clock
+// ---------------------------
+.clock {
+  width: 150px;
+  height: 150px;
+  animation-name: fade-in;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+  fill: $theme-text-color;
+
+  &__hand-seconds,
+  &__hand-minutes,
+  &__hand-hours {
+    transform-origin: 50% 50%;
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+
+  &__hand-seconds {
+    fill: $theme-second-color;
+  }
+}
+
+// Summary
+// ---------------------------
+.summary {
+  >div:first-child {
+    @include make-col-ready();
+
+    // col-md-4
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+  }
+
+  &__picture {
+    position: relative;
+
+    img {
+      @include img-fluid();
+      position: absolute;
+      transition: opacity 1s ease-in-out;
+      filter: grayscale(100%);
+    }
+
+    &__top {
+      position: relative !important;
+
+      &:hover {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__bio {
+    @include make-col-ready();
+
+    // col-md-8
+    @include media-breakpoint-up(md) {
+      @include make-col(8);
+    }
+
+    //  col-lg-4
+    @include media-breakpoint-up(lg) {
+      @include make-col(4);
+    }
+
+    font-weight: normal;
+    font-style: normal;
+    line-height: 34px;
+    font-size: 20px;
+  }
+
+  &__splash {
+    @include make-col-ready();
+
+    // .col-md-4
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none !important; // .d-lg-block
+    }
+
+    text-align: center; // text-center
+
+    svg {
+      fill: none;
+    }
+
+    path {
+      stroke: $theme-second-color;
+    }
+  }
+}
+
+// Strong sides
+// ---------------------------
 .strong-sides {
   font-style: normal;
   font-weight: normal;
@@ -45,84 +222,209 @@ footer {
   font-size: 24px;
   list-style: none;
   padding-left: 0px;
+  stroke: $theme-second-color;
 
-  li:before {
-    content: url('/img/tick.svg');
-    margin-right: 10px;
-  }
+  // li:before {
+  //   margin-right: 10px;
+  // }
 }
 
-.bio {
-  font-weight: normal;
-  font-style: normal;
-  line-height: 34px;
-  font-size: 20px;
-}
+// Characteristics and Proud of sections
+// ---------------------------
+.characteristics,
+.proudof {
+  >div {
+    @include make-col-ready();
 
-.date {
-  font-style: normal;
-  font-weight: normal;
-  line-height: 23px;
-  font-size: 16px;
-}
-
-.ask-help {
-  font-style: normal;
-  font-weight: normal;
-  line-height: 34px;
-  font-size: 22px;
-
-  @include media-breakpoint-down(lg) {
-    margin-bottom: 20px;
-  }
-}
-
-.profile-pic {
-  position: relative;
-
-  img {
-    position: absolute;
-    transition: opacity 1s ease-in-out;
-    filter: grayscale(100%);
-  }
-
-  .top {
-    position: relative;
-    &:hover {
-      opacity:0;
+    // .col-md-4
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
     }
   }
-
 }
 
-.contact-me {
-  font-style: normal;
-  font-weight: bold;
-  color: color($key: "gold");
-  
-  &:hover {
-    text-decoration-line: underline;
-    color: color($key: "gold");
-  }
-}
+// Marathon map
+// ---------------------------
+.map {
+  fill: $theme-second-color;
 
-.list-aligned {
-  padding-left: 16px;
-}
-
-.ten {
-  color: color($key: "gold");
+  color: $theme-second-color;
   font-size: 40px;
 
   @include media-breakpoint-down(lg) {
     font-size: 26px;
   }
+
+  @include media-breakpoint-down(sm) {
+    display: none !important; // .d-lg-block
+  }
+
+  &__route {
+    margin-top: -50px;
+    padding: 10px;
+    fill: $theme-second-color;
+  }
 }
 
-.container {
-  hr {
-    background-color: color($key: "gold");
-    border: none;
-    height: 3px;
+// Latest articles
+// ---------------------------
+.latest-articles {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 35px;
+  font-size: 24px;
+
+  >div:first-child {
+    // col-md-12
+    @include make-col-ready();
+
+    @include media-breakpoint-up(md) {
+      @include make-col(12);
+    }
+
+    margin-bottom: 20px;
+  }
+
+  // Article
+  &__article {
+    // col-md-4
+    @include make-col-ready();
+
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+
+    margin-bottom: 20px;
+
+    &__title {
+      font-style: normal;
+      font-weight: 500;
+      line-height: 59px;
+      font-size: 40px;
+
+      @include media-breakpoint-down(lg) {
+        line-height: 30px;
+        font-size: 20px;
+      }
+
+      &:hover {
+        text-decoration: none;
+        border-bottom: 1px solid $theme-second-color;
+      }
+    }
+
+    &__date {
+      font-style: normal;
+      font-weight: normal;
+      line-height: 23px;
+      font-size: 16px;
+    }
+  }
+}
+
+// Testimonials
+// ---------------------------
+.testimonials {
+  >div {
+    // col-lg-3
+    @include make-col-ready();
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(3);
+    }
+  }
+
+  &__testimonial {
+    border: 1px solid $theme-second-color;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 15px;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0px 21px 3px $theme-second-color;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+    }
+
+    &__author {
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+// Footer
+// ---------------------------
+footer {
+  .ask-help {
+    font-style: normal;
+    font-weight: normal;
+    line-height: 34px;
+    font-size: 22px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .contact-me {
+    font-style: normal;
+    font-weight: bold;
+    color: $theme-second-color;
+
+    &:hover {
+      text-decoration-line: underline;
+      color: $theme-second-color;
+    }
+  }
+}
+
+// Blog posts
+// ----------------
+.blog-posts {
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 59px;
+    font-size: 40px;
+
+    @include media-breakpoint-down(lg) {
+      line-height: 30px;
+      font-size: 20px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      border-bottom: 1px solid $theme-second-color;
+    }
+  }
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+}
+
+// Blog post page
+// ---------------------------
+article {
+  a {
+    color: $theme-second-color;
+
+    &:hover,
+    &:link,
+    &:active,
+    &:visited {
+      color: $theme-second-color;
+    }
+  }
+
+  code {
+    color: $theme-second-color;
+  }
+
+  pre {
+    padding: 0.5em;
   }
 }
