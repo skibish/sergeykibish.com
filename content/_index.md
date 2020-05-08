@@ -1,8 +1,10 @@
 ---
 about: >
-  Skilled in different languages / tools / technologies.
-  Strong engineering professional with a Master of Science (Mg.Sc.Comp.) focused in Computer Science.
-  Natural-born leader, full of passion and charisma.
+  Great team player with deep technical expertise.
+  A person for whom learning is a part of lifestyle.
+  Customer focused, practical problem solver.
+  Has very strong ability to work in a interdisciplinary environment.
+  Intelligent and open-minded.
   A hobby is music in all of its manifestations (listening, playing, writing).
 todo_next: >
   I'm interested in creation of great experiences.

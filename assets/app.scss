@@ -400,6 +400,7 @@ footer {
       border-bottom: 1px solid $theme-second-color;
     }
   }
+
   ul {
     padding-left: 0;
     list-style: none;
@@ -426,5 +427,14 @@ article {
 
   pre {
     padding: 0.5em;
+  }
+
+  blockquote {
+    border-left: 4px solid $theme-text-color;
+    padding-left: 6px;
+
+    p {
+      font-style: italic;
+    }
   }
 }
