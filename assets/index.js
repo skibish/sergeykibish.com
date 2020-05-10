@@ -39,24 +39,53 @@ setInterval(setTime, 1000);
 
 const trackList = [
   // David Guetta - I Can Only Imagine ft. Chris Brown, Lil Wayne (Official Video)
-  "https://www.youtube.com/watch?v=TSNerxNwWtU",
+  'https://www.youtube.com/watch?v=TSNerxNwWtU',
 
   // Gandalf Sax Guy 10 Hours HD
-  "https://www.youtube.com/watch?v=G1IbRujko-A",
+  'https://www.youtube.com/watch?v=G1IbRujko-A',
 
   // 10 Hours of Nothing
-  "https://www.youtube.com/watch?v=fx2Z5ZD_Rbo",
+  'https://www.youtube.com/watch?v=fx2Z5ZD_Rbo',
 
   // Counting To 100,000 In One Video
-  "https://www.youtube.com/watch?v=xWcldHxHFpo&t=20",
+  'https://www.youtube.com/watch?v=xWcldHxHFpo&t=20',
 
   // Tom Cruise Running for 10 HOURS
-  "https://www.youtube.com/watch?v=-2aU5Yq0u3E",
+  'https://www.youtube.com/watch?v=-2aU5Yq0u3E',
 
   // 10 Hours of *ODDLY SATISFYING* Videos - Compilation / Loop
-  "https://www.youtube.com/watch?v=fwYEREqQCHc",
+  'https://www.youtube.com/watch?v=fwYEREqQCHc',
 ];
 
-document.querySelector("[data-play-video]").addEventListener("click", () => {
-  document.querySelector("[data-play-video]").href = trackList[Math.floor(Math.random() * trackList.length)];
+document.querySelector('[data-play-video]').addEventListener('click', () => {
+  document.querySelector('[data-play-video]').href = trackList[Math.floor(Math.random() * trackList.length)];
+});
+
+/**
+ * Listen for clicks on testimonial.
+ * If it's not expanded -> expand, if expanded -> go back to compact.
+ */
+document.querySelectorAll('.testimonials__testimonial').forEach(v => {
+  v.addEventListener('click', (ev) => {
+    let el = ev.currentTarget;
+    let parent = el.parentNode;
+
+    // if it's expanded -> reset
+    if (el.classList.contains('testimonials__testimonial--expanded')) {
+      el.classList.remove('testimonials__testimonial--expanded');
+      parent.classList.remove('expanded');
+      
+      // hide full text and show short text
+      el.querySelector('div:nth-child(2)').style.display = 'none';
+      el.querySelector('div:nth-child(1)').removeAttribute('style');
+      return;
+    }
+
+    el.classList.add('testimonials__testimonial--expanded');
+    parent.classList.add('expanded');
+
+    // hide short text and show full text
+    el.querySelector('div:nth-child(1)').style.display = 'none';
+    el.querySelector('div:nth-child(2)').removeAttribute('style');
+  });
 });

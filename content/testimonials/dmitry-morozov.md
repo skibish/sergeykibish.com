@@ -12,6 +12,6 @@ Working for Transact Pro, Sergey proved himself as a professional developer, abl
 
 Mostly back-end developer, Sergey showed strong skills in front-end, devops, and also participated into our raspberry pi cluster building.
 
-I was also impressed by his skill to explain his concepts, ideas and solutions to other team members - and check that others got his idea.
+I was also impressed by his skill to explain his concepts, ideas and solutions to other team members --- and check that others got his idea.
 
 Sergey definitely would be valuable member to any team.
