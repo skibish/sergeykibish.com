@@ -1,10 +1,25 @@
 <footer>
-    <div class="col-md-3 ask-help">
+    <div class="col-md-4 ask-help">
       <div>Ask / Hire</div>
       <a class="contact-me" href="mailto:{{.Site.Params.Email}}">Just email me</a>
     </div>
 
     <div class="col-md-2 offset-md-2">
+      <h3>Navigation</h3>
+
+      <ul class="list list-unstyled">
+        {{ range .Site.Data.footerLinks.nav }}
+        <li class="list-item">
+          <i class="{{ .icon }}"></i> 
+          <a href="{{ .link }}" rel="me">
+            {{ .title }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="col-md-2">
       <h3>Social</h3>
 
       <ul class="list list-unstyled">
@@ -19,18 +34,10 @@
       </ul>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-2">
       <h3>Different</h3>
 
       <ul class="list list-unstyled">
-        {{if not .IsHome}}
-        <li class="list-item">
-          <i class="far fa-id-card"></i>
-          <a href="/">
-            Home
-          </a>
-        </li>
-        {{end}}
         {{ range .Site.Data.footerLinks.hobby }}
         <li class="list-item">
           <i class="{{ .icon }}"></i>

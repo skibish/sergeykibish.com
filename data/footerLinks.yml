@@ -1,5 +1,12 @@
 # Footer links.
-# Can be social, hobby or partOf
+# Can be nav, social, hobby or partOf
+nav:
+- title: Home
+  icon: far fa-id-card
+  link: /
+- title: Blog
+  icon: far fa-newspaper
+  link: /blog/
 social:
 - title: LinkedIn
   icon: fab fa-linkedin
@@ -11,9 +18,6 @@ social:
   icon: fab fa-twitter
   link: https://twitter.com/s_kibish
 hobby:
-- title: Blog
-  icon: far fa-newspaper
-  link: /blog/
 - title: Talks
   icon: fab fa-youtube
   link: https://www.youtube.com/playlist?list=PL6U6iDFrKTE2ySiMLs2O77WOIpk3WepiZ
