@@ -3,7 +3,7 @@ about: >
   Great team player with deep technical expertise.
   A person for whom learning is a part of lifestyle.
   Customer focused, practical problem solver.
-  Has very strong ability to work in a interdisciplinary environment.
+  Has very strong ability to work in an interdisciplinary environment.
   Intelligent and open-minded.
   A hobby is music in all of its manifestations (listening, playing, writing).
 todo_next: >
