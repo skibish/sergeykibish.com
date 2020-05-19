@@ -431,10 +431,10 @@ article {
   }
 
   p code {
-      color: $theme-second-color;
-      background-color: $theme-text-color;
-      padding-left: .2em;
-      padding-right: .2em;
+    color: $theme-second-color;
+    background-color: $theme-text-color;
+    padding-left: .2em;
+    padding-right: .2em;
   }
 
   pre {
@@ -447,6 +447,21 @@ article {
 
     p {
       font-style: italic;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:hover a {
+      display: initial;
+    }
+
+    a {
+      display: none;
     }
   }
 }

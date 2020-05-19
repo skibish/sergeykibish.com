@@ -26,7 +26,7 @@ Anomaly detection is an actual problem in various areas, such as:
 - Anomaly detection in text data
 - Sensor networks and other domains
 
-## What is anomaly
+## What is anomaly
 
 Unfortunately, there is no clear definition of the anomaly that's why I've chosen the following one  ---  anomalies are patterns in the data that do not conform to a well-defined notion of normal behaviour \[1\].
 We can illustrate anomalies in a simple two-dimensional space (Figure 1).
@@ -107,7 +107,7 @@ For many cases anomalies are not known in advance or may occur as novelties duri
 ![Figure 4. Supervised anomaly detection](images/figure_4.png)
 
 *Semi-supervised Anomaly Detection.*
-In the beginning*,* when we do not have any knowledge, we gather it from training results.
+In the beginning, when we do not have any knowledge, we gather it from training results.
 This setup also uses training and test datasets, where only training data consists of normal data without any anomalies.
 The idea is, that a model of the normal class is already taught and anomalies can be detected by deviating from learned model.
 This approach is also known as "one-class" classification.
