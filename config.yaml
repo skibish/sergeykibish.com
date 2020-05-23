@@ -6,7 +6,7 @@ enableRobotsTXT: true
 enableEmoji: true
 googleAnalytics: "UA-103073257-1"
 taxonomies: []
-disableKinds: ["RSS", "sitemap"]
+disableKinds: ["RSS"]
 
 markup:
   highlight:
