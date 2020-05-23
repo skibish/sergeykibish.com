@@ -21,7 +21,7 @@
 
 <section class="characteristics">
   <div>
-    <h4>What I’m looking to do next</h4>
+    <h5>What I’m looking to do next</h5>
 
     <p>{{ .Params.todo_next }}</p>
 
@@ -38,7 +38,7 @@
     <p></p>
   </div>
   <div>
-    <h4>I'm really good at</h4>
+    <h5>I'm really good at</h5>
 
     <ul>
     {{ range .Params.good_at}}
@@ -48,7 +48,7 @@
 
   </div>
   <div>
-    <h4>How people describe me (strongest sides)</h4>
+    <h5>How people describe me (strongest sides)</h5>
     <ul class="strong-sides">
     {{ range .Params.strong_sides}}
     <li>
@@ -64,7 +64,7 @@
 
 <section class="proudof">
   <div>
-    <h4>Side projects</h4>
+    <h5>Side projects</h5>
     <p>Side projects, which I'm happy to show are:</p>
     <ul>
     {{ range .Params.side_projects}}
@@ -87,12 +87,14 @@
     </p>
   </div>
   <div>
-    <h4>Achievements</h4>
+    <h5>Achievements</h5>
 
+    <dl>
     {{ range .Params.achievements }}
-    <h5>{{ .title }}</h5>
-    <p>{{ .description }}</p>
+    <dt>{{ .title }}</dt>
+    <dd>{{ .description }}</dd>
     {{ end }}
+    </dl>
 
   </div>
   <div class="map">

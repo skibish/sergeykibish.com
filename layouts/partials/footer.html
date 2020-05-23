@@ -5,7 +5,7 @@
     </div>
 
     <div class="col-md-2 offset-md-2">
-      <h3>Navigation</h3>
+      <h5>Navigation</h5>
 
       <ul class="list list-unstyled">
         {{ range .Site.Data.footerLinks.nav }}
@@ -20,7 +20,7 @@
     </div>
 
     <div class="col-md-2">
-      <h3>Social</h3>
+      <h5>Social</h5>
 
       <ul class="list list-unstyled">
         {{ range .Site.Data.footerLinks.social }}
@@ -35,7 +35,7 @@
     </div>
 
     <div class="col-md-2">
-      <h3>Different</h3>
+      <h5>Different</h5>
 
       <ul class="list list-unstyled">
         {{ range .Site.Data.footerLinks.hobby }}
@@ -51,7 +51,7 @@
 
     {{ if isset .Site.Data.footerLinks "partOf" }}
     <div class="col-md-2">
-      <h3>Part of</h3>
+      <h5>Part of</h5>
 
       <ul class="list list-unstyled">
         {{ range .Site.Data.footerLinks.partOf }}

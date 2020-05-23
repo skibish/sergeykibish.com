@@ -44,32 +44,9 @@ h1 {
   border-bottom: 1px solid $theme-second-color;
 }
 
-h3 {
-  font-style: normal;
-  font-weight: bold;
-  line-height: normal;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-h4 {
-  font-weight: $font-weight-bold;
-  font-size: $h5-font-size;
-  margin-bottom: $headings-margin-bottom + 1.5;
-}
-
 h5 {
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  font-size: 16px;
-}
-
-p {
-  font-style: normal;
-  font-weight: normal;
-  line-height: inherit;
-  font-size: 16px;
+  font-weight: $font-weight-bold;
+  margin-bottom: $headings-margin-bottom + 1.5;
 }
 
 .underline {
@@ -186,7 +163,7 @@ header>div {
     font-weight: normal;
     font-style: normal;
     line-height: 34px;
-    font-size: 20px;
+    font-size: 1.3rem;
   }
 
   &__splash {
@@ -219,7 +196,7 @@ header>div {
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  font-size: 24px;
+  font-size: 2rem;
   list-style: none;
   padding-left: 0px;
   stroke: $theme-second-color;
@@ -272,7 +249,7 @@ header>div {
   font-style: normal;
   font-weight: bold;
   line-height: 35px;
-  font-size: 24px;
+  font-size: $h5-font-size;
 
   >div:first-child {
     // col-md-12
@@ -300,11 +277,11 @@ header>div {
       font-style: normal;
       font-weight: 500;
       line-height: 59px;
-      font-size: 40px;
+      font-size: $h1-font-size;
 
       @include media-breakpoint-down(lg) {
         line-height: 30px;
-        font-size: 20px;
+        font-size: $h3-font-size;
       }
 
       &:hover {
@@ -317,7 +294,7 @@ header>div {
       font-style: normal;
       font-weight: normal;
       line-height: 23px;
-      font-size: 16px;
+      font-size: $font-size-base;
     }
   }
 }
