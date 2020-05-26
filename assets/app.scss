@@ -420,10 +420,11 @@ article {
 
   blockquote {
     border-left: 4px solid $theme-text-color;
-    padding-left: 6px;
+    padding-left: 0.5em;
 
     p {
       font-style: italic;
+      font-size: 1.5rem;
     }
   }
 
