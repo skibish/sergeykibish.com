@@ -13,4 +13,7 @@ Sergey's Blog: {{ .Title }}
   {{with .PrevInSection}}<a href="{{.Permalink}}">&larr; Previous post</a>{{end}}
   <div class="clearfix"></div>
 </article>
+
+{{ template "_internal/disqus.html" . }}
+
 {{end}}
