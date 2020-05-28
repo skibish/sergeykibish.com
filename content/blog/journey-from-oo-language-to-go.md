@@ -14,19 +14,19 @@ I was very surprised to see that [my talk](https://www.youtube.com/watch?v=1Zjvh
 It's my most popular video on YouTube.
 Not my, but with me speaking about something.
 
-And I thought that it would be a good idea to save this talk in written form.
-Please welcome a transcript (almost) of this talk.
+And I thought that it would be a good idea to save this talk in a written form.
+Please welcome a post adaptation of this talk.
 
 Enjoy!
 
 ## Intro
 
-What I want to share today is really a story of transformation.
+What I want to share is really a story of transformation.
 About Object-oriented programming and Go in general.
 About mistakes that I made during the journey from Object-oriented language to Go.
 And a new way of thinking.
 
-I hope that in the end you will have a desire to try Go one more time, if you not liked it some time ago.
+I hope that in the end you will have a desire to try Go one more time if you not liked it some time ago.
 Maybe even make it #1 language for yourself or in your company.
 Or if you already a Go user --- to convince somebody to join the squad.
 
@@ -37,10 +37,10 @@ According to the [Wikipedia](https://en.wikipedia.org/wiki/Object-oriented_progr
 
 Or in other words OOP is a programming language model organized around objects rather than "actions" and data rather than logic.
 
-For this story I've chosen Java as OO language to refer to, because it is classic of OO world.
-Still one of the most popular languages used.
+For this story I've chosen Java as Object-oriented language to refer to because it is classic of Object-oriented world.
+Still one of the most popular languages used for software development.
 
-But what I will write about next --- applies to majority of OO programming languages.
+But what I will write about next --- applies to majority of Object-oriented programming languages.
 Just swap Java with a language that you like more.
 
 ## The beginning
@@ -51,25 +51,25 @@ Which is still famous.
 And he proposed a valid thing.
 Let's try to create a service in Go.
 
-But before diving into development, let's take a look on a differences between OO language and Go and try to make a conclusion:
+But before diving into development, let's take a look at differences between Object-oriented language and Go and try to make a conclusion:
 Is Go Object-oriented or not?
 Can it be defined as such?
 
 As you know, our world is flat and stands on three elephants.
-Same true for OO world, but elephants are different.
+Same true for Object-oriented world, but elephants are different.
 They are:
 
 - **Encapsulation**. Keeps the data and the code safe from external interference;
 - **Inheritance**. Mechanism by which an object acquires some or all properties of another object;
 - **Polymorphism**. Means to process objects differently based on their data type.
 
-Does Go have all of these to call it self a OO programming language?
+Does Go have all of these to call itself a Object-oriented programming language?
 
-It has encapsulation, because it can abstract things.
+It has encapsulation because it can abstract things.
 It doesn't have inheritance, instead it uses [composition](https://en.wikipedia.org/wiki/Composition_over_inheritance) very heavily.
 
 Polymorphism...
-To have full polymorphism inheritance is needed. Thus, not full polymorphism here.
+To have full polymorphism inheritance is needed. Thus, not full polymorphism is here.
 
 Let's start with examples that will show these language properties.
 
@@ -159,8 +159,8 @@ func (v *Vehicle) GetSpeed() int {
 ```
 
 1st one.
-Go we doesn't have classes.
-Instead, it has structures.
+Go doesn't have classes.
+It has structures instead.
 Like in C, because Go was inspired by C/C++ and [was built as an alternative to C/C++](https://talks.golang.org/2012/splash.article).
 
 ```go {hl_lines=[1]}
@@ -180,8 +180,8 @@ type Vehicle struct {
 
 2nd one.
 Go doesn't have special access modifier keywords like `private`, `public`, `protected`.
-Instead, it has exported and un-exported fields.
-Which are differentiated by first letters of variables, methods or functions.
+It has exported and un-exported fields.
+They are differentiated by first letters of variables, methods or functions.
 Lower case --- un-exported, Capital --- exported.
 These are package level visibilities.
 
@@ -201,11 +201,11 @@ type Vehicle struct {
 ```
 
 At first glance this seems weird.
-But after some time you realise, that this is a big bonus, because it is easier to recognize in your code.
+But after some time you realise that this is a big bonus, because it is easier to recognize in your code.
 
 ### Inheritance
 
-This how looks inheritance in Java.
+This how inheritance looks in Java.
 
 ```java {hl_lines=[1]}
 public class Car extends Vehicle {
@@ -250,7 +250,7 @@ fmt.Println(car.GetSpeed())
 // >> 20
 ```
 
-Or another approach by using property explicitly.
+Or another approach by using properties explicitly.
 
 ```go {hl_lines=[5, 6]}
 motorcycle := &Motorcycle{
@@ -267,10 +267,10 @@ fmt.Println(motorcycle.Base.GetSpeed())
 ### Polymorphism
 
 Now what about polymorphism?
-How behavior of some method can be changed?
+How behavior of some methods can be changed?
 
-In Java usual is to overwrite method to change its behavior.
-And this is how it will look like:
+In Java usual way is to overwrite method to change its behavior.
+And this is how it looks like:
 
 ```java {hl_lines=["6-9"]}
 public class Car extends Vehicle {
@@ -293,7 +293,7 @@ System.out.println(car.getSpeed());
 
 In Go interfaces can be used to mimic such behavior.
 
-Let's add default method that is doing main logic.
+Let's add default method that will do main logic.
 
 ```go
 func (v *Vehicle) ComputeSpeed() int {
@@ -323,7 +323,7 @@ func (m *Motorcycle) GetSpeed() int {
 }
 ```
 
-If structure has a method with same signature, it means that it implements any interface that has same method signature defined.
+If structure has a method with same signature, it means that it implements any interface that has same defined method signature.
 
 And this is how it will work:
 
@@ -347,14 +347,14 @@ printSpeed(car)
 printSpeed(motorcycle)
 ```
 
-I've created a function `printSpeed()`, that receives structure that satisfies `Speeder` interface and prints speed to the output.
+I've created a function `printSpeed()` that receives structure that satisfies `Speeder` interface and prints speed to the output.
 
 > **A note about interfaces.**
 > In Go, interfaces are not declared somewhere specifically.
 > Usually they are declared in place of their usage.
-> You can see in example above, that interface is located close to the consumer (`printSpeed()`).
+> You can see in example above that interface is located close to the consumer (`printSpeed()`).
 
-This is considered as a good practice.
+This is considered to be a good practice.
 Helps with readability and code understanding.
 
 ### Constructors
@@ -409,7 +409,7 @@ Vehicle was initialized like above.
 Empty string and zero.
 That's why `0` will be printed to the output in example with `printSpeed(car)`.
 
-What else valuable OO language has?
+What else valuable Object-oriented language has?
 
 ### Enum
 
@@ -457,7 +457,7 @@ Because it can be used in expressions, it provides possibilities beyond simple u
 
 The value of `iota` is reset to `0` whenever the reserved word `const` appears in the source (i.e. after each `const` block)
 
-So, checkmark on this one.
+Checkmate on this one.
 
 What else?
 
@@ -493,7 +493,7 @@ A `panic` typically means that something went unexpectedly wrong.
 Completely wrong.
 Mostly they are used to fail fast on problems that shouldn't occur during normal operation.
 
-Panics should be used **only in exceptional** cases.
+Panics should be used **only in exceptional cases**.
 
 But to be honest, panics are not for you.
 "For whom, then?" will you ask me.
@@ -504,11 +504,11 @@ For the good for all of us.
 At this point all basics were covered.
 It's time to return to the idea of the service creation.
 
-Also conclusion can be made that Go is not an OO language.
+Conclusion can be made that Go is not an Object-oriented language.
 
-But what is Go about then?
+But what is Go about, then?
 
-In my opinion, Go is about:
+In my opinion Go is about:
 
 - Simplicity ([KISS](https://en.wikipedia.org/wiki/KISS_principle));
 - Minimalism;
@@ -518,7 +518,7 @@ In my opinion, Go is about:
 That's why big companies and products like [Docker](https://www.docker.com/), [Kubernetes](https://kubernetes.io/), [Consul](https://www.consul.io/) bid heavily on Go currently.
 And not on Java for some reason, you know.
 
-With this in mind, Let's write a service!
+With all of this in mind let's write a service!
 
 ## Writing a service
 
@@ -529,7 +529,7 @@ Very simple.
 What is usually done after understanding of a final goal?
 Tools are chosen, right?
 
-If OO programming languages approach will be used, I bet list will looks similar to this one:
+If Object-oriented programming languages approach is used, I bet list will looks similar to this one:
 
 - Libraries;
 - IoC;
@@ -544,7 +544,7 @@ How would you create such service in Java?
 In Java nowadays you will go with a framework.
 And most likely with [Spring Boot](https://spring.io/projects/spring-boot).
 
-Let's start to write service by using framework.
+Let's start to write a service by using framework.
 Java approach.
 Just a prototype, to make sure that idea works.
 
@@ -568,8 +568,9 @@ public class PagesController {
 ```
 
 Controller will look something like this.
-Very simple, classic routes for CRUD. Annotations do a lot of stuff for us.
-So, it's more like "annotation programming".
+Very simple, classic routes for CRUD.
+Annotations do a lot of stuff for us.
+It looks more like "annotation programming".
 
 `PagesDto` looks like this (DTO stands for Data Transfer Object):
 
@@ -628,7 +629,7 @@ public class PagesService {
   }
 ```
 
-As you **@Autowire** annotation is used which is IoC (Inversion of Control) library.
+As you see **@Autowire** annotation is used which is IoC (Inversion of Control) library.
 
 Back to controller, wiring service in:
 
@@ -654,7 +655,6 @@ public class PagesController {
 
 Boom.
 Done.
-
 Directory structure of the project will looks like this:
 
 ```text
@@ -688,32 +688,32 @@ Everything is in their place.
 
 - Annotations;
 - Not transparent;
-- A lot of things where you don't have control, it just somehow works;
+- A lot of things where you don't have control, it just works somehow;
 - Super high level of abstraction.
 
-But easy. There is a nice quote about what is simple, and what is easy.
+But easy.
+There is a nice quote about what is simple, and what is easy.
 
->**Simple**: a line of code that does something very small and specific.
+> **Simple**: a line of code that does something very small and specific.
 >
->**Easy**: a line of code that does a lot by calling a framework function causing thousands of lines of code to be executed.
+> **Easy**: a line of code that does a lot by calling a framework function causing thousands of lines of code to be executed.
 >
 > --- [Ilya Sher](https://ilya-sher.org/2016/05/19/tips-for-beginning-systems-and-software-engineers/)
 
-So, OO programming nowadays is more about second one.
+So, Object-oriented programming nowadays is more about second one.
 
 ### Service in Go
 
-Now, it is time to create same thing in Go.
+Now it is time to create same thing in Go.
 
-The first mistake, that I did --- I thought about it "not in a Go way" .
+The first mistake, that I did --- I thought about it "not in a Go way".
 I was thinking not as a Go developer.
 I wanted to jump in.
 There are even [articles like this one](https://nemethgergely.com/learning-go-as-a-nodejs-developer/), for example.
-
 In my opinion this is a bad read and a wrong path.
 Correct way of learning would be to look around before diving in.
 
-Go has a very big community, here is a few Twitter handles that you can follow to get deeper into ideas and good practices.
+Go has a very big community, here are few Twitter handles that you can follow to get deeper into ideas and good practices.
 
 - [@rob_pike](https://twitter.com/rob_pike)
 - [@davecheney](https://twitter.com/davecheney)
@@ -731,11 +731,11 @@ Go has a very big community, here is a few Twitter handles that you can follow t
 
 > Learn Go as Go developer and from Go developers
 
-In Java example, framework was used, remember?
+In Java example framework was used, remember?
 This was my another mistake.
 Ask yourself --- why you need a framework?
-We have application with five routes only.
-Only five routes.
+Application has five routes only.
+Five routes.
 One database.
 One model.
 Why you need a framework?
@@ -817,7 +817,7 @@ func (a *API) bootRouter() *httprouter.Router {
 ```
 
 API should start somehow.
-That's why separate `Start()` method was created.
+That's why separate `Start()` method is created.
 Server is initialized there and start to listen for connections:
 
 ```go {hl_lines=["16-23"]}
@@ -858,9 +858,9 @@ func (a *API) bootRouter() *httprouter.Router {
 }
 ```
 
-Yes, I could call `http.ListenAndServe()` directly in the `Start()` function, but wait a little.
+Yes, I could call `http.ListenAndServe()` directly in the `Start()` function, but soon you will see why I went in this direction.
 
-It is a good practice to shutdown server gracefully, so we also defined `Shutdown()` method:
+It is a good practice to shutdown server gracefully, so we also define `Shutdown()` method:
 
 ```go {hl_lines=["25-27"]}
 package api
@@ -1078,7 +1078,7 @@ type Page struct {
 }
 ```
 
-These are few methods in this package.
+There are few methods in this package.
 One example is listed below.
 A little bit more verbose comparing to Java where you just specify annotations.
 But in my opinion this is more transparent, because you see what is executed and what is checked:
@@ -1101,7 +1101,7 @@ func (s *Storage) GetPageByID(id string) (p *Page, err error) {
 }
 ```
 
-Go back to `api` package.
+Back to `api` package.
 Let's wire `storage` into handler:
 
 ```go
@@ -1145,7 +1145,7 @@ func write(w http.ResponseWriter, statusCode int, body []byte) {
 }
 ```
 
-In OO world some class would be created for response representation.
+In Object-oriented world some class would be created for response representation.
 But why you need to create separate class, if you know how successful response will always look like?
 Why not just to write it like this straight away?
 
@@ -1162,10 +1162,10 @@ In the end application layout looks like this:
 
 ```
 
-See the difference between OO style and current one?
+See the difference between Object-oriented style and current one?
 
 When I first time started, I organized code around objects.
-Like in OO style of programming.
+Like in Object-oriented style of programming.
 Here code is organized around actions and logic.
 
 #### Another Summary
@@ -1179,10 +1179,10 @@ Here code is organized around actions and logic.
 
 Go is simple.
 Obvious code, boring to write sometimes.
-Because it will be same.
+Because it will be the same.
 
 Go is limited and not rich language comparing to Java.
-In most cases you will have one option on how to solve a problem.
+In most cases you will have one option on how to solve the problem.
 And this is good.
 
 It is transparent.
@@ -1208,7 +1208,7 @@ Going back to the quote of simple vs easy.
 >
 > --- [Ilya Sher](https://ilya-sher.org/2016/05/19/tips-for-beginning-systems-and-software-engineers/)
 
-I would say, Go is simple language.
+I would say, Go is a simple language.
 With no magic.
 
 > Go is a sobering language.
