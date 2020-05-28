@@ -4,8 +4,8 @@ description: >
   A story of transformation.
   About Object-oriented programming and Go in general.
   About mistakes that I made during the journey from Object-oriented language to Go.
-date: 2020-05-26T18:28:55+03:00
-draft: true
+date: 2020-05-28T20:40:00+03:00
+draft: false
 ---
 
 ## Preface
