@@ -1,6 +1,5 @@
 baseURL: "https://sergeykibish.com/"
 languageCode: "en-us"
-title: "Sergey Kibish — Experienced Multifunctional Software Engineer"
 
 enableRobotsTXT: true
 enableEmoji: true
@@ -22,6 +21,8 @@ markup:
     tabWidth: 4
 
 params:
-  Author: "Sergey Kibish"
-  Description: "Creator, developer, a person with not a standard thinking"
-  Email: "sergey@kibish.com"
+  author: "Sergey Kibish"
+  images:
+    - /img/social-share.png
+  description: "Creator, developer, a person with not a standard thinking"
+  email: "sergey@kibish.com"

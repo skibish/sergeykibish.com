@@ -1,4 +1,5 @@
 ---
+title: Sergey Kibish — Experienced Multifunctional Software Engineer
 about: >
   Great team player with deep technical expertise.
   A person for whom learning is a part of lifestyle.

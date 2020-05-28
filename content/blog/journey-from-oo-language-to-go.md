@@ -1,5 +1,9 @@
 ---
 title: "Journey From Object-oriented Language to Go"
+description: >
+  A story of transformation.
+  About Object-oriented programming and Go in general.
+  About mistakes that I made during the journey from Object-oriented language to Go.
 date: 2020-05-26T18:28:55+03:00
 draft: true
 ---
@@ -19,7 +23,7 @@ Enjoy!
 
 What I want to share today is really a story of transformation.
 About Object-oriented programming and Go in general.
-About mistakes that I made during the journey from Object-oriented to Go language.
+About mistakes that I made during the journey from Object-oriented language to Go.
 And a new way of thinking.
 
 I hope that in the end you will have a desire to try Go one more time, if you not liked it some time ago.

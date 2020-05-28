@@ -1,5 +1,7 @@
 ---
 title: "How Docker Changed My Workflow"
+description: >
+  Use Docker to create nice and clean development environment.
 date: 2017-12-07T14:45:19+02:00
 canonical: "https://hackernoon.com/how-docker-changed-my-workflow-b953b79b73ff"
 draft: false

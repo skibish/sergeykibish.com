@@ -25,27 +25,9 @@
 <link rel="icon" type="image/png" href="/img/touch/favicon-128.png" sizes="128x128" />
 <link rel="shortcut icon" href="/favicon.ico?v={{ readFile "static/favicon.ico" | md5 }}" type="image/x-icon">
 
-<meta property="og:url" content="{{ .Permalink }}" />
-{{if .IsPage}}
-<meta property="og:title" content="{{ .Params.Title }}" />
-<meta property="og:description" content="{{ .Summary }}" />
-{{else}}
-<meta property="og:title" content="{{ .Site.Title }}" />
-<meta property="og:description" content="{{ .Site.Params.Description }}" />
-<meta property="og:image" content="/img/social-share.png?v={{ readFile "static/img/social-share.png" | md5 }}" />
-{{end}}
+{{ template "_internal/opengraph.html" . }}
 
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@s_kibish" />
-
-{{if .IsPage}}
-<meta name="twitter:title" content="{{ .Params.Title }}" />
-<meta name="twitter:description" content="{{ .Summary }}" />
-{{else}}
-<meta name="twitter:title" content="{{ .Site.Title }}" />
-<meta name="twitter:description" content="{{ .Site.Params.Description }}" />
-<meta name="twitter:image" content="/img/social-share.png?v={{ readFile "static/img/social-share.png" | md5 }}" />
-{{end}}
+{{ partial "twitter_card.html" . }}
 
 {{if .Params.canonical}}
 <link rel="canonical" href="{{.Params.canonical}}" />

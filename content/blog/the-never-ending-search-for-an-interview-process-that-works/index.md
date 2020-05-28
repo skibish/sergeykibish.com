@@ -1,5 +1,7 @@
 ---
 title: "The Never-Ending Search For An Interview Process That Works"
+description: >
+  A collection of notes I wrote to myself that describe the interview processes I have encountered so far, the good and the bad.
 date: 2020-04-28T00:00:00+02:00
 canonical: "https://medium.com/@kibish/the-never-ending-search-for-an-interview-process-that-works-3af3faa4d29d"
 draft: false

@@ -1,5 +1,8 @@
 ---
 title: "Your Personal DDNS"
+description: >
+  Created own and free DDNS service.
+  Here you can find out how I did it.
 date: 2017-10-12T18:27:03+03:00
 canonical: "https://hackernoon.com/your-personal-ddns-4ef7bbb189de"
 draft: false

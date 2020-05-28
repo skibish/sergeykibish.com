@@ -1,5 +1,8 @@
 ---
 title: "A Note About Finding Anomalies"
+description: >
+  This article is inspired by the research done during studies in the university.
+  Goal of this article is to act as a note and reminder that finding anomalies is not a trivial task (currently).
 date: 2018-04-10T00:00:00+02:00
 canonical: "https://towardsdatascience.com/a-note-about-finding-anomalies-f9cedee38f0b"
 draft: false
