@@ -10,7 +10,7 @@ build: ## Build webiste
 	hugo
 	docker run --rm --mount type=bind,src=$(PWD),dst=/app -w /app --entrypoint "npm" node:13.12 install
 	docker run --rm --mount type=bind,src=$(PWD),dst=/app -w /app --entrypoint "npm" node:13.12 run build
-	hugo
+	hugo --minify
 
 deploy: ## Deploy website
 	docker run --rm --mount type=bind,src=$(PWD),dst=/app -w /app node:13.12 ./node_modules/.bin/firebase deploy --token "${FIREBASE_TOKEN}"
