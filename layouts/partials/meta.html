@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="theme-color" content="#0e131f">
+<meta name="theme-color" content="{{ .Param "styles.mainColor"  }}">
 
 {{if .IsPage}}
 <meta name="description" content="{{ .Summary }}"/>
@@ -8,7 +8,8 @@
 <meta name="description" content="{{ .Site.Params.Description }}"/>
 {{end}}
 
-<link rel="manifest" href="/manifest.json?v={{ readFile "static/manifest.json" | md5 }}">
+{{ $manifest := resources.Get "manifest.json" | resources.ExecuteAsTemplate "manifest.json" . | fingerprint }}
+<link rel="manifest" href="{{ $manifest.RelPermalink }}">
 
 <link rel="apple-touch-icon" sizes="57x57" href="/img/touch/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon" sizes="114x114" href="/img/touch/apple-touch-icon-114x114.png" />

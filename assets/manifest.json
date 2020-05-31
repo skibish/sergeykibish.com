@@ -1,8 +1,8 @@
 {
   "name": "Sergey Kibish - Multifunctional Software Engineer",
   "short_name": "Sergey Kibish",
-  "theme_color": "#0e131f",
-  "background_color": "#0e131f",
+  "theme_color": "{{ .Param "styles.mainColor" }}",
+  "background_color": "{{ .Param "styles.mainColor" }}",
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",

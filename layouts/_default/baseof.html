@@ -4,7 +4,7 @@
 <head>
   {{ partial "meta.html" . }}
 
-  {{ $css := resources.Get "app.scss" | toCSS }}
+  {{ $css := resources.Get "app.scss" | resources.ExecuteAsTemplate "app.scss" . | toCSS }}
   {{ $css = $css | postCSS | minify | fingerprint | resources.PostProcess }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">

@@ -29,3 +29,17 @@ params:
     - /img/social-share.png
   description: "Creator, developer, a person with not a standard thinking"
   email: "sergey@kibish.com"
+  styles:
+    mainColor: "#0e131f"
+    secondColor: "#ab966d"
+    textColor: "#fbf5f3"
+    
+    # Mint
+    # mainColor: "#0091adff"
+    # secondColor: "#6efafbff"
+    # textColor: "#fff4e4ff"
+    
+    # Sea
+    # mainColor: "#0fa3b1ff"
+    # secondColor: "#b5e2faff"
+    # textColor: "#f9f7f3ff"
