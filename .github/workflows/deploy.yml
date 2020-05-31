@@ -26,8 +26,6 @@ jobs:
     - name: Build
       run: |
         npm i
-        hugo
-        npm run build
         hugo --minify
 
     - name: Publish
