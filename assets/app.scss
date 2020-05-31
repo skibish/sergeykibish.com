@@ -298,6 +298,10 @@ header>div {
       font-weight: normal;
       line-height: 23px;
       font-size: $font-size-base;
+
+      i {
+        margin-right: 0.2em;
+      }
     }
   }
 }
