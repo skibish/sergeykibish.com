@@ -2,7 +2,6 @@
 title: "One of our best master students"
 date: 2017-06-16T00:00:00+03:00
 draft: false
-profilePictureURL: "/img/testimonials/irina-jackiva.jpg"
 headline: "Vice-rector for education at TSI"
 fullName: "Irina Jackiva"
 pitchLine: "Very motivated, ability to learn and with excellent communication skills. He has good potential in R&D. Very intelligent and open-minded."

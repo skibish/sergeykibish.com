@@ -2,7 +2,6 @@
 title: "Constantly growing software developer"
 date: 2017-06-11T00:00:00+03:00
 draft: false
-profilePictureURL: "/img/testimonials/aleksandrs-antonovs.jpg"
 headline: "Golang Developer at Evoke Gaming"
 fullName: "Aleksandrs Antonovs"
 pitchLine: "An obsession with exploring and learning new technologies makes him a team member you’d love to work with."

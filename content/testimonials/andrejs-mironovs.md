@@ -2,7 +2,6 @@
 title: "Great public speaker and colleague"
 date: 2017-05-07T00:00:00+03:00
 draft: false
-profilePictureURL: "/img/testimonials/andrejs-mironovs.jpg"
 headline: "Java Developer at TWINO"
 fullName: "Andrejs Mironovs"
 pitchLine: "Great public speaker and colleague."
