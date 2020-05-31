@@ -3,12 +3,8 @@ name: Deploy
 on:
   push:
     branches: [ master ]
-    paths:
-    - 'assets/**'
-    - 'content/**'
-    - 'data/**'
-    - 'layouts/**'
-    - 'static/**'
+    paths-ignore:
+    - 'README.md'
 
 jobs:
   deploy:

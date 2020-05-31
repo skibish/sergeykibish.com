@@ -11,7 +11,3 @@
 *.otf             binary
 *.woff            binary
 *.woff2           binary
-
-# Build static files
-static/css/*.css      binary
-static/js/*.js        binary
