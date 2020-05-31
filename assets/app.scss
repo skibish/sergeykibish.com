@@ -204,9 +204,9 @@ header>div {
   padding-left: 0px;
   stroke: $theme-second-color;
 
-  // li:before {
-  //   margin-right: 10px;
-  // }
+  svg {
+    margin-right: 0.2em;
+  }
 }
 
 // Characteristics and Proud of sections
