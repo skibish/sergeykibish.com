@@ -20,6 +20,9 @@ markup:
     style: solarized-light
     tabWidth: 4
 
+build:
+  writeStats: true
+
 params:
   author: "Sergey Kibish"
   images:

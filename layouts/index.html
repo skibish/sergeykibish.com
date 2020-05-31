@@ -125,5 +125,7 @@
 {{ end }}
 
 {{ define "scripts" }}
-  <script src="/js/app.js?v={{ readFile "static/js/app.js" | md5 }}"></script>
+  {{ $opts := dict "noComments" true "minified" true "compact" true }}
+  {{ $js := resources.Get "index.js" | babel $opts | fingerprint "sha512" }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 {{ end }}

@@ -17,9 +17,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: peaceiris/actions-hugo@v2
+      with:
+        extended: true
     - uses: actions/setup-node@v1.4.2
       with:
-        node-version: "13.x"
+        node-version: "14.x"
 
     - name: Build
       run: |

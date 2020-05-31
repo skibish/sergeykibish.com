@@ -7,9 +7,7 @@ include .env
 export $(shell sed 's/=.*//' .env)
 
 build: ## Build webiste
-	hugo
-	docker run --rm --mount type=bind,src=$(PWD),dst=/app -w /app --entrypoint "npm" node:13.12 install
-	docker run --rm --mount type=bind,src=$(PWD),dst=/app -w /app --entrypoint "npm" node:13.12 run build
+	npm install
 	hugo --minify
 
 deploy: ## Deploy website

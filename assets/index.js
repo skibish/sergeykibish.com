@@ -1,5 +1,3 @@
-import './app.scss';
-
 const secondHand = document.querySelector('.clock__hand-seconds');
 const minsHand = document.querySelector('.clock__hand-minutes');
 const hourHand = document.querySelector('.clock__hand-hours');
