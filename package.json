@@ -8,6 +8,7 @@
     "autoprefixer": "^9.7.6",
     "babel-preset-minify": "^0.5.1",
     "bootstrap": "^4.4.1",
+    "cssnano": "^4.1.10",
     "firebase-tools": "^8.2.0",
     "postcss-cli": "^7.1.1"
   }

@@ -11,5 +11,12 @@ module.exports = {
   plugins: [
     require('autoprefixer'),
     purgecss,
+    require('cssnano')({
+      preset: ['default', {
+        discardComments: {
+          removeAll: true,
+        },
+      }]
+    }),
   ]
 }
