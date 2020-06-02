@@ -7,16 +7,18 @@
     <div class="col-md-2 offset-md-2">
       <h5>Navigation</h5>
 
-      <ul class="list list-unstyled">
-        {{ range .Site.Data.footerLinks.nav }}
-        <li class="list-item">
-          <i class="{{ .icon }}"></i> 
-          <a href="{{ .link }}" rel="me">
-            {{ .title }}
-          </a>
-        </li>
-        {{ end }}
-      </ul>
+      <nav>
+        <ul class="list list-unstyled">
+          {{ range .Site.Data.footerLinks.nav }}
+          <li class="list-item">
+            <i class="{{ .icon }}"></i> 
+            <a href="{{ .link }}" rel="me">
+              {{ .title }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </nav>
     </div>
 
     <div class="col-md-2">
