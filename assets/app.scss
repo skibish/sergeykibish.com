@@ -48,17 +48,6 @@ header {
   }
 }
 
-footer {
-  @include make-row();
-
-  li {
-    margin-bottom: 0.5em;
-    i {
-      margin-right: 0.2em;
-    }
-  }
-}
-
 h1 {
   font-weight: $font-weight-bold;
 }
@@ -373,6 +362,19 @@ header>div {
 // Footer
 // ---------------------------
 footer {
+  @include make-row();
+
+  h5 {
+    margin-bottom: $headings-margin-bottom;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+    i {
+      margin-right: 0.2em;
+    }
+  }
+
   .ask-help {
     font-style: normal;
     font-weight: normal;
