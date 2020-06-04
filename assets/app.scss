@@ -17,9 +17,9 @@ $font-family-sans-serif: Montserrat;
 $font-size-base: 1.1rem;
 
 //** Global textual link color.
-$link-color:            $theme-text-color;
+$link-color: $theme-text-color;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      $link-color;
+$link-hover-color: $link-color;
 //** Link hover decoration.
 $link-hover-decoration: underline;
 
@@ -231,6 +231,7 @@ header>div {
     @include media-breakpoint-up(md) {
       @include make-col(6);
     }
+
     @include media-breakpoint-up(lg) {
       @include make-col(4);
     }
@@ -377,6 +378,7 @@ footer {
 
   li {
     margin-bottom: 0.5em;
+
     i {
       margin-right: 0.2em;
     }
@@ -384,9 +386,11 @@ footer {
 
   .contact {
     @include make-col-ready();
+
     @include media-breakpoint-up(md) {
       @include make-col(3);
     }
+
     @include media-breakpoint-up(lg) {
       @include make-col(6);
     }
@@ -404,7 +408,7 @@ footer {
       font-style: normal;
       font-weight: $font-weight-bold;
       color: $theme-second-color;
-  
+
       &:hover {
         text-decoration-line: underline;
         color: $theme-second-color;
@@ -414,9 +418,11 @@ footer {
 
   .navigation {
     @include make-col-ready();
+
     @include media-breakpoint-up(md) {
       @include make-col(3);
     }
+
     @include media-breakpoint-up(lg) {
       @include make-col(2);
     }
@@ -425,9 +431,11 @@ footer {
   .social,
   .different {
     @include make-col-ready();
+
     @include media-breakpoint-up(md) {
       @include make-col(3);
     }
+
     @include media-breakpoint-up(lg) {
       @include make-col(2);
     }
@@ -492,6 +500,14 @@ article {
     p {
       font-style: italic;
       font-size: 1.5rem;
+    }
+  }
+
+  .img-wrap {
+    text-align: center;
+
+    img {
+      @include img-fluid();
     }
   }
 
