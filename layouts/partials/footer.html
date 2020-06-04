@@ -1,16 +1,16 @@
 <footer>
-    <div class="col-md-4 ask-help">
+    <div class="contact">
       <div>Ask / Hire</div>
-      <a class="contact-me" href="mailto:{{.Site.Params.Email}}">Just email me</a>
+      <a class="contact__email" href="mailto:{{.Site.Params.Email}}">Just email me</a>
     </div>
 
-    <div class="col-md-2 offset-md-2">
+    <div class="navigation">
       <h5>Navigation</h5>
 
       <nav>
-        <ul class="list list-unstyled">
+        <ul>
           {{ range .Site.Data.footerLinks.nav }}
-          <li class="list-item">
+          <li>
             <i class="{{ .icon }}"></i> 
             <a href="{{ .link }}" rel="me">
               {{ .title }}
@@ -21,12 +21,12 @@
       </nav>
     </div>
 
-    <div class="col-md-2">
+    <div class="social">
       <h5>Social</h5>
 
-      <ul class="list list-unstyled">
+      <ul>
         {{ range .Site.Data.footerLinks.social }}
-        <li class="list-item">
+        <li>
           <i class="{{ .icon }}"></i> 
           <a href="{{ .link }}" rel="me">
             {{ .title }}
@@ -36,12 +36,12 @@
       </ul>
     </div>
 
-    <div class="col-md-2">
+    <div class="different">
       <h5>Different</h5>
 
-      <ul class="list list-unstyled">
+      <ul>
         {{ range .Site.Data.footerLinks.hobby }}
-        <li class="list-item">
+        <li>
           <i class="{{ .icon }}"></i>
           <a href="{{ .link }}" rel="me">
             {{ .title }}
@@ -55,7 +55,7 @@
     <div class="col-md-2">
       <h5>Part of</h5>
 
-      <ul class="list list-unstyled">
+      <ul>
         {{ range .Site.Data.footerLinks.partOf }}
         <li class="list-item">
           <i class="{{ .icon }}"></i> 

@@ -229,6 +229,9 @@ header>div {
 
     // .col-md-4
     @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
       @include make-col(4);
     }
   }
@@ -246,7 +249,7 @@ header>div {
     font-size: 26px;
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     display: none !important; // .d-lg-block
   }
 
@@ -368,6 +371,10 @@ footer {
     margin-bottom: $headings-margin-bottom;
   }
 
+  ul {
+    @include list-unstyled();
+  }
+
   li {
     margin-bottom: 0.5em;
     i {
@@ -375,7 +382,15 @@ footer {
     }
   }
 
-  .ask-help {
+  .contact {
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+      @include make-col(3);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(6);
+    }
+
     font-style: normal;
     font-weight: normal;
     line-height: 34px;
@@ -384,16 +399,37 @@ footer {
     @include media-breakpoint-down(lg) {
       margin-bottom: 20px;
     }
+
+    &__email {
+      font-style: normal;
+      font-weight: $font-weight-bold;
+      color: $theme-second-color;
+  
+      &:hover {
+        text-decoration-line: underline;
+        color: $theme-second-color;
+      }
+    }
   }
 
-  .contact-me {
-    font-style: normal;
-    font-weight: bold;
-    color: $theme-second-color;
+  .navigation {
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+      @include make-col(3);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(2);
+    }
+  }
 
-    &:hover {
-      text-decoration-line: underline;
-      color: $theme-second-color;
+  .social,
+  .different {
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+      @include make-col(3);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(2);
     }
   }
 }
