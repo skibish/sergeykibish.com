@@ -1,0 +1,9 @@
+<ul class="nav justify-content-end">
+  {{ $currentPage := . }}
+  {{ range .Site.Menus.main }}
+  <li class="nav-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} nav-item--active{{end}}">
+    <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+  </li>
+  {{ end }}
+</ul>
+<hr/>

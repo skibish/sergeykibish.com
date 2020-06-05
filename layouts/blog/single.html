@@ -3,6 +3,9 @@ Sergey's Blog: {{ .Title }}
 {{end}}
 
 {{define "main"}}
+
+{{ partial "menu.html" . }}
+
 <article>
   <h1>{{ .Title }}</h1>
   <p>{{ dateFormat "Jan 2, 2006" .Date }} ({{.ReadingTime}} minutes read)</p>

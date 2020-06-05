@@ -442,6 +442,25 @@ footer {
   }
 }
 
+// Navigation (menu) outside root
+//-----------------
+.nav-item {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  font-weight: $font-weight-bold;
+
+  &--active {
+    border-top: 3px solid $theme-second-color;
+  }
+
+  &:visited {
+    border-bottom: 3px solid transparent;
+  }
+  &:hover {
+    border-bottom: 3px solid $theme-second-color;
+  }
+}
+
 // Blog posts
 // ----------------
 .blog-posts {

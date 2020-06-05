@@ -6,14 +6,13 @@
 
     <div class="navigation">
       <h5>Navigation</h5>
-
       <nav>
         <ul>
-          {{ range .Site.Data.footerLinks.nav }}
+          {{ range .Site.Menus.main }}
           <li>
-            <i class="{{ .icon }}"></i> 
-            <a href="{{ .link }}" rel="me">
-              {{ .title }}
+            <i class="{{ .Pre }}"></i> 
+            <a href="{{ .URL }}" rel="me">
+              {{ .Name }}
             </a>
           </li>
           {{ end }}

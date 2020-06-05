@@ -1,4 +1,7 @@
 {{define "main" }}
+
+{{ partial "menu.html" . }}
+
 <div class="blog-posts">
   {{ range (.Pages.GroupByDate "2006") }}
   <h1>{{ .Key }}</h1>
