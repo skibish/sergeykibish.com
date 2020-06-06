@@ -8,7 +8,15 @@ Sergey's Blog: {{ .Title }}
 
 <article>
   <h1>{{ .Title }}</h1>
-  <p>{{ dateFormat "Jan 2, 2006" .Date }} ({{.ReadingTime}} minutes read)</p>
+  <p>
+    {{ dateFormat "Jan 2, 2006" .Date }}
+    ({{.ReadingTime}} minutes read
+    {{- with .Params.Canonical -}}
+    {{- $url := urls.Parse . -}}
+    , first time published on <a href="{{ . }}" rel="noopener noreferrer" target="_blank">{{$url.Host}}</a>
+    {{- end -}}
+    )
+  </p>
   <hr/>
   {{ .Content }}
   
