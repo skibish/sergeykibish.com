@@ -1,56 +1,56 @@
 <footer>
-    <div class="contact">
-      <div>Ask / Hire</div>
-      <a class="contact__email" href="mailto:{{.Site.Params.Email}}">Just email me</a>
-    </div>
+  <div class="contact">
+    <div>Ask / Hire</div>
+    <a class="contact__email" href="mailto:{{.Site.Params.Email}}">Just email me</a>
+  </div>
 
-    <div class="navigation">
-      <h5>Navigation</h5>
-      <nav>
-        <ul>
-          {{ range .Site.Menus.main }}
-          <li>
-            <i class="{{ .Pre }}"></i> 
-            <a href="{{ .URL }}" rel="me">
-              {{ .Name }}
-            </a>
-          </li>
-          {{ end }}
-        </ul>
-      </nav>
-    </div>
-
-    <div class="social">
-      <h5>Social</h5>
-
+  <div class="navigation">
+    <h5>Navigation</h5>
+    <nav>
       <ul>
-        {{ range .Site.Data.footerLinks.social }}
+        {{ range .Site.Menus.main }}
         <li>
-          <i class="{{ .icon }}"></i> 
-          <a href="{{ .link }}" rel="me">
-            {{ .title }}
+          <i class="{{ .Pre }}"></i> 
+          <a href="{{ .URL }}" rel="me">
+            {{ .Name }}
           </a>
         </li>
         {{ end }}
       </ul>
-    </div>
+    </nav>
+  </div>
 
-    <div class="different">
-      <h5>Different</h5>
+  <div class="social">
+    <h5>Social</h5>
 
-      <ul>
-        {{ range .Site.Data.footerLinks.hobby }}
-        <li>
-          <i class="{{ .icon }}"></i>
-          <a href="{{ .link }}" rel="me">
-            {{ .title }}
-          </a>
-        </li>
-        {{ end }}
-      </ul>
-    </div>
+    <ul>
+      {{ range .Site.Data.footerLinks.social }}
+      <li>
+        <i class="{{ .icon }}"></i> 
+        <a href="{{ .link }}" rel="me">
+          {{ .title }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
 
-    <div class="copyright">
-      <p><small>&copy; {{ .Site.Params.author }}</small></p>
-    </div>
-  </footer>
+  <div class="different">
+    <h5>Different</h5>
+
+    <ul>
+      {{ range .Site.Data.footerLinks.hobby }}
+      <li>
+        <i class="{{ .icon }}"></i>
+        <a href="{{ .link }}" rel="me">
+          {{ .title }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div class="copyright">
+    <p><small>&copy; {{ .Site.Params.author }}</small></p>
+  </div>
+</footer>
