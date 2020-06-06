@@ -50,20 +50,7 @@
       </ul>
     </div>
 
-    {{ if isset .Site.Data.footerLinks "partOf" }}
-    <div class="col-md-2">
-      <h5>Part of</h5>
-
-      <ul>
-        {{ range .Site.Data.footerLinks.partOf }}
-        <li class="list-item">
-          <i class="{{ .icon }}"></i> 
-          <a href="{{ .link }}" rel="me">
-            {{ .title }}
-          </a>
-        </li>
-        {{ end }}
-      </ul>
+    <div class="copyright">
+      <p><small>&copy; {{ .Site.Params.author }}</small></p>
     </div>
-    {{end}}
   </footer>

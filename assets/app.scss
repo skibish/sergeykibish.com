@@ -452,6 +452,13 @@ footer {
       @include make-col(2);
     }
   }
+
+  .copyright {
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+      @include make-col(12);
+    }
+  }
 }
 
 // Navigation (menu) outside root
