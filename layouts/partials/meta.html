@@ -1,12 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="theme-color" content="{{ .Param "styles.mainColor"  }}">
-
-{{if .IsPage}}
-<meta name="description" content="{{ .Summary }}"/>
-{{else}}
+{{ with .Description }}
+<meta name="description" content="{{ . }}"/>
+{{ else }}
 <meta name="description" content="{{ .Site.Params.Description }}"/>
-{{end}}
+
+{{ end }}
 
 {{ $manifest := resources.Get "manifest.json" | resources.ExecuteAsTemplate "manifest.json" . | fingerprint }}
 <link rel="manifest" href="{{ $manifest.RelPermalink }}">
