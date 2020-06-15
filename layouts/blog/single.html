@@ -25,6 +25,14 @@ Sergey's Blog: {{ .Title }}
   <div class="clearfix"></div>
 </article>
 
-{{ template "_internal/disqus.html" . }}
+<section class="comments">
+  {{ template "_internal/disqus.html" . }}
+</section>
 
+{{end}}
+
+{{define "scripts"}}
+<script>
+  document.querySelectorAll('.footnote-backref').forEach(el => el.text = '[return]');
+</script>
 {{end}}

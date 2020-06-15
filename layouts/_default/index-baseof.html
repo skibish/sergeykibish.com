@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+  {{ partial "meta.html" . }}
+
+  {{ $css := resources.Get "app.scss" | resources.ExecuteAsTemplate "app.scss" . | toCSS }}
+  {{ $css = $css | postCSS | minify | fingerprint | resources.PostProcess }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
+</head>
+
+<body>
+  <div class="container home">
+    {{ block "main" . }}
+    <!-- The part of the page that begins to differ between templates -->
+    {{ end }}
+
+    <hr/>
+    {{ partial "footer.html" . }}
+
+  </div>
+  {{ template "_internal/google_analytics_async.html" . }}
+
+  {{ block "scripts" . }}
+  {{ end }}
+</body>

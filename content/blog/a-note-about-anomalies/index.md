@@ -31,7 +31,7 @@ Anomaly detection is an actual problem in various areas, such as:
 
 ## What is anomaly
 
-Unfortunately, there is no clear definition of the anomaly that's why I've chosen the following one --- anomalies are patterns in the data that do not conform to a well-defined notion of normal behaviour {{<reference id="1">}}.
+Unfortunately, there is no clear definition of the anomaly that's why I've chosen the following one --- anomalies are patterns in the data that do not conform to a well-defined notion of normal behavior[^1].
 We can illustrate anomalies in a simple two-dimensional space (Figure 1).
 
 ![Figure 1. Illustration of simple anomalies in two-dimensional space](images/figure_1.png)
@@ -53,7 +53,7 @@ This is the simplest anomaly category and a lot of researches include them.
 Taking into consideration example represented in Figure 1 points O₁ and O₂ are point anomalies
 - *Contextual Anomalies*.
 If object is anomalous in some defined context.
-Only in this case it is contextual anomaly (also known as conditional anomaly {{<reference id="2">}}.
+Only in this case it is contextual anomaly (also known as conditional anomaly[^2].
 In Figure 2 can be seen periodic context.
 In this case point O₁ is anomaly, because it differs from periodic context
 - *Collective Anomalies*.
@@ -96,7 +96,7 @@ So, where to look and what to do?
 
 ## Anomaly detection approaches overview
 
-Approaches that can be used to find anomalies fall into following categories {{<reference id="4">}}:
+Approaches that can be used to find anomalies fall into following categories[^4]:
 
 *Supervised Anomaly Detection.*
 A setup where the data is labelled in training and test data sets; when simple classifier can be trained, and applied.
@@ -143,7 +143,7 @@ Most of the unsupervised anomaly detection approaches are shown in Figure 7.
 
 If the behaviour of observable objects in defined environment change in time, this environment can be considered as a dynamic environment.
 
-A dynamic environment, such as a production process, a communication network, highway traffic, etc., may contain a huge amount of information, changing with time, which is a valuable resource for understanding the general behaviour of the environment, discovering the regularities and anomalies currently happening in the environment, controlling an evolution process, and intelligent modelling or managing the environment {{<reference id="3">}}.
+A dynamic environment, such as a production process, a communication network, highway traffic, etc., may contain a huge amount of information, changing with time, which is a valuable resource for understanding the general behaviour of the environment, discovering the regularities and anomalies currently happening in the environment, controlling an evolution process, and intelligent modelling or managing the environment[^3].
 
 For example: an internet shop that is experiencing growth.
 Traffic and transactions volume change.
@@ -196,7 +196,7 @@ This is an essential quality for a biological organism to survive.
 HTM has been built around this idea, that intelligent systems need to learn continuously as biological organisms.
 There will be applications, where systems do not need to learn online, but these are not the norm, but exceptions.
 HTM is pretending to be a universal learning method for any task, which has temporal behaviour.
-More details can be found on their website, referring to the following source {{<reference id="4">}}.
+More details can be found on their website, referring to the following source[^4].
 
 ## Invented new approach! How to prove that it works?
 
@@ -206,10 +206,10 @@ Many researchers, investigating unsupervised anomaly detection methods, encounte
 Many scientists only make theoretical assumptions.
 Currently, some attempts to create such framework appeared.
 
-Markus Goldstein and Seiichi Uchida in their work {{<reference id="5">}} propose, how evaluation should be done for anomaly detection approaches.
+Markus Goldstein and Seiichi Uchida in their work[^5] propose, how evaluation should be done for anomaly detection approaches.
 But their assessment methodology is oriented on methods that work with tabular data.
 
-On the 14th International Conference on Machine Learning and Applications (IEEE ICMLA) 2015 Alexander Lavin and Subutai Ahmad proposed their methodology for real-time anomaly detection procedures evaluation  ---  the Numenta Anomaly Benchmark (NAB){{<reference id="6">}}.
+On the 14th International Conference on Machine Learning and Applications (IEEE ICMLA) 2015 Alexander Lavin and Subutai Ahmad proposed their methodology for real-time anomaly detection procedures evaluation  ---  the Numenta Anomaly Benchmark (NAB)[^6].
 
 ### NAB
 
@@ -253,16 +253,9 @@ To read more on this topic, you can find references to the different articles be
 
 May the force be with you.
 
-## References
-
-{{<reference id="1" desc="true">}} Chandola, V., Banerjee, A. & Kumar, V., 2009. Anomaly Detection: A Survey. ACM Computing Surveys, July. 41(3).
-
-{{<reference id="2" desc="true">}} Song, X., Wu, M. & Jermaine, C., 2007. Conditional Anomaly Detection. IEEE Transactions on Knowledge and Data Engineering, 26 March, 19(5), pp. 631--645.
-
-{{<reference id="3" desc="true">}} Kawano, H., Nishio, S., Han, J. & Hasegawa, T., 1994. How does knowledge discovery cooperate with active database techniques in controlling dynamic environment?. Athens, Greece, Springer-Verlag Berlin Heidelberg.
-
-{{<reference id="4" desc="true">}} Hawkins, J., Ahmad, S. & Lavin, A., 2016. Biological and Machine Intelligence. [Available here](http://bit.ly/2qJzvjO).
-
-{{<reference id="5" desc="true">}} Goldstein, M. & Uchida, S., 2016. A Comparative Evaluation of Unsupervised Anomaly Detection Algorithms for Multivariate Data. PLoS ONE, 11(4), p. 31.
-
-{{<reference id="6" desc="true">}} Lavin, A. & Ahmad, S., 2015. Evaluating Real-time Anomaly Detection Algorithms  ---  the Numenta Anomaly Benchmark. Miami, IEEE.
+[^1]: Chandola, V., Banerjee, A. & Kumar, V., 2009. Anomaly Detection: A Survey. ACM Computing Surveys, July. 41(3).
+[^2]: Song, X., Wu, M. & Jermaine, C., 2007. Conditional Anomaly Detection. IEEE Transactions on Knowledge and Data Engineering, 26 March, 19(5), pp. 631--645.
+[^3]: Kawano, H., Nishio, S., Han, J. & Hasegawa, T., 1994. How does knowledge discovery cooperate with active database techniques in controlling dynamic environment?. Athens, Greece, Springer-Verlag Berlin Heidelberg.
+[^4]: Hawkins, J., Ahmad, S. & Lavin, A., 2016. Biological and Machine Intelligence. [Available here](http://bit.ly/2qJzvjO).
+[^5]: Goldstein, M. & Uchida, S., 2016. A Comparative Evaluation of Unsupervised Anomaly Detection Algorithms for Multivariate Data. PLoS ONE, 11(4), p. 31.
+[^6] Lavin, A. & Ahmad, S., 2015. Evaluating Real-time Anomaly Detection Algorithms  ---  the Numenta Anomaly Benchmark. Miami, IEEE.
