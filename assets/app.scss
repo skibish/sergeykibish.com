@@ -521,11 +521,15 @@ article {
     }
   }
 
-  p code {
+  code {
     color: $theme-second-color;
     background-color: $theme-text-color;
     padding-left: .2em;
     padding-right: .2em;
+  }
+
+  .highlight code {
+    all: unset;
   }
 
   pre {
