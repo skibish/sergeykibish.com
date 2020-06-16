@@ -387,6 +387,7 @@ footer {
 
   ul {
     @include list-unstyled();
+    margin-left: 0;
   }
 
   li {
@@ -502,8 +503,8 @@ footer {
   }
 
   ul {
-    padding-left: 0;
-    list-style: none;
+    @include list-unstyled();
+    margin-left: 0;
   }
 }
 
