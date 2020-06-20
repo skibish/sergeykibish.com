@@ -571,3 +571,30 @@ article {
     }
   }
 }
+
+#TableOfContents {
+  ul {
+    @include list-unstyled();
+  }
+  >ul {
+    border-left: 1px solid $theme-second-color;
+    padding-left: 10px;
+  }
+  a {
+    color: $theme-text-color;
+
+    &:hover,
+    &:link,
+    &:active,
+    &:visited {
+      color: $theme-text-color;
+    }
+  }
+}
+
+.toc {
+  position: sticky;
+  top: 4rem;
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+}

@@ -10,13 +10,16 @@
 
 <body>
   <div class="container">
-    {{ block "main" . }}
-    <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
+    {{ partial "menu.html" . }}
+
+        {{ block "main" . }}
+        <!-- The part of the page that begins to differ between templates -->
+        {{ end }}
 
     <hr/>
+  </div>
+  <div class="container">
     {{ partial "footer.html" . }}
-
   </div>
 
   {{ partial "scripts.html" . }}

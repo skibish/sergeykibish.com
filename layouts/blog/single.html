@@ -3,9 +3,6 @@ Sergey's Blog: {{ .Title }}
 {{end}}
 
 {{define "main"}}
-
-{{ partial "menu.html" . }}
-
 <article>
   <h1>{{ .Title }}</h1>
   <p>
@@ -18,7 +15,12 @@ Sergey's Blog: {{ .Title }}
     )
   </p>
   <hr/>
-  {{ .Content }}
+  <div class="row">
+    <div class="col-sm-12 col-xl-9">
+      {{ .Content }}  
+    </div>
+    <aside class="d-none d-xl-block col-xl-3 toc">{{.TableOfContents}}</aside>
+  </div>
   
   {{with .NextInSection}}<a href="{{.Permalink}}" class="float-right">Next post &rarr;</a>{{end}}
   {{with .PrevInSection}}<a href="{{.Permalink}}">&larr; Previous post</a>{{end}}
