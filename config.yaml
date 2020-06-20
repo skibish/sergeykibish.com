@@ -17,7 +17,7 @@ markup:
     lineNos: false
     lineNumbersInTable: true
     noClasses: true
-    style: solarized-light
+    style: github
     tabWidth: 4
 
 build:
@@ -41,14 +41,14 @@ params:
   description: "Creator, developer, a person with not a standard thinking"
   email: "sergey@kibish.com"
   styles:
-    mainColor: "#0e131f"
-    secondColor: "#ab966d"
-    textColor: "#fbf5f3"
+    # mainColor: "#0e131f"
+    # secondColor: "#ab966d"
+    # textColor: "#fbf5f3"
 
     # Mint
-    # mainColor: "#0091adff"
-    # secondColor: "#cdc392"
-    # textColor: "#fff4e4ff"
+    mainColor: "#0091adff"
+    secondColor: "#cdc392"
+    textColor: "#fff4e4ff"
 
     # Sea
     # mainColor: "#0fa3b1ff"

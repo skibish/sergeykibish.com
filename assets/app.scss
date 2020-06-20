@@ -87,7 +87,8 @@ hr {
   height: 3px;
 }
 
-ul, ol {
+ul,
+ol {
   margin-left: 1em;
   padding: 0;
 }
@@ -162,7 +163,10 @@ header>div {
       @include img-fluid();
       position: absolute;
       transition: opacity 1s ease-in-out;
-      filter: grayscale(100%);
+
+      @if (lightness($theme-main-color) < 20) {
+        filter: grayscale(100%);
+      }
     }
 
     &__top {
@@ -457,6 +461,7 @@ footer {
 
   .copyright {
     @include make-col-ready();
+
     @include media-breakpoint-up(md) {
       @include make-col(12);
     }
@@ -477,6 +482,7 @@ footer {
   &:visited {
     border-bottom: 3px solid transparent;
   }
+
   &:hover {
     border-bottom: 3px solid $theme-second-color;
   }
@@ -523,8 +529,9 @@ article {
   }
 
   code {
-    color: $theme-second-color;
+    color: darken($theme-second-color, 30%);
     background-color: $theme-text-color;
+    font-weight: $font-weight-bold;
     padding-left: .2em;
     padding-right: .2em;
   }
@@ -576,10 +583,12 @@ article {
   ul {
     @include list-unstyled();
   }
+
   >ul {
     border-left: 1px solid $theme-second-color;
     padding-left: 10px;
   }
+
   a {
     color: $theme-text-color;
 
