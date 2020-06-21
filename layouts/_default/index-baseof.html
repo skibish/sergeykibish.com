@@ -21,7 +21,8 @@
     {{ partial "footer.html" . }}
 
   </div>
-  {{ template "_internal/google_analytics_async.html" . }}
+
+  {{ partial "scripts.html" . }}
 
   {{ block "scripts" . }}
   {{ end }}
