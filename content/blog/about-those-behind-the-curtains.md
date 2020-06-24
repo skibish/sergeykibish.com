@@ -4,8 +4,7 @@ description: >
   About developers, operations, SREs and many others who make your business running.
   Those behind the curtains.
   I want you to think about the Developers Experience (DX).
-date: 2020-06-24T19:45:19+02:00
-draft: true
+date: 2020-06-24T17:45:17+02:00
 ---
 
 I want all involved in development to think about other users.
