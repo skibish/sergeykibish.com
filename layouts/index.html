@@ -125,7 +125,7 @@
 {{ end }}
 
 {{ define "scripts" }}
-  {{ $opts := dict "noComments" true "minified" true "compact" true }}
-  {{ $js := resources.Get "index.js" | babel $opts | fingerprint "sha512" }}
+  {{ $opts := dict "minify" true "target" "es2016" }}
+  {{ $js := resources.Get "index.js" | js.Build $opts | fingerprint "sha512" }}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 {{ end }}

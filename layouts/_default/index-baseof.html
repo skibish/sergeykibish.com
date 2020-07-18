@@ -4,10 +4,7 @@
 <head>
   {{ partial "meta.html" . }}
 
-  {{ $css := resources.Get "app.scss" | resources.ExecuteAsTemplate "app.scss" . | toCSS }}
-  {{ $css = $css | postCSS | minify | fingerprint | resources.PostProcess }}
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  {{ partial "styles.html" . }}
   <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
 </head>
 
