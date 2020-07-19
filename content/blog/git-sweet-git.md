@@ -6,7 +6,6 @@ description: >
   And you want to keep it clean and ready for guests.
   Yes, sometimes it's a mess after a party but still, you know how to clean everything and get back a shiny house.
 date: 2020-07-19T11:27:55+03:00
-draft: true
 ---
 
 Your Git repository is like your home.
