@@ -1,7 +1,7 @@
 <footer>
   <div class="contact">
     <div>Ask / Hire</div>
-    <a class="contact__email" href="mailto:{{.Site.Params.Email}}">Just email me</a>
+    <a class="contact__email" href="mailto:{{.Site.Author.email}}">Just email me</a>
   </div>
 
   <div class="navigation">
@@ -51,6 +51,6 @@
   </div>
 
   <div class="copyright">
-    <p><small>&copy; {{ .Site.Params.author }}</small></p>
+    <p><small>{{ .Site.Copyright | safeHTML }}</small></p>
   </div>
 </footer>

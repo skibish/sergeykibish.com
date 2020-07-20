@@ -6,9 +6,9 @@
   <div>
     <div class="summary__picture">
       <img src="/img/me.hover.jpg?v={{ readFile "static/img/me.hover.jpg" | md5 }}"
-        alt="{{ .Site.Params.Author }}">
+        alt="{{ .Site.Author.name }}">
       <img src="/img/me.jpg?v={{ readFile "static/img/me.jpg" | md5 }}" class="summary__picture__top"
-        alt="{{ .Site.Params.Author }}">
+        alt="{{ .Site.Author.name }}">
     </div>
   </div>
   <div class="summary__bio">

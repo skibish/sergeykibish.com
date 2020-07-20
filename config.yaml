@@ -1,12 +1,19 @@
 baseURL: "https://sergeykibish.com/"
 languageCode: "en-us"
+copyright: "&#169; Sergey Kibish"
+author:
+  name: "Sergey Kibish"
+  email: "sergey@kibish.com"
 
 enableRobotsTXT: true
 enableEmoji: true
 googleAnalytics: "UA-103073257-1"
 disqusShortname: sergey-kibish-blog
 taxonomies: []
-disableKinds: ["RSS"]
+outputs:
+    page: ["HTML"]
+    home: ["HTML"]
+    section: ["HTML","RSS"]
 
 markup:
   highlight:
@@ -35,11 +42,9 @@ menu:
     weight: -100
 
 params:
-  author: "Sergey Kibish"
   images:
     - /img/social-share.png
   description: "Creator, developer, a person with not a standard thinking"
-  email: "sergey@kibish.com"
   styles:
     # mainColor: "#0e131f"
     # secondColor: "#ab966d"

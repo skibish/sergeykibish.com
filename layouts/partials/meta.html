@@ -23,3 +23,7 @@
 {{if .Params.canonical}}
 <link rel="canonical" href="{{.Params.canonical}}" />
 {{end}}
+
+{{ with .OutputFormats.Get "rss" -}}
+{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
