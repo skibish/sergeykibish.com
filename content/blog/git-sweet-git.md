@@ -206,7 +206,7 @@ Many ingredients lie on a table, jars are open, everything smells tasty.
 Process is going on.
 When you are almost finished, you clean everything up and add final touch with a cherry on top.
 
-it is good to do a rebase when you are almost finished and would like to present your beautiful work.
+It is good to do a rebase when you are almost finished and would like to present your beautiful work.
 Merge --- to signal that work is completed.
 
 Use both.
