@@ -4,7 +4,6 @@ description: >
   I follow minimalism thinking for some long period of time. It helps me to navigate in this world, make choices, grow and expand area of my freedom.
   I would like to share how minimalism influences me as an engineer and my life in general. How thinking works in my head.
 date: 2020-10-05T06:00:00+03:00
-draft: true
 ---
 
 I follow minimalism thinking for some long period of time.
