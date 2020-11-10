@@ -1,7 +1,6 @@
 ---
 title: "Shinji Shirai"
 date: 2020-11-10T21:33:25+02:00
-draft: true
 headline: "Project Manager at Swiss Re"
 pitchLine: "Sergey is the dream architect & developer for every project manager"
 fullName: "Shinji Shirai"
