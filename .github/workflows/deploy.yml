@@ -17,7 +17,7 @@ jobs:
         hugo-version: "0.75.1"
         extended: true
 
-    - uses: actions/setup-node@v1.4.2
+    - uses: actions/setup-node@v1
       with:
         node-version: "14.x"
 
