@@ -3,9 +3,8 @@ Sergey's Blog: {{ .Title }}
 {{end}}
 
 {{define "main"}}
-<article>
-  <h1>{{ .Title }}</h1>
-  <p>
+<article class="-mt-9">
+  <h1 class="text-2xl font-bold">{{ .Title }}</h1>
     {{ dateFormat "Jan 2, 2006" .Date }}
     ({{.ReadingTime}} minutes read
     {{- with .Params.Canonical -}}
@@ -13,24 +12,26 @@ Sergey's Blog: {{ .Title }}
     , first time published on <a href="{{ . }}" rel="noopener noreferrer" target="_blank">{{$url.Host}}</a>
     {{- end -}}
     )
-  </p>
-  <hr/>
-  <div class="row">
-    <div class="col-sm-12 col-xl-9">
-      {{ .Content }}  
+  <hr class="mt-3 mb-12"/>
+
+  <div class="max-w-screen-md mx-auto">
+    {{ .Content }}
+
+    <div class="flex justify-between my-12">
+      {{- with .PrevInSection -}}
+      <a class="btn" href="{{.Permalink}}" >Previous</a>
+      {{- end -}}
+      {{- with .NextInSection -}}
+      <a class="btn" href="{{.Permalink}}" >Next</a>
+      {{- end -}}
     </div>
-    <aside class="d-none d-xl-block col-xl-3 toc">{{.TableOfContents}}</aside>
+
+    <section class="comments">
+      {{ template "_internal/disqus.html" . }}
+    </section>
+
   </div>
-  
-  {{with .NextInSection}}<a href="{{.Permalink}}" class="float-right">Next post &rarr;</a>{{end}}
-  {{with .PrevInSection}}<a href="{{.Permalink}}">&larr; Previous post</a>{{end}}
-  <div class="clearfix"></div>
 </article>
-
-<section class="comments">
-  {{ template "_internal/disqus.html" . }}
-</section>
-
 {{end}}
 
 {{define "scripts"}}

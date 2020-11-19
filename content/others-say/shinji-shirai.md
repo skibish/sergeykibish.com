@@ -2,7 +2,7 @@
 title: "Shinji Shirai"
 date: 2020-11-10T21:33:25+02:00
 headline: "Project Manager at Swiss Re"
-pitchLine: "Sergey is the dream architect & developer for every project manager"
+pitchLine: "Sergey stands out, not only thanks to his technical capability but always with an easy way to explain for everyone to comprehend."
 fullName: "Shinji Shirai"
 ---
 
@@ -13,7 +13,7 @@ Although after I stepped down from the project manager role, the project manager
 
 Imagine projects in Asia; it does not always work like in the West.
 It does not mean wrong but merely different.
-Even this difficult to manage the environment, Sergey stands out, not only thanks to his technical capability but always an easy way to explain for everyone to comprehend.
+Even this difficult to manage the environment, Sergey stands out, not only thanks to his technical capability but always with an easy way to explain for everyone to comprehend.
 Sergey still maintained his calmness during some of hectic as well as some critical issues popped up.
 He played a vital role in the success of this project.
 

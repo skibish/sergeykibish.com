@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply block px-12 py-4 text-center border-4 border-accent font-bold hover:no-underline hover:bg-accent hover:bg-opacity-10;
+}
+
+hr {
+  @apply h-2 border-none mt-3 bg-accent;
+}
+
+.underline {
+  text-decoration-color: #cdc392;
+}
+
+.hover\:underline:hover {
+  text-decoration-color: #cdc392;
+}
+
+.footnotes hr {
+  @apply mb-6;
+}
+
+article h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-2xl font-bold;
+}
+
+p {
+  @apply leading-7 mb-5;
+}
+
+article ul {
+  @apply list-disc list-outside pl-5 mb-5;
+}
+
+article ol {
+  @apply list-decimal list-outside pl-5 mb-5;
+}
+
+article a {
+  @apply hover:underline text-accent;
+}
+
+article blockquote {
+  @apply italic border-l-4 pl-3;
+}
+
+article code {
+  @apply bg-txt text-accent px-1;
+}
+
+.highlight code {
+  all: unset;
+  color: #000;
+}
+
+.highlight {
+  @apply mb-5;
+}
+
+article pre {
+  @apply p-1 rounded overflow-auto;
+}

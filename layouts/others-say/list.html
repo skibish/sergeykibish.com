@@ -1,0 +1,16 @@
+{{define "main" }}
+
+<div class="max-w-screen-md mx-auto">
+  {{ .Content }}
+
+  {{ range .Pages.ByDate.Reverse }}
+  <article>
+    <h1 class="mt-12">{{.Params.fullName}}</h1>
+    <h1 class="font-normal">{{.Params.headline}}</h1>
+  
+  {{.Content}}
+  </article>
+  {{ end }}
+</div>
+
+{{end}}

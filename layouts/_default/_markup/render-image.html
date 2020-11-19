@@ -1,10 +1,9 @@
 {{/* https://gohugo.io/getting-started/configuration-markup#image-markdown-example */}}
-<div class="img-wrap">
+<div>
     <img
       src="{{ .Destination | safeURL }}"
       alt="{{ .Text }}"
       decoding="auto"
-      class="img-fluid"
     />
     <p><em>{{ .Text }}</em></p>
 </div>

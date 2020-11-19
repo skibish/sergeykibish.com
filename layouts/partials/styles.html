@@ -1,4 +1,5 @@
-{{ $css := resources.Get "app.scss" | resources.ExecuteAsTemplate "app.scss" . | toCSS }}
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+{{ $css := resources.Get "tailwind.css" | resources.ExecuteAsTemplate "app.css" . | toCSS }}
 {{ $css = $css | postCSS | minify | fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">

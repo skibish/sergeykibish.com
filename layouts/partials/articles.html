@@ -2,13 +2,5 @@
   <div>
     My latest articles
   </div>
-  {{ range first 3 (where .Site.RegularPages "Section" "=" "blog") }}
-  <div class="latest-articles__article">
-    <div class="latest-articles__article__date">
-      <i class="far fa-newspaper"></i>
-      {{ dateFormat "Jan 2, 2006" .Date }}
-    </div>
-    <a class="latest-articles__article__title" href="{{ .Permalink }}">{{ .Title }}</a>
-  </div>
-  {{ end }}
+
 </section>

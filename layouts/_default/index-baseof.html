@@ -8,8 +8,12 @@
   <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
 </head>
 
-<body>
-  <div class="container home">
+<body class="bg-main text-txt mt-3">
+  <div class="container max-w-screen-lg mx-auto px-3 xl:px-0">
+    <header class="flex justify-between">
+      <div class="text-4xl md:text-9xl font-bold self-end">Sergey<br>Kibish</div>
+      {{ partial "menu.html" . }}
+    </header>
     {{ block "main" . }}
     <!-- The part of the page that begins to differ between templates -->
     {{ end }}

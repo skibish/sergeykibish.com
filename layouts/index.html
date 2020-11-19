@@ -1,131 +1,79 @@
 {{define "main"}}
+{{/* <div class="text-4xl md:text-9xl">Sorting Chaos</div> */}}
 
-{{ partial "header.html" . }}
+<hr class="mt-4" />
 
-<section class="summary">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 leading-7 mt-8 mb-20">
+
   <div>
-    <div class="summary__picture">
-      <img src="/img/me.hover.jpg?v={{ readFile "static/img/me.hover.jpg" | md5 }}"
-        alt="{{ .Site.Author.name }}">
-      <img src="/img/me.jpg?v={{ readFile "static/img/me.jpg" | md5 }}" class="summary__picture__top"
-        alt="{{ .Site.Author.name }}">
-    </div>
-  </div>
-  <div class="summary__bio">
-    {{.Params.about}}
-  </div>
-  <div class="summary__splash">
-    <svg xmlns="http://www.w3.org/2000/svg" width="298" height="224"><path stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.3" d="M205.85 114.62l91.15 21.2-101.82-5.48a10.06 10.06 0 0 0-9.55 14.45l34.55 71.02-47.95-59.87a10.01 10.01 0 0 0-16.15.69l-35.32 52.7 5.57-24.8c2.22-9.88-9.87-16.48-16.94-9.25L62.69 223l25.58-53.09a10.06 10.06 0 0 0-9.03-14.44h-46.6l26.14-6.1c9.16-2.15 10.62-14.6 2.2-18.8C36.22 118.23 1.87 101.16 1 100.86l101.17 19.2c8.99 1.7 15.38-8.56 9.9-15.9L55.67 28.63l62.74 64.14c6.03 6.17 16.49 2.35 17.16-6.26L142.22 1l6.7 89.6a10.03 10.03 0 0 0 15.11 7.9l96.82-57.45-59.62 56.46a10.07 10.07 0 0 0 4.63 17.11z"/></svg>
-  </div>
-</section>
+    <h1 class="font-bold my-3">Who am I</h1>
 
-<section class="characteristics">
+    <p>{{ .Params.about }}</p>
+  </div>
+
   <div>
-    <h5>What I’m looking to do next</h5>
+    <h1 class="font-bold my-3">I'm really good at</h1>
+
+    <ul class="list-disc pl-4">
+      {{ range .Params.good_at}}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div>
+    <h1 class="font-bold my-3">What I’m looking to do next</h1>
 
     <p>{{ .Params.todo_next }}</p>
-
-    <p>Additionally:</p>
-    <ul>
-    {{range .Params.additionally}}
-      <li>{{ . }}</li>
-    {{end}}
-    </ul>
-
-    <a class="underline" href="https://www.youtube.com/watch?v=TSNerxNwWtU" target="_blank" rel="noopener" data-play-video>
-      Just imagine what I can bring you.
-    </a>
-    <p></p>
-  </div>
-  <div>
-    <h5>I'm really good at</h5>
-
-    <ul>
-    {{ range .Params.good_at}}
-      <li>{{ . }}</li>
-    {{ end }}
-    </ul>
-
-  </div>
-  <div>
-    <h5>How people describe me (strongest sides)</h5>
-    <ul class="strong-sides">
-    {{ range .Params.strong_sides}}
-    <li>
-      <svg width="19" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 9.498l6.561 12.307L18 1" stroke-width="1.3" stroke-miterlimit="10"/>
-      </svg>
-      {{ . }}
-    </li>
-    {{ end }}
-    </ul>
-  </div>
-</section>
-
-<section class="proudof">
-  <div>
-    <h5>Side projects</h5>
-    <p>Side projects, which I'm happy to show are:</p>
-    <ul>
-    {{ range .Params.side_projects}}
-      <li>
-        <a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
-      </li>
-    {{ end }}
-    </ul>
-
+    <p>Additionally:
+      <ul class="list-disc pl-4">
+        {{range .Params.additionally}}
+        <li>{{ . }}</li>
+        {{end}}
+      </ul>
+    </p>
     <p>
-      They are quite popular.
-      But I don't have so many of them.
-      Because a lot is happening at work.
-      And they are not open source.
-      Take a look at my talks, presentations, thoughts and music that I've made down below.
-    </p>
-
-    <p>For other projects and what I explore in the IT world you can 
-      <a href="https://github.com/skibish" target="_blank" rel="noopener">check my GitHub</a>.
+      <a class="underline" href="https://www.youtube.com/watch?v=TSNerxNwWtU" target="_blank" rel="noopener"
+        data-play-video>
+        Just imagine what I can bring you.
+      </a>
     </p>
   </div>
+
   <div>
-    <h5>Achievements</h5>
+    <h1 class="font-bold my-3">Highlights</h1>
 
     <dl>
-    {{ range .Params.achievements }}
-    <dt>{{ .title }}</dt>
-    <dd>{{ .description }}</dd>
-    {{ end }}
+      {{ range .Params.achievements }}
+      <dt class="font-bold">{{ .title }}</dt>
+      <dd>{{ .description }}</dd>
+      {{ end }}
     </dl>
-
   </div>
-  <div class="map">
-    <span class="">10 km</span>
-    <svg xmlns="http://www.w3.org/2000/svg" class="map__route" viewBox="0 0 347.57 358.71">
-      <circle r="10" >
-        <animateMotion
-          dur="30s"
-          repeatCount="indefinite"
-          path="M149.6 358.7c-3.9 0-7.8-.9-11.5-2.6l-8.4-4a26.8 26.8 0 0 1-14.8-18.7l-3.3-15.2c-.9-4-2.7-7.6-5.5-10.6l-9.3-10.3c-3.4-3.8-5.6-8.5-6.4-13.5l-2.9-19.9a23.2 23.2 0 0 0-7.6-14L59.6 232a23.3 23.3 0 0 0-15.3-5.8h-17c-6.1 0-12.1-2.2-16.8-6.2L9 218.8c-5.4-4.7-8.6-11.2-9-18.3s2.2-13.9 7.1-19.1l6.7-7c4.1-4.3 9.6-7 15.5-7.8l34.8-4.2c3.6-.4 7.2-1.8 10.2-3.8l28.2-19.2c1.4-.9 2.7-2 3.8-3.2l14-14.8a23.5 23.5 0 0 0 6.3-17.8l-2-24.3c-.7-9 1.8-18 7.3-25.2l5.8-7.8 2.1 1.6-5.8 7.8c-5 6.7-7.4 15.1-6.7 23.5l2 24.3c.6 7.3-1.9 14.5-7 19.8l-14 14.8c-1.3 1.3-2.7 2.6-4.2 3.6l-28.2 19.2c-3.4 2.3-7.3 3.8-11.4 4.3l-34.8 4.2c-5.3.6-10.2 3.1-13.9 7l-6.7 7c-4.5 4.6-6.7 10.7-6.4 17.2.3 6.4 3.2 12.3 8.1 16.5l1.5 1.3c4.2 3.6 9.6 5.6 15.1 5.6h17.1c6.3 0 12.3 2.3 17 6.4l20.3 17.8c4.6 4 7.6 9.6 8.5 15.6l2.9 19.9c.7 4.5 2.6 8.7 5.7 12.1l9.3 10.3c3 3.3 5.1 7.4 6.1 11.8l3.3 15.2c1.6 7.3 6.6 13.6 13.4 16.9l8.4 4c4.4 2.1 9.2 2.8 13.9 2.1l14.7-2.2c8-1.2 14.8-6.2 18.3-13.5l.2-.4c3.8-7.9 11.3-13.5 19.9-14.8l13.9-2.2c6.7-1.1 12.5-5 16.1-10.8l8.4-13.7c3.8-6.3 10.2-10.6 17.4-11.9l49.6-9c5.9-1.1 11.1-4.3 14.6-9.2l14.3-19.6c5-6.9 5.9-16 2.1-23.7l-20.1-41.5a22.3 22.3 0 0 0-5.8-7.5l-23-19.7c-4.4-3.8-7.5-9.1-8.5-14.8l-4-21.2c-1.4-7.7-6.6-14.1-13.9-17.1L235 89.6c-4.6-1.9-8.5-5.1-11.2-9.2l-12.4-18.5c-3.3-5-4.2-11.4-2.2-17.1 1.7-5 1.2-10.5-1.3-15.1s-6.9-8-12-9.2l-14.8-3.6.6-2.5 14.8 3.6a21.35 21.35 0 0 1 15.2 27.6c-1.7 4.9-1 10.5 1.9 14.8L226 78.9c2.5 3.7 6 6.6 10.1 8.3l32.5 13.5c8.1 3.3 13.8 10.5 15.4 19l4 21.2c1 5.2 3.7 9.9 7.7 13.3l23 19.7c2.7 2.3 4.9 5.1 6.4 8.3l20.1 41.5c4.1 8.6 3.2 18.7-2.4 26.4l-14.3 19.6c-3.9 5.4-9.7 9-16.2 10.2l-49.6 9c-6.5 1.2-12.2 5.1-15.6 10.7l-8.4 13.7a25.66 25.66 0 0 1-17.9 12l-13.9 2.2c-7.8 1.3-14.6 6.3-18 13.4l-.2.4c-3.9 8-11.5 13.6-20.3 14.9l-14.7 2.2c-1.4.2-2.8.3-4.1.3z"
-        />
-      </circle>
+</div>
 
-      <path d="M170.2 25.6c-7.1 0-12.8-5.8-12.8-12.8S163.1 0 170.2 0c7.1 0 12.8 5.8 12.8 12.8s-5.7 12.8-12.8 12.8zm0-23c-5.6 0-10.2 4.6-10.2 10.2S164.6 23 170.2 23s10.2-4.6 10.2-10.2-4.6-10.2-10.2-10.2z"
-         />
-      <path d="M149.6 358.7c-3.9 0-7.8-.9-11.5-2.6l-8.4-4a26.8 26.8 0 0 1-14.8-18.7l-3.3-15.2c-.9-4-2.7-7.6-5.5-10.6l-9.3-10.3c-3.4-3.8-5.6-8.5-6.4-13.5l-2.9-19.9a23.2 23.2 0 0 0-7.6-14L59.6 232a23.3 23.3 0 0 0-15.3-5.8h-17c-6.1 0-12.1-2.2-16.8-6.2L9 218.8c-5.4-4.7-8.6-11.2-9-18.3s2.2-13.9 7.1-19.1l6.7-7c4.1-4.3 9.6-7 15.5-7.8l34.8-4.2c3.6-.4 7.2-1.8 10.2-3.8l28.2-19.2c1.4-.9 2.7-2 3.8-3.2l14-14.8a23.5 23.5 0 0 0 6.3-17.8l-2-24.3c-.7-9 1.8-18 7.3-25.2l5.8-7.8 2.1 1.6-5.8 7.8c-5 6.7-7.4 15.1-6.7 23.5l2 24.3c.6 7.3-1.9 14.5-7 19.8l-14 14.8c-1.3 1.3-2.7 2.6-4.2 3.6l-28.2 19.2c-3.4 2.3-7.3 3.8-11.4 4.3l-34.8 4.2c-5.3.6-10.2 3.1-13.9 7l-6.7 7c-4.5 4.6-6.7 10.7-6.4 17.2.3 6.4 3.2 12.3 8.1 16.5l1.5 1.3c4.2 3.6 9.6 5.6 15.1 5.6h17.1c6.3 0 12.3 2.3 17 6.4l20.3 17.8c4.6 4 7.6 9.6 8.5 15.6l2.9 19.9c.7 4.5 2.6 8.7 5.7 12.1l9.3 10.3c3 3.3 5.1 7.4 6.1 11.8l3.3 15.2c1.6 7.3 6.6 13.6 13.4 16.9l8.4 4c4.4 2.1 9.2 2.8 13.9 2.1l14.7-2.2c8-1.2 14.8-6.2 18.3-13.5l.2-.4c3.8-7.9 11.3-13.5 19.9-14.8l13.9-2.2c6.7-1.1 12.5-5 16.1-10.8l8.4-13.7c3.8-6.3 10.2-10.6 17.4-11.9l49.6-9c5.9-1.1 11.1-4.3 14.6-9.2l14.3-19.6c5-6.9 5.9-16 2.1-23.7l-20.1-41.5a22.3 22.3 0 0 0-5.8-7.5l-23-19.7c-4.4-3.8-7.5-9.1-8.5-14.8l-4-21.2c-1.4-7.7-6.6-14.1-13.9-17.1L235 89.6c-4.6-1.9-8.5-5.1-11.2-9.2l-12.4-18.5c-3.3-5-4.2-11.4-2.2-17.1 1.7-5 1.2-10.5-1.3-15.1s-6.9-8-12-9.2l-14.8-3.6.6-2.5 14.8 3.6a21.35 21.35 0 0 1 15.2 27.6c-1.7 4.9-1 10.5 1.9 14.8L226 78.9c2.5 3.7 6 6.6 10.1 8.3l32.5 13.5c8.1 3.3 13.8 10.5 15.4 19l4 21.2c1 5.2 3.7 9.9 7.7 13.3l23 19.7c2.7 2.3 4.9 5.1 6.4 8.3l20.1 41.5c4.1 8.6 3.2 18.7-2.4 26.4l-14.3 19.6c-3.9 5.4-9.7 9-16.2 10.2l-49.6 9c-6.5 1.2-12.2 5.1-15.6 10.7l-8.4 13.7a25.66 25.66 0 0 1-17.9 12l-13.9 2.2c-7.8 1.3-14.6 6.3-18 13.4l-.2.4c-3.9 8-11.5 13.6-20.3 14.9l-14.7 2.2c-1.4.2-2.8.3-4.1.3z"
-         id="mapPath" />
-      <path d="M145.7 50.5c-7.1 0-12.8-5.8-12.8-12.8s5.8-12.8 12.8-12.8c7.1 0 12.8 5.8 12.8 12.8s-5.7 12.8-12.8 12.8zm0-23c-5.6 0-10.2 4.6-10.2 10.2s4.6 10.2 10.2 10.2 10.2-4.6 10.2-10.2-4.5-10.2-10.2-10.2z"
-         />
-    </svg>
-
+<h1 class="font-bold my-3 text-2xl">Thoughts</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 text-2xl">
+  {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+  <div>
+    <div>
+      {{ dateFormat "Jan 2, 2006" .Date }}
+    </div>
+    <a class="font-bold hover:underline" href="{{ .Permalink }}">{{ .Title }}</a>
   </div>
-</section>
+  {{ end }}
+</div>
 
-{{ partial "articles.html" . }}
-
-{{ partial "testimonials.html" . }}
-{{ end }}
-
-{{ define "scripts" }}
-  {{ $opts := dict "minify" true "target" "es2016" }}
-  {{ $js := resources.Get "index.js" | js.Build $opts | fingerprint "sha512" }}
-  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+<h1 class="font-bold my-3 text-2xl">Others say</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 leading-7">
+  {{ range first 3 (where .Site.RegularPages "Section" "others-say") }}
+  <div class="flex flex-col">
+    <div class="h-full">{{ .Params.pitchLine }}</div>
+    <div class="mt-3">
+      <div class="font-bold">{{ .Params.fullName }}</div>
+      <div>{{ .Params.headline }}</div>
+    </div>
+  </div>
+  {{end}}
+</div>
 {{ end }}

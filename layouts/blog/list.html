@@ -1,18 +1,15 @@
 {{define "main" }}
 
-{{ partial "menu.html" . }}
-
-<div class="blog-posts">
-  {{ range (.Pages.GroupByDate "2006") }}
-  <h1>{{ .Key }}</h1>
-  <ul>
+{{ range (.Pages.GroupByDate "2006") }}
+  <h1 class="text-4xl md:text-9xl font-bold my-6">{{ .Key }}</h1>
+  <ul class="list-none mb-20">
     {{ range .Pages.ByDate.Reverse }}
-    <li>
-      <a class="blog-posts__title" href="{{.Permalink}}">{{.Title}}</a>
+    <li class="text-2xl my-6">
+      <a class="font-bold hover:underline" href="{{.Permalink}}">{{.Title}}</a>
       <p>{{ dateFormat "Jan 2" .Date }} ({{.ReadingTime}} minutes read)</p>
     </li>
     {{ end }}
   </ul>
   {{ end }}
-</div>
+
 {{end}}

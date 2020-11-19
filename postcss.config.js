@@ -1,22 +1,18 @@
-const purgecss = require('@fullhuman/postcss-purgecss')({
-  content: ['./hugo_stats.json'],
-  defaultExtractor: (content) => {
-    let els = JSON.parse(content).htmlElements;
-    els.classes.push('testimonials__testimonial--expanded', 'expanded');
-    return els.tags.concat(els.classes, els.ids);
-  }
-});
+const plugins = {
+  tailwindcss: {},
+  autoprefixer: {},
+}
+
+if (process.env.NODE_ENV == 'production') {
+  plugins.cssnano = {
+    preset: ['default', {
+      discardComments: {
+        removeAll: true,
+      },
+    }]
+  };
+}
 
 module.exports = {
-  plugins: [
-    require('autoprefixer'),
-    purgecss,
-    require('cssnano')({
-      preset: ['default', {
-        discardComments: {
-          removeAll: true,
-        },
-      }]
-    }),
-  ]
+  plugins: plugins,
 }

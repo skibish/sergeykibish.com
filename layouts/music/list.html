@@ -1,0 +1,20 @@
+{{define "main" }}
+
+{{ .Content }}
+
+<h1 class="text-2xl font-bold my-12">Singles and albums</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 my-6">
+  {{ range .Params.releases }}
+  <div class="text-accent mb-6">
+    <img src="{{ .art }}" alt="{{ .title }}" class="mb-3 mx-auto">
+    <div class="flex flex-col">
+      <a class="btn mb-3" href="{{ .spotify | safeURL }}"  target="_blank" rel="noopener">Spotify</a>
+      <a class="btn" href="{{ .appleMusic | safeURL }}"  target="_blank" rel="noopener">Apple Music</a>
+    </div>
+  </div>
+  {{ end }}
+</div>
+
+
+{{end}}

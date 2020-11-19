@@ -1,11 +1,11 @@
 {
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
-    "@fullhuman/postcss-purgecss": "^2.2.0",
-    "autoprefixer": "^9.7.6",
-    "bootstrap": "^4.5.0",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "autoprefixer": "^10.0.2",
     "cssnano": "^4.1.10",
-    "firebase-tools": "^8.2.0",
-    "postcss-cli": "^7.1.1"
+    "firebase-tools": "^8.16.2",
+    "postcss": "^8.1.7",
+    "postcss-cli": "^8.3.0",
+    "tailwindcss": "^2.0.1"
   }
 }

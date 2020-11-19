@@ -1,4 +1,4 @@
-baseURL: "https://sergeykibish.com/"
+baseURL: "https://sergeykibish.com"
 languageCode: "en-us"
 copyright: "&#169; Sergey Kibish"
 author:
@@ -33,27 +33,31 @@ build:
 menu:
   main:
   - name: Home
-    pre: far fa-id-card
     url: /
     weight: -110
   - name: Blog
-    pre: far fa-newspaper
     url: /blog/
     weight: -100
+  - name: Music
+    url: /music/
+    weight: -90
+  - name: Others Say
+    url: /others-say/
+    weight: -80
 
 params:
   images:
     - /img/social-share.png
-  description: "Creator, developer, a person with not a standard thinking"
+  description: "Problem solver. Sorting chaos."
   styles:
     # mainColor: "#0e131f"
     # secondColor: "#ab966d"
     # textColor: "#fbf5f3"
 
     # Mint
-    mainColor: "#0091adff"
-    secondColor: "#cdc392"
-    textColor: "#fff4e4ff"
+    mainColor: "#2171a4"
+    secondColor: "#c7ba9d"
+    textColor: "#f8f5f3"
 
     # Sea
     # mainColor: "#0fa3b1ff"

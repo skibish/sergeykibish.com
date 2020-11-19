@@ -1,33 +1,24 @@
-<footer>
-  <div class="contact">
-    <div>Ask / Hire</div>
-    <a class="contact__email" href="mailto:{{.Site.Author.email}}">Just email me</a>
-  </div>
+<footer class="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-20 mt-3">
+  <a class="block col-span-3 py-12 text-center border-4 border-accent text-accent font-bold text-2xl hover:bg-accent hover:bg-opacity-10" href="mailto:{{.Site.Author.email}}">Contact me</a>
+  <nav>
+    <h1 class="font-bold mb-3">Navigation</h1>
+    <ul class="list-none">
+      {{ range .Site.Menus.main }}
+      <li>
+        <a class="hover:underline" href="{{ .URL }}" rel="me">
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
 
-  <div class="navigation">
-    <h5>Navigation</h5>
-    <nav>
-      <ul>
-        {{ range .Site.Menus.main }}
-        <li>
-          <i class="{{ .Pre }}"></i> 
-          <a href="{{ .URL }}" rel="me">
-            {{ .Name }}
-          </a>
-        </li>
-        {{ end }}
-      </ul>
-    </nav>
-  </div>
-
-  <div class="social">
-    <h5>Social</h5>
-
+  <div>
+    <h1 class="font-bold mb-3">Social</h1>
     <ul>
       {{ range .Site.Data.footerLinks.social }}
-      <li>
-        <i class="{{ .icon }}"></i> 
-        <a href="{{ .link }}" rel="me">
+      <li class="list-none">
+        <a class="hover:underline" href="{{ .link }}" rel="me">
           {{ .title }}
         </a>
       </li>
@@ -35,22 +26,20 @@
     </ul>
   </div>
 
-  <div class="different">
-    <h5>Different</h5>
-
+  <div>
+    <h1 class="font-bold mb-3">Different</h1>
     <ul>
       {{ range .Site.Data.footerLinks.hobby }}
-      <li>
-        <i class="{{ .icon }}"></i>
-        <a href="{{ .link }}" rel="me">
+      <li class="list-none">
+        <a class="hover:underline" href="{{ .link }}" rel="me">
           {{ .title }}
         </a>
       </li>
       {{ end }}
     </ul>
   </div>
-
-  <div class="copyright">
-    <p><small>{{ .Site.Copyright | safeHTML }}</small></p>
-  </div>
 </footer>
+
+<div class="my-6">
+  {{ .Site.Copyright | safeHTML }}
+</div>

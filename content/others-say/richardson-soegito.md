@@ -1,7 +1,7 @@
 ---
 title: "He's a quick thinker"
 date: 2020-10-05T14:41:48+03:00
-headline: "Technical Design Consultant at Swiss Re"
+headline: "Technical Consultant at Swiss Re"
 fullName: "Richardson Soegito"
 pitchLine: "He's a quick thinker and a person who takes the initiative and actions to make things happen / achieve things in timely manner."
 ---
