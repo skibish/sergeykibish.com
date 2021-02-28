@@ -9,8 +9,9 @@
   <div class="text-accent mb-6">
     <img src="{{ .art }}" alt="{{ .title }}" class="mb-3 mx-auto">
     <div class="flex flex-col">
-      <a class="btn mb-3" href="{{ .spotify | safeURL }}"  target="_blank" rel="noopener">Spotify</a>
-      <a class="btn" href="{{ .appleMusic | safeURL }}"  target="_blank" rel="noopener">Apple Music</a>
+      <a class="btn mb-3" href="{{ .bandcamp | safeURL }}"  target="_blank" rel="noopener">Bandcamp</a>
+      <a class="btn mb-3" href="{{ .appleMusic | safeURL }}"  target="_blank" rel="noopener">Apple Music</a>
+      <a class="btn" href="{{ .spotify | safeURL }}"  target="_blank" rel="noopener">Spotify</a>
     </div>
   </div>
   {{ end }}

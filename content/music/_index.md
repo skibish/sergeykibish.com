@@ -6,10 +6,12 @@ date: 2020-11-18T22:52:19+02:00
 releases:
   - title: 1 D
     art: /img/music/releases/1d_500x500.jpg
+    bandcamp: https://skibish.bandcamp.com/track/1-d
     spotify: https://open.spotify.com/track/4AF8HOZpXoILAqFAUOyI18?si=NJDIq7MwS4OZYvnw9FGkag
     appleMusic: https://music.apple.com/lv/album/1-d/1539305828?i=1539305829
   - title: Can You Get It?
     art: /img/music/releases/can-you-get-it_500x500.jpg
+    bandcamp: https://skibish.bandcamp.com/track/can-you-get-it
     spotify: https://open.spotify.com/album/2lrLQhACssuGHbXA2kY70T?si=HnLadFzIQiKcZTg3Y4XvzA
     appleMusic: https://music.apple.com/lv/album/can-you-get-it/1502847356?i=1502847357
 ---
