@@ -7,8 +7,8 @@ releases:
   - title: The World Has Changed
     art: /img/music/releases/the-world-has-changed_500x500.jpg
     bandcamp: https://skibish.bandcamp.com/album/the-world-has-changed
-    spotify: https://open.spotify.com/album/4WoL72gskXHF0qsvy1HN7r
-    appleMusic: https://music.apple.com/lv/album/the-world-has-changed/1557083314?uo=4&app=music
+    spotify: https://open.spotify.com/album/3rUV118vJpLPPlIQPpmW6r?si=wKp5lcCwRguTYAR_a2gawA
+    appleMusic: https://music.apple.com/lv/album/the-world-has-changed/1565656551
   - title: 1 D
     art: /img/music/releases/1d_500x500.jpg
     bandcamp: https://skibish.bandcamp.com/track/1-d
