@@ -4,6 +4,11 @@ description: >
   Here you can find my singles, albums and playlists
 date: 2020-11-18T22:52:19+02:00
 releases:
+  - title: The Wall
+    art: /img/music/releases/the-wall_500x500.jpg
+    bandcamp: https://skibish.bandcamp.com/track/the-wall
+    spotify: https://open.spotify.com/track/5K8o1f5qZnSCeUZEJgNewV?si=1a6b4d7dedda43e9
+    appleMusic: https://music.apple.com/lv/album/the-wall/1567851346?i=1567851347
   - title: The World Has Changed
     art: /img/music/releases/the-world-has-changed_500x500.jpg
     bandcamp: https://skibish.bandcamp.com/album/the-world-has-changed
