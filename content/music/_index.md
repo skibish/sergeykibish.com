@@ -4,6 +4,11 @@ description: >
   Here you can find my singles, albums and playlists
 date: 2020-11-18T22:52:19+02:00
 releases:
+  - title: Elevator
+    art: /img/music/releases/elevator_500x500.jpg
+    bandcamp: https://skibish.bandcamp.com/track/elevator
+    spotify: https://open.spotify.com/track/4CofGyVkloZEtxNXVnDe8R?si=fc8ee104dc17419f
+    appleMusic: https://music.apple.com/lv/album/elevator/1567695200?i=1567695201
   - title: The Wall
     art: /img/music/releases/the-wall_500x500.jpg
     bandcamp: https://skibish.bandcamp.com/track/the-wall
