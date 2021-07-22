@@ -2,7 +2,7 @@
 title: Constantly growing software developer
 date: 2017-06-11T00:00:00+03:00
 draft: false
-headline: Golang Developer at Evoke Gaming
+headline: "Software Engineer at FAST TRACK"
 fullName: Aleksandrs Antonovs
 pitchLine: An obsession with exploring and learning new technologies makes him a team member you’d love to work with.
 ---

@@ -2,7 +2,7 @@
 title: "Would be too happy to work with him again"
 date: 2014-04-13T00:00:00+03:00
 draft: false
-headline: "Software Developer at Nordea"
+headline: "Senior Software Developer at Nordea"
 fullName: "Nghi Le Vinh"
 pitchLine: "Sergey is a self-motivated, reliable, knowledgeable and responsible person."
 ---

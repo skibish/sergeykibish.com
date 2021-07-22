@@ -2,7 +2,7 @@
 title: "A fast learner"
 date: 2017-11-23T00:00:00+02:00
 draft: false
-headline: "Head of IT Department at Transact Pro"
+headline: "CTO at Paydoo"
 fullName: "Dmitry Morozov"
 pitchLine: "Sergey rapidly became one of our most skilled developers. I was also impressed by his skill to explain his concepts, ideas and solutions to other team members."
 ---

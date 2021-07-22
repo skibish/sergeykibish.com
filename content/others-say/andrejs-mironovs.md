@@ -2,7 +2,7 @@
 title: "Great public speaker and colleague"
 date: 2017-05-07T00:00:00+03:00
 draft: false
-headline: "Java Developer at TWINO"
+headline: "Senior Software Developer at Luminor"
 fullName: "Andrejs Mironovs"
 pitchLine: "Great public speaker and colleague."
 ---
