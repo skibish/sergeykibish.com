@@ -70,7 +70,7 @@
   <div class="flex flex-col">
     <div class="h-full">{{ .Params.quote }}</div>
     <div class="mt-3">
-      <div class="font-bold">{{ .Params.name }}</div>
+      <a class="font-bold hover:underline" href="/others-say#{{ .File.TranslationBaseName }}">{{ .Params.name }}</a>
       <div>{{ .Params.title }} at {{ .Params.company }}</div>
     </div>
   </div>

@@ -36,13 +36,13 @@ menu:
     url: /
     weight: -110
   - name: Blog
-    url: /blog/
+    pageRef: blog
     weight: -100
   - name: Music
-    url: /music/
+    pageRef: music
     weight: -90
   - name: Others Say
-    url: /others-say/
+    pageRef: others-say
     weight: -80
 
 params:
