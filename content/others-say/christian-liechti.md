@@ -1,10 +1,10 @@
 ---
-title: "Christian Liechti"
+title: "Head Magnum APAC a.i."
+company: "Swiss Re"
+name: "Christian Liechti"
+quote: "His problem-solving skills, client centricity and technical knowhow are very impressive."
 date: 2021-07-22T13:30:59+03:00
-draft: true
-headline: "Head Magnum APAC a.i. at Swiss Re"
-fullName: "Christian Liechti"
-pitchLine: "His problem-solving skills, client centricity and technical knowhow are very impressive."
+featured: true
 ---
 
 I worked with Sergey on various projects across Asia over the last 3+ years.

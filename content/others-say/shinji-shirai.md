@@ -1,10 +1,9 @@
 ---
-title: "Shinji Shirai"
+title: "Project Manager"
+company: "Swiss Re"
+name: "Shinji Shirai"
+quote: "Sergey stands out, not only thanks to his technical capability but always with an easy way to explain for everyone to comprehend."
 date: 2020-11-10T21:33:25+02:00
-headline: "Project Manager at Swiss Re"
-pitchLine: "Sergey stands out, not only thanks to his technical capability but always with an easy way to explain for everyone to comprehend."
-fullName: "Shinji Shirai"
-draft: true
 ---
 
 Sergey is the dream architect & developer for every project manager!

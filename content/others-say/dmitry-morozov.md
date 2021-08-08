@@ -1,13 +1,14 @@
 ---
-title: "A fast learner"
+title: "CTO"
+company: "Paydoo"
+name: "Dmitry Morozov"
+quote: "Impressed by his skill to explain his concepts, ideas and solutions to other team members."
 date: 2017-11-23T00:00:00+02:00
-draft: false
-headline: "CTO at Paydoo"
-fullName: "Dmitry Morozov"
-pitchLine: "Sergey rapidly became one of our most skilled developers. I was also impressed by his skill to explain his concepts, ideas and solutions to other team members."
+featured: true
 ---
 
-Working for Transact Pro, Sergey proved himself as a professional developer, able to work both on existing projects support and new systems development. Being a fast learner, Sergey rapidly became one of our most skilled developers, evolving from fresh graduate in a very short term.
+Working for Transact Pro, Sergey proved himself as a professional developer, able to work both on existing projects support and new systems development.
+Being a fast learner, Sergey rapidly became one of our most skilled developers, evolving from fresh graduate in a very short term.
 
 Mostly back-end developer, Sergey showed strong skills in front-end, devops, and also participated into our raspberry pi cluster building.
 

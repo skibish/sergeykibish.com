@@ -1,10 +1,9 @@
 ---
-title: "David Bole"
+title: "Director"
+company: "Neueda"
+name: "David Bole"
+quote: "Exceptionally talented developer who understands what it takes to put an overall solution/architecture in place."
 date: 2018-10-22T16:08:25+03:00
-draft: false
-headline: "Director at Neueda"
-fullName: "David Bole"
-pitchLine: "Sergey is an exceptionally talented developer who understands what it takes to put an overall solution/architecture in place."
 ---
 
 Sergey is an exceptionally talented developer who understands what it takes to put an overall solution/architecture in place.

@@ -1,10 +1,9 @@
 ---
-title: Constantly growing software developer
+title: Software Engineer
+company: "FAST TRACK"
+name: "Aleksandrs Antonovs"
+quote: "An obsession with exploring and learning new technologies makes him a team member you'd love to work with."
 date: 2017-06-11T00:00:00+03:00
-draft: false
-headline: "Software Engineer at FAST TRACK"
-fullName: Aleksandrs Antonovs
-pitchLine: An obsession with exploring and learning new technologies makes him a team member you’d love to work with.
 ---
 
 Sergey's skills and an obsession with exploring and learning new technologies makes him a team member you'd love to work with.

@@ -1,10 +1,9 @@
 ---
-title: "He is distinguished by a systematic and careful approach in the organisation of his work"
+title: "Data Scientist / Digital Data Associate Manager"
+company: "Accenture"
+name: "Elena Yurshevich"
+quote: "He is distinguished by a systematic and careful approach in the organisation of his work, and by ability thoroughly and accurately solve the problems."
 date: 2017-07-16T00:00:00+03:00
-draft: false
-headline: "Data Scientist / Digital Data Associate Manager at Accenture"
-fullName: "Elena Yurshevich"
-pitchLine: "He is distinguished by a systematic and careful approach in the organisation of his work, and by ability thoroughly and accurately solve the problems."
 ---
 
 I know Sergey since 2014.

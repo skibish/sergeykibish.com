@@ -1,10 +1,9 @@
 ---
-title: "One of our best master students"
+title: "Vice-rector for education"
+company: "TSI"
+name: "Irina Jackiva"
+quote: "He has very strong ability to work in a interdisciplinary environment and ability to incorporate existing knowledge."
 date: 2017-06-16T00:00:00+03:00
-draft: false
-headline: "Vice-rector for education at TSI"
-fullName: "Irina Jackiva"
-pitchLine: "Very motivated, ability to learn and with excellent communication skills. He has good potential in R&D. Very intelligent and open-minded."
 ---
 
 Sergey was one of our best master student and with high-estimated Master Thesis.

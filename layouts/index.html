@@ -66,12 +66,12 @@
 
 <h1 class="font-bold my-3 text-2xl">Others say</h1>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 leading-7">
-  {{ range first 3 (where .Site.RegularPages "Section" "others-say") }}
+  {{ range first 3 (shuffle (where (where .Site.RegularPages "Section" "others-say") "Params.featured" "==" true)) }}
   <div class="flex flex-col">
-    <div class="h-full">{{ .Params.pitchLine }}</div>
+    <div class="h-full">{{ .Params.quote }}</div>
     <div class="mt-3">
-      <div class="font-bold">{{ .Params.fullName }}</div>
-      <div>{{ .Params.headline }}</div>
+      <div class="font-bold">{{ .Params.name }}</div>
+      <div>{{ .Params.title }} at {{ .Params.company }}</div>
     </div>
   </div>
   {{end}}

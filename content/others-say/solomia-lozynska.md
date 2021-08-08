@@ -1,10 +1,9 @@
 ---
-title: "He is very talented"
+title: "Project Manager"
+company: "United Thinkers"
+name: "Solomia Lozynska"
+quote: "I was surprised with his global view on the projects and great attention to all the details."
 date: 2014-04-27T00:00:00+03:00
-draft: false
-headline: "Project Manager at United Thinkers"
-fullName: "Solomia Lozynska"
-pitchLine: "I was surprised with his global view on the projects and great attention to all the details. He is very talented and I do recommend him as the greatest asset to any company."
 ---
 
 Sergey is a professional IT specialist!
