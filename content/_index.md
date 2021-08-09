@@ -6,6 +6,7 @@ about: >
   Client focused, open-minded problem solver.
   Out-of-the-box thinker.
   Minimalist.
+  Gets Stuff Done.
 todo_next: >
   Make products that people are delighted to use.
   Build environment where individuals can open their full potential.
