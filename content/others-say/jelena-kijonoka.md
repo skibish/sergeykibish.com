@@ -4,7 +4,6 @@ company: "Accenture"
 name: "Jelena Kijonoka"
 quote: "He is distinguished by a systematic and careful approach in the organisation of his work, and by ability thoroughly and accurately solve the problems."
 date: 2017-07-16T00:00:00+03:00
-featured: true
 ---
 
 I know Sergey since 2014.
