@@ -1,8 +1,7 @@
 module.exports = {
-  purge: [
+  content: [
     './layouts/**/*.html'
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
@@ -14,9 +13,6 @@ module.exports = {
         txt: "#f8f5f3",
       }
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }
