@@ -40,11 +40,11 @@ menu:
   - name: Music
     pageRef: music
     weight: -90
-  - name: Others Say
-    pageRef: others-say
-    weight: -80
   - name: Speaking
     pageRef: speaking
+    weight: -80
+  - name: Others Say
+    pageRef: others-say
     weight: -70
 
 params:

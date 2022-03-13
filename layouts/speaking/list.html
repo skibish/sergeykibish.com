@@ -6,9 +6,9 @@
   {{ range (.Pages.GroupByDate "2006") }}
     <h1 class="text-4xl md:text-9xl font-bold my-6">{{ .Key }}</h1>
 
-    {{ range .Pages.ByDate.Reverse }}
+    {{ range .Pages }}
     <article>
-      <h1 id="{{.File.TranslationBaseName}}" class="mt-12">{{ .Params.title }} ({{ dateFormat "Jan 2, 2006" .Date }})</h1>
+      <h1 id="{{.File.TranslationBaseName}}" class="mt-12">{{ if lt now .Date}}[UPCOMING] {{end}}{{ .Params.title }} ({{ dateFormat "Jan 2, 2006" .Date }})</h1>
       <h1 class="font-normal">
         {{ .Params.name }}
         · {{ .Params.city }}, {{ .Params.country }}
