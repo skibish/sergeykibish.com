@@ -1,0 +1,25 @@
+{{define "main" }}
+
+<div class="max-w-screen-md mx-auto">
+  {{ .Content }}
+
+  {{ range (.Pages.GroupByDate "2006") }}
+    <h1 class="text-4xl md:text-9xl font-bold my-6">{{ .Key }}</h1>
+
+    {{ range .Pages.ByDate.Reverse }}
+    <article>
+      <h1 id="{{.File.TranslationBaseName}}" class="mt-12">{{ .Params.title }} ({{ dateFormat "Jan 2, 2006" .Date }})</h1>
+      <h1 class="font-normal">
+        {{ .Params.name }}
+        · {{ .Params.city }}, {{ .Params.country }}
+        {{ if isset .Params "website" }} · <a href="{{ .Params.website }}" target="_blank" rel="noopener">Website</a> {{ end }}
+        {{ if isset .Params "video" }} · <a href="{{ .Params.video }}" target="_blank" rel="noopener">Video</a> {{ end }}
+      </h1> 
+      {{.Content}}
+    </article>
+    {{ end }}
+  {{ end }}
+
+
+</div>
+{{end}}

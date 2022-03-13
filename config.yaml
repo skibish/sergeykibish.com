@@ -43,6 +43,9 @@ menu:
   - name: Others Say
     pageRef: others-say
     weight: -80
+  - name: Speaking
+    pageRef: speaking
+    weight: -70
 
 params:
   images:
