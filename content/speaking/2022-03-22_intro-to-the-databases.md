@@ -5,7 +5,6 @@ website: "https://dgtlschool.com/club"
 country: "Internet"
 countryISO2: "XX"
 city: "Online"
-publishDate: 2022-03-12
 date: 2022-03-22
 ---
 
