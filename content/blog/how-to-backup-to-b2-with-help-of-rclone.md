@@ -4,6 +4,12 @@ description: >
   I'm living in a place with not the fastest internet download/upload (39/12 Mbps) speeds.
   It took some time to tune all the parameters of the Rclone to successfully create an initial backup (around 400GB) and keep the network alive during the upload to Backblaze B2.
 date: 2021-11-27T11:30:26+03:00
+blog/categories:
+  - How tos
+blog/tags:
+  - RClone
+  - Backblaze B2
+  - Backups
 ---
 
 Some time ago I concluded that it would be nice to have an offsite copy of the important data if something will go completely wrong.

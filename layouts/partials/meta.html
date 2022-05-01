@@ -1,14 +1,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="theme-color" content="{{ .Param "styles.mainColor"  }}">
-{{ with .Description }}
+{{- with .Description -}}
 <meta name="description" content="{{ . }}"/>
-{{ else }}
+{{- else -}}
 <meta name="description" content="{{ .Site.Params.Description }}"/>
+{{- end }}
 
-{{ end }}
-
-{{ $manifest := resources.Get "manifest.json" | resources.ExecuteAsTemplate "manifest.json" . | fingerprint }}
+{{- $manifest := resources.Get "manifest.json" | resources.ExecuteAsTemplate "manifest.json" . | fingerprint }}
 <link rel="manifest" href="{{ $manifest.RelPermalink }}">
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -16,14 +15,14 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="shortcut icon" href="/favicon.ico?v={{ readFile "static/favicon.ico" | md5 }}">
 
-{{ template "_internal/opengraph.html" . }}
+{{- template "_internal/opengraph.html" . -}}
 
-{{ partial "twitter_card.html" . }}
+{{- partial "twitter_card.html" . -}}
 
-{{if .Params.canonical}}
+{{- if .Params.canonical -}}
 <link rel="canonical" href="{{.Params.canonical}}" />
-{{end}}
+{{- end -}}
 
-{{ with .OutputFormats.Get "rss" -}}
-{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-{{ end -}}
+{{- with .OutputFormats.Get "rss" -}}
+{{- printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML -}}
+{{- end -}}

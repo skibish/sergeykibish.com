@@ -1,0 +1,8 @@
+<div class="flex flex-col md:flex-row">
+  <div class="flex-none">{{ .Scratch.Get "termTitle" }}</div>
+  <ul class="list-none flex-wrap pl-0 md:pl-2 mb-0">
+    {{- range sort (.GetTerms (.Scratch.Get "termsSelector") ) "LinkTitle" -}}
+    <li class="inline-block mr-1"><a href="{{ .Permalink }}">#{{ .LinkTitle | urlize }}</a></li>
+    {{- end -}}
+  </ul>
+</div>

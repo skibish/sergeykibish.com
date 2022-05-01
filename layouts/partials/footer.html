@@ -1,47 +1,45 @@
-<footer class="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-20 mt-3">
-  <a class="block col-span-3 py-14 text-center border-4 border-accent text-accent font-bold text-2xl hover:bg-accent hover:bg-opacity-10" href="mailto:{{.Site.Author.email}}">Contact me</a>
-  <nav>
+<footer class="flex flex-col md:flex-row justify-between mt-3">
+  <a class="flex-initial grow block py-14 text-center border-4 border-accent text-accent font-bold text-2xl hover:bg-accent hover:bg-opacity-10 md:mr-3" href="mailto:{{.Site.Author.email}}">Contact me</a>
+  <nav class="flex-initial md:mr-3 mt-3 md:mt-0">
     <h1 class="font-bold mb-3">Navigation</h1>
     <ul class="list-none">
-      {{ range .Site.Menus.main }}
+      {{- range .Site.Menus.main -}}
       <li>
         <a class="hover:underline" href="{{ .URL }}" rel="me">
-          {{ .Name }}
+          {{- .Name -}}
         </a>
       </li>
-      {{ end }}
+      {{- end -}}
     </ul>
   </nav>
 
-  <div>
+  <div class="flex-initial md:mr-3 mt-3 md:mt-0">
     <h1 class="font-bold mb-3">Social</h1>
     <ul>
-      {{ range .Site.Data.footerLinks.social }}
+      {{- range .Site.Data.footerLinks.social -}}
       <li class="list-none">
         <a class="hover:underline" href="{{ .link }}" rel="me">
-          {{ .title }}
+          {{- .title -}}
         </a>
       </li>
-      {{ end }}
+      {{- end -}}
     </ul>
   </div>
 
-  <div>
-    <h1 class="font-bold mb-3">Different</h1>
+  <div class="flex-initial mt-3 md:mt-0">
+    <h1 class="font-bold mb-3">Various</h1>
     <ul>
-      {{ range .Site.Data.footerLinks.hobby }}
+    {{ range $k, $v := .Site.Taxonomies }}
       <li class="list-none">
-        <a class="hover:underline" href="{{ .link }}" rel="me">
-          {{ .title }}
+        <a class="hover:underline" href="{{ $k | absURL }}" rel="me">
+          {{- delimit (split $k "/") " " | title -}}
         </a>
       </li>
-      {{ end }}
+    {{ end }}
     </ul>
   </div>
 </footer>
 
 <div class="my-6">
-  {{ .Site.Copyright | safeHTML }}
+  {{- .Site.Copyright | safeHTML -}}
 </div>
-
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5e130d5003e54ea1b1d816103e8af1d6"}'></script>

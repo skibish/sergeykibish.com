@@ -11,6 +11,13 @@ description: >
   In this blog post I want to walk you through my thought process behind v4 and what influenced its rewrite.
   It's time for a retro.
 date: 2021-05-23T16:40:04+03:00
+blog/categories:
+  - Side Projects
+blog/tags:
+  - DDNS
+  - Go
+  - DigitalOcean
+  - Developer Experience
 ---
 
 Can't believe that I wrote DDNS 4 years ago, in 2017.

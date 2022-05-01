@@ -1,0 +1,20 @@
+{{ define "title" }}Sergey's Blog {{ replace .Title "Blog/" "" }}{{ end }}
+
+{{ define "main" }}
+<h1 class="-mt-9 text-2xl font-bold">{{ replace .Title "Blog/" "" }}</h1>
+
+<hr class="mt-3 mb-12"/>
+
+<ul class="list-none mb-20">
+  {{ range .Data.Terms.Alphabetical }}
+  <li class="text-2xl my-6">
+    {{- $totalReadingTime := 0 -}}
+    {{- range .Pages -}}
+      {{- $totalReadingTime = add $totalReadingTime .ReadingTime -}}
+    {{- end -}}
+
+    <p><a class="font-bold hover:underline" href="{{ .Page.Permalink }}">#{{ .Page.Title | urlize }}</a> ({{ .Count }} posts, reading time: {{ $totalReadingTime }} minutes)</p>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

@@ -1,17 +1,31 @@
-{{define "title"}}
-Sergey's Blog: {{ .Title }}
-{{end}}
+{{define "title"}}Sergey's Blog: {{ .Title }}{{end}}
 
 {{define "main"}}
 <article class="-mt-9">
   <h1 class="text-2xl font-bold">{{ .Title }}</h1>
-    {{ dateFormat "Jan 2, 2006" .Date }}
-    ({{.ReadingTime}} minutes read
-    {{- with .Params.Canonical -}}
-    {{- $url := urls.Parse . -}}
-    , first time published on <a href="{{ . }}" rel="noopener noreferrer" target="_blank">{{$url.Host}}</a>
-    {{- end -}}
+  <div class="mb-3">
+    {{- dateFormat "Jan 2, 2006" .Date }}
+    (
+      {{- .ReadingTime }} minutes to read
+      {{- with .Params.Canonical -}}
+        {{- $url := urls.Parse . -}}
+        , first time published on <a href="{{ . }}" rel="noopener noreferrer" target="_blank">{{$url.Host}}</a>
+      {{- end -}}
     )
+  </div>
+  {{ $categories := "blog/categories" }}
+  {{- if .Param $categories -}}
+    {{- .Scratch.Set "termTitle" "Categories:" -}}
+    {{- .Scratch.Set "termsSelector" "blog/categories" -}}
+    {{- partial "terms-list-inline.html" . -}}
+  {{- end -}}
+  {{ $tags := "blog/tags" }}
+  {{- if .Param $tags -}}
+    {{- .Scratch.Set "termTitle" "Tags:" -}}
+    {{- .Scratch.Set "termsSelector" "blog/tags" -}}
+    {{- partial "terms-list-inline.html" . -}}
+  {{- end -}}
+
   <hr class="mt-3 mb-12"/>
 
   <div class="max-w-screen-md mx-auto">

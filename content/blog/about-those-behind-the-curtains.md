@@ -5,6 +5,17 @@ description: >
   Those behind the curtains.
   I want you to think about the Developers Experience (DX).
 date: 2020-06-24T17:45:17+02:00
+blog/categories:
+  - Software Craftsmanship
+blog/tags:
+  - API Design
+  - Development
+  - Configuration
+  - Backend
+  - Operations
+  - DevOps
+  - SRE
+  - Developer Experience
 ---
 
 I want all involved in development to think about other users.

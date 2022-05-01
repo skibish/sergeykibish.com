@@ -6,6 +6,11 @@ description: >
   And you want to keep it clean and ready for guests.
   Yes, sometimes it's a mess after a party but still, you know how to clean everything and get back a shiny house.
 date: 2020-07-19T11:27:55+03:00
+blog/categories:
+  - Software Craftsmanship
+blog/tags:
+  - Git
+  - Development
 ---
 
 Your Git repository is like your home.
@@ -112,7 +117,7 @@ README.md
 .gitignore
 .gitattributes
 ```
- 
+
 This is a good start for any project that should go with an initial commit.
 
 ## Commit message

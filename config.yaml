@@ -8,7 +8,9 @@ author:
 enableRobotsTXT: true
 enableEmoji: true
 disqusShortname: sergey-kibish-blog
-taxonomies: []
+taxonomies:
+  category: blog/categories
+  tag: blog/tags
 outputs:
   page: ["HTML"]
   home: ["HTML"]

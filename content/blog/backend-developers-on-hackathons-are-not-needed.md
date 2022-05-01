@@ -5,6 +5,12 @@ description: >
   You've heard that right.
   The main goal of the startup hackathons (or any other) is to validate the idea in a limited time that the product you build is needed by people in the room.
 date: 2021-11-28T17:17:59+02:00
+blog/categories:
+  - Observations
+blog/tags:
+  - Hackathons
+  - Backend
+  - Development
 ---
 
 A few years back, when people had more interactions and live events, I've participated in various hackathons as a participant and mentor.

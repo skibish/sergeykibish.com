@@ -4,6 +4,8 @@ description: >
   Today is the day when people go on dates, confess in love and do various romantic things.
   In this post I'll share my dating experience, thoughts, tips and learnings collected on a journey of ~3 years, approximately.
 date: 2022-02-14T20:21:28+02:00
+blog/categories:
+  - Observations
 ---
 
 Today is the day when people go on dates, confess in love and do various romantic things.

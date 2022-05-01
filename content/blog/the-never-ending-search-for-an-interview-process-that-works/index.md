@@ -4,6 +4,10 @@ description: >
   A collection of notes I wrote to myself that describe the interview processes I have encountered so far, the good and the bad.
 date: 2020-04-28T00:00:00+02:00
 canonical: "https://medium.com/@kibish/the-never-ending-search-for-an-interview-process-that-works-3af3faa4d29d"
+blog/categories:
+  - Research
+blog/tags:
+  - Interviews
 ---
 
 If, by any chance, a comprehensive analysis of interview processes already exists somewhere on the internet, then this is the next best thing.

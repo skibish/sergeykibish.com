@@ -1,5 +1,5 @@
-{{ if .Get "desc" }}
-<a id="ref-{{.Get "id"}}-desc" href="#ref-{{.Get "id"}}">[ {{.Get "id"}} ]</a>
-{{else}}
-<a id="ref-{{.Get "id"}}" href="#ref-{{.Get "id"}}-desc">[ {{.Get "id"}} ]</a>
-{{end}}
+{{- if .Get "desc" -}}
+<a id="ref-{{.Get "id"}}-desc" href="#ref-{{.Get "id"}}">[ {{ .Get "id" }} ]</a>
+{{- else -}}
+<a id="ref-{{.Get "id"}}" href="#ref-{{.Get "id"}}-desc">[ {{ .Get "id" }} ]</a>
+{{- end -}}

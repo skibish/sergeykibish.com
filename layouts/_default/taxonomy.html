@@ -1,4 +1,7 @@
 {{define "main" }}
+<h1 class="-mt-9 text-2xl font-bold"><a class="font-bold hover:underline" href="{{ .Section | absURL }}">{{ replace .Section "blog/" "" | title }}</a> / #{{ .Title | urlize }}</h1>
+
+<hr class="mt-3 mb-12"/>
 
 {{ range (.Pages.GroupByDate "2006") }}
   <h1 class="text-4xl md:text-9xl font-bold my-6">{{ .Key }}</h1>
@@ -12,4 +15,4 @@
   </ul>
 {{ end }}
 
-{{end}}
+{{ end }}

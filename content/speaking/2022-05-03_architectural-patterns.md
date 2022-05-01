@@ -6,7 +6,6 @@ country: "Internet"
 countryISO2: "XX"
 city: "Online"
 date: 2022-05-03
-publishDate: 2022-04-15
 ---
 
 During this talk we will go through various architectural patterns looking at them through the Business Analyst prism.

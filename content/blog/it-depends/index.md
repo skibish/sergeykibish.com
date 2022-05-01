@@ -9,6 +9,8 @@ description: >
   But why does this happen?
   Let's think about it.
 date: 2021-06-10T20:41:39+03:00
+blog/categories:
+  - Observations
 ---
 
 Have you ever noticed the more experience you gain, the more often you can't answer some questions straight away?
@@ -102,6 +104,6 @@ Each question will give a new shape to a problem, more clues to you on how to so
 
 - While problem space is small all problems look like nails and you have a hammer
 - When problem space starts to expand you understand that not all problems can be solved with one hammer.
-You need other tools/techniques for different types of problems
+You need other tools/techniques for different types of problems.
 - Finally, before giving something out you define constraints and shape the problem.
 This is where "It depends" steps in.

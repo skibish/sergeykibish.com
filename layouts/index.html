@@ -1,4 +1,4 @@
-{{define "main"}}
+{{ define "main" }}
 {{/* <div class="text-4xl md:text-9xl">Sorting Chaos</div> */}}
 
 <hr class="mt-4" />
@@ -15,21 +15,21 @@
     <h1 class="font-bold my-3">I'm really good at</h1>
 
     <ul class="list-disc pl-4">
-      {{ range .Params.good_at}}
+      {{- range .Params.good_at -}}
       <li>{{ . }}</li>
-      {{ end }}
+      {{- end -}}
     </ul>
   </div>
 
   <div>
-    <h1 class="font-bold my-3">What I’m looking to do next</h1>
+    <h1 class="font-bold my-3">What I'm looking to do next</h1>
 
     <p>{{ .Params.todo_next }}</p>
     <p>Additionally:
       <ul class="list-disc pl-4">
-        {{range .Params.additionally}}
+        {{- range .Params.additionally -}}
         <li>{{ . }}</li>
-        {{end}}
+        {{- end -}}
       </ul>
     </p>
     <p>
@@ -44,29 +44,27 @@
     <h1 class="font-bold my-3">Highlights</h1>
 
     <dl>
-      {{ range .Params.achievements }}
+      {{- range .Params.achievements -}}
       <dt class="font-bold">{{ .title }}</dt>
       <dd>{{ .description }}</dd>
-      {{ end }}
+      {{- end -}}
     </dl>
   </div>
 </div>
 
 <h1 class="font-bold my-3 text-2xl">Thoughts</h1>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 text-2xl">
-  {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+  {{- range first 3 (where .Site.RegularPages "Section" "blog") -}}
   <div>
-    <div>
-      {{ dateFormat "Jan 2, 2006" .Date }}
-    </div>
+    <div>{{ dateFormat "Jan 2, 2006" .Date }}</div>
     <a class="font-bold hover:underline" href="{{ .Permalink }}">{{ .Title }}</a>
   </div>
-  {{ end }}
+  {{- end -}}
 </div>
 
 <h1 class="font-bold my-3 text-2xl">Others say</h1>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 leading-7">
-  {{ range first 3 (shuffle (where (where .Site.RegularPages "Section" "others-say") "Params.featured" "==" true)) }}
+  {{- range first 3 (shuffle (where (where .Site.RegularPages "Section" "others-say") "Params.featured" "==" true)) -}}
   <div class="flex flex-col">
     <div class="h-full">{{ .Params.quote }}</div>
     <div class="mt-3">
@@ -74,6 +72,6 @@
       <div>{{ .Params.title }} at {{ .Params.company }}</div>
     </div>
   </div>
-  {{end}}
+  {{- end -}}
 </div>
-{{ end }}
+{{- end -}}
