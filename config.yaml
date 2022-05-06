@@ -10,9 +10,9 @@ enableEmoji: true
 disqusShortname: sergey-kibish-blog
 taxonomies: []
 outputs:
-    page: ["HTML"]
-    home: ["HTML"]
-    section: ["HTML","RSS"]
+  page: ["HTML"]
+  home: ["HTML"]
+  section: ["HTML","RSS"]
 
 markup:
   highlight:
