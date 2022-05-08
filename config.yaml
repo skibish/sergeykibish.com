@@ -24,8 +24,7 @@ markup:
     lineNoStart: 1
     lineNos: false
     lineNumbersInTable: true
-    noClasses: true
-    style: github
+    noClasses: false
     tabWidth: 4
 
 build:
@@ -54,16 +53,7 @@ params:
     - /img/social-share.png
   description: "Problem solver. Sorting chaos."
   styles:
-    # mainColor: "#0e131f"
-    # secondColor: "#ab966d"
-    # textColor: "#fbf5f3"
-
     # Mint
     mainColor: "#2171a4"
     secondColor: "#c7ba9d"
     textColor: "#f8f5f3"
-
-    # Sea
-    # mainColor: "#0fa3b1ff"
-    # secondColor: "#b5e2faff"
-    # textColor: "#f9f7f3ff"

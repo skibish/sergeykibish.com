@@ -1,11 +1,7 @@
 {
   "name": "{{ .Param "author" }}",
-  "short_name": "{{ .Param "author" }}",
-  "theme_color": "{{ .Param "styles.mainColor" }}",
-  "background_color": "{{ .Param "styles.mainColor" }}",
   "display": "standalone",
   "orientation": "portrait",
-  "Scope": "/",
   "start_url": "/",
   "icons": [
     {
@@ -33,6 +29,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "splash_pages": null
+  ]
 }
