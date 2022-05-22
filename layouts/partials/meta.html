@@ -22,6 +22,6 @@
 <link rel="canonical" href="{{.Params.canonical}}" />
 {{- end -}}
 
-{{- with .OutputFormats.Get "rss" -}}
-{{- printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML -}}
-{{- end -}}
+{{- $b := .Site.GetPage "/blog" -}}
+{{- $rss := $b.OutputFormats.Get "rss" -}}
+{{- printf `<link rel="%s" type="%s" href="%s" title="%s" />` $rss.Rel $rss.MediaType.Type $rss.Permalink $b.Title | safeHTML -}}

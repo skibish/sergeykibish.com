@@ -29,6 +29,11 @@
   <div class="flex-initial mt-3 md:mt-0">
     <h1 class="font-bold mb-3">Various</h1>
     <ul>
+    {{- $b := .Site.GetPage "/blog" -}}
+    {{- $rss := $b.OutputFormats.Get "rss" -}}
+      <li class="list-none">
+        <a class="hover:underline" href="{{ $rss.Permalink }}">Blog RSS Feed</a>
+      </li>
     {{ range $k, $v := .Site.Taxonomies }}
       <li class="list-none">
         <a class="hover:underline" href="{{ $k | absURL }}" rel="me">
