@@ -1,7 +1,9 @@
 ---
 title: "Implementing Microsoft REST API Filter"
 description: >
-  Description about "Implementing Microsoft Rest Api Filter".
+  Enterprise organizations try to adapt Microsoft REST API Guidelines as a basis for their services more and more.
+  Something is simple to follow, something is not, like $filter.
+  In this post I will show you how to work with $filter outside the Microsoft tooling.
 date: 2022-07-12T06:00:00+03:00
 blog/categories:
   - How tos
