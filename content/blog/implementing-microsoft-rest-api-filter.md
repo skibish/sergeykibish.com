@@ -131,7 +131,7 @@ filter: expr+ EOF ;
 
 expr
  : OPAR expr CPAR
- | NOT PROPERTY COMPARISON VALUE
+ | NOT expr
  | PROPERTY COMPARISON VALUE
  | expr AND expr
  | expr OR expr
