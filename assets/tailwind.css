@@ -60,7 +60,7 @@ article blockquote {
 }
 
 code:not(.highlight *) {
-  @apply bg-txt dark:bg-darkAccent text-accent dark:text-txt px-1;
+  @apply text-accent dark:text-txt px-1;
 }
 
 .highlight {

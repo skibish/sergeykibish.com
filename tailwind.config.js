@@ -9,7 +9,7 @@ module.exports = {
       },
       colors: {
         main: "#2171a4",
-        accent: "#c7ba9d",
+        accent: "#fff3b0",
         txt: "#f8f5f3",
         darkMain: "#0e131f",
         darkAccent: "#ab966d",
