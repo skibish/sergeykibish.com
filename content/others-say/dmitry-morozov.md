@@ -4,7 +4,6 @@ company: "Paydoo"
 name: "Dmitry Morozov"
 quote: "Impressed by his skill to explain his concepts, ideas and solutions to other team members."
 date: 2017-11-23T00:00:00+02:00
-featured: true
 ---
 
 Working for Transact Pro, Sergey proved himself as a professional developer, able to work both on existing projects support and new systems development.
