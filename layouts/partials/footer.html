@@ -1,10 +1,10 @@
 <footer class="flex flex-col md:flex-row justify-between mt-3">
   <a class="btn-contactme flex-initial grow block py-14 text-center border-4 md:mr-3" href="mailto:{{.Site.Author.email}}">Contact me</a>
-  <nav class="flex-initial md:mr-3 mt-3 md:mt-0">
-    <h1 class="font-bold mb-3">Navigation</h1>
+  <nav class="flex-initial mt-3 md:mr-12 md:mt-0">
+    <h1 class="font-bold">Navigation</h1>
     <ul class="list-none">
       {{- range .Site.Menus.main -}}
-      <li>
+      <li class="py-1 md:py-0">
         <a class="hover:underline" href="{{ .URL }}" rel="me">
           {{- .Name -}}
         </a>
@@ -13,11 +13,11 @@
     </ul>
   </nav>
 
-  <div class="flex-initial md:mr-3 mt-3 md:mt-0">
-    <h1 class="font-bold mb-3">Social</h1>
-    <ul>
+  <div class="flex-initial mt-3 md:mr-12 md:mt-0">
+    <h1 class="font-bold">Social</h1>
+    <ul class="list-none">
       {{- range .Site.Data.footerLinks.social -}}
-      <li class="list-none">
+      <li class="py-1 md:py-0">
         <a class="hover:underline" href="{{ .link }}" rel="me">
           {{- .title -}}
         </a>
@@ -27,15 +27,15 @@
   </div>
 
   <div class="flex-initial mt-3 md:mt-0">
-    <h1 class="font-bold mb-3">Various</h1>
-    <ul>
+    <h1 class="font-bold">Various</h1>
+    <ul class="list-none">
     {{- $b := .Site.GetPage "/blog" -}}
     {{- $rss := $b.OutputFormats.Get "rss" -}}
-      <li class="list-none">
+      <li class="py-1 md:py-0">
         <a class="hover:underline" href="{{ $rss.Permalink }}">Blog RSS Feed</a>
       </li>
     {{ range $k, $v := .Site.Taxonomies }}
-      <li class="list-none">
+      <li class="py-1 md:py-0">
         <a class="hover:underline" href="{{ $k | absURL }}" rel="me">
           {{- delimit (split $k "/") " " | title -}}
         </a>
