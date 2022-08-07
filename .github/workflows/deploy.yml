@@ -27,4 +27,7 @@ jobs:
         hugo --minify
 
     - name: Publish
-      run: ./node_modules/.bin/firebase deploy --message $GITHUB_SHA --project ${{ secrets.FIREBASE_PROJECT }} --token ${{ secrets.FIREBASE_TOKEN }}
+      run: |
+        echo ${{ secrets.FIREBASE_SERVICE_ACCOUNT }} | base64 -d > sa.json
+        GOOGLE_APPLICATION_CREDENTIALS=$GITHUB_WORKSPACE/sa.json ./node_modules/.bin/firebase deploy --message $GITHUB_SHA --project ${{ secrets.FIREBASE_PROJECT }}
+        rm sa.json
