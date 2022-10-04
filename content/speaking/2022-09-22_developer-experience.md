@@ -2,6 +2,7 @@
 title: "Developer Experience: why it’s important"
 name: "DevClub"
 website: "https://devclub.lv"
+video: "https://www.youtube.com/watch?v=amHtZppzB-8"
 country: "Latvia"
 countryISO2: "LV"
 city: "Riga"
