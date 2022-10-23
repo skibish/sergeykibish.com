@@ -6,6 +6,7 @@ country: "Internet"
 countryISO2: "XX"
 city: "Online"
 date: 2022-11-01
+publishDate: 2022-10-22
 ---
 
 Soon it is the end of the year, so it is the perfect time to look at what is happening in the IT, what are the trends in the various areas.
