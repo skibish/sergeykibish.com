@@ -31,6 +31,8 @@
   <div class="max-w-screen-md mx-auto">
     {{ .Content }}
 
+    {{- partial "social-share-buttons.html" . -}}
+
     <div class="flex justify-between my-12">
       {{- with .PrevInSection -}}
       <a class="btn" href="{{.Permalink}}" >Previous</a>

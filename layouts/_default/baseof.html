@@ -5,6 +5,7 @@
   {{ partial "meta.html" . }}
 
   {{ partial "styles.html" . }}
+  {{- block "styles" . -}}{{- end -}}
   <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
 </head>
 
