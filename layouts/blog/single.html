@@ -4,7 +4,7 @@
 <article class="-mt-9">
   <h1 class="text-2xl font-bold">{{ .Title }}</h1>
   <div class="mb-3">
-    {{- dateFormat "Jan 2, 2006" .Date }}
+    <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "Jan 2, 2006" .Date }}</time>
     (
       {{- .ReadingTime }} minutes to read
       {{- with .Params.Canonical -}}

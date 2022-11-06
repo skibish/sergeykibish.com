@@ -4,7 +4,7 @@
   {{ .Content }}
 
   {{ range (.Pages.GroupByDate "2006") }}
-    <h1 class="text-4xl md:text-9xl font-bold my-6">{{ .Key }}</h1>
+    <h1 class="text-9xl font-bold mt-20">{{ .Key }}</h1>
 
     {{ range .Pages }}
     <article>

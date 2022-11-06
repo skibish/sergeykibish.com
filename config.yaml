@@ -32,20 +32,20 @@ build:
 
 menu:
   main:
-  - name: Home
-    url: /
-    weight: -110
   - name: Blog
     pageRef: blog
-    weight: -100
-  - name: Music
-    pageRef: music
-    weight: -90
+    weight: -110
   - name: Speaking
     pageRef: speaking
-    weight: -80
+    weight: -100
   - name: Others Say
     pageRef: others-say
+    weight: -90
+  - name: About
+    url: /
+    weight: -80
+  - name: Music
+    pageRef: music
     weight: -70
 
 params:

@@ -1,15 +1,20 @@
 {{define "main" }}
 
+<div class="max-w-screen-md mx-auto">
+
+{{ .Content }}
+
 {{ range (.Pages.GroupByDate "2006") }}
-  <h1 class="text-4xl md:text-9xl font-bold my-6">{{ .Key }}</h1>
-  <ul class="list-none mb-20">
-    {{ range .Pages.ByDate.Reverse }}
-    <li class="text-2xl my-6">
-      <a class="font-bold hover:underline" href="{{.Permalink}}">{{.Title}}</a>
-      <p>{{ dateFormat "Jan 2" .Date }} ({{.ReadingTime}} minutes read)</p>
-    </li>
-    {{ end }}
+  <h1 class="text-9xl font-bold mt-20">{{ .Key }}</h1>
+  {{ range .Pages.ByDate.Reverse }}
+  <article>
+    <h1 class="mt-12"><a class="font-bold text-txt dark:text-darkTxt hover:underline" href="{{.Permalink}}">{{.Title}}</a></h1>
+    <h1 class="font-normal"><time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "Jan 2" .Date }}</time> ({{.ReadingTime}} minutes read)</h1>
+    <p>{{ .Params.description }}</p>
+  </article>
+  {{ end }}
   </ul>
 {{ end }}
 
+</div>
 {{end}}

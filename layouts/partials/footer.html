@@ -5,7 +5,7 @@
     <ul class="list-none">
       {{- range .Site.Menus.main -}}
       <li class="py-1 md:py-0">
-        <a class="hover:underline" href="{{ .URL }}" rel="me">
+        <a class="text-txt dark:text-darkTxt hover:underline" href="{{ .URL }}" rel="me">
           {{- .Name -}}
         </a>
       </li>
@@ -18,7 +18,7 @@
     <ul class="list-none">
       {{- range .Site.Data.footerLinks.social -}}
       <li class="py-1 md:py-0">
-        <a class="hover:underline" href="{{ .link }}" rel="me">
+        <a class="text-txt dark:text-darkTxt hover:underline" href="{{ .link }}" rel="me">
           {{- .title -}}
         </a>
       </li>
@@ -32,11 +32,11 @@
     {{- $b := .Site.GetPage "/blog" -}}
     {{- $rss := $b.OutputFormats.Get "rss" -}}
       <li class="py-1 md:py-0">
-        <a class="hover:underline" href="{{ $rss.Permalink }}">Blog RSS Feed</a>
+        <a class="text-txt dark:text-darkTxt hover:underline" href="{{ $rss.Permalink }}">Blog RSS Feed</a>
       </li>
     {{ range $k, $v := .Site.Taxonomies }}
       <li class="py-1 md:py-0">
-        <a class="hover:underline" href="{{ $k | absURL }}" rel="me">
+        <a class="text-txt dark:text-darkTxt hover:underline" href="{{ $k | absURL }}" rel="me">
           {{- delimit (split $k "/") " " | title -}}
         </a>
       </li>

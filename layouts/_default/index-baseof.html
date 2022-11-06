@@ -10,9 +10,11 @@
 
 <body>
   <div class="container max-w-screen-lg mx-auto px-3 xl:px-0">
-    <header class="flex justify-between">
-      <div class="text-4xl md:text-9xl font-bold self-end">Sergey<br>Kibish</div>
+    <header class="mb-20">
       {{ partial "menu.html" . }}
+    </header>
+    <header>
+      <div class="text-8xl md:text-9xl font-bold">Sergey Kibish</div>
     </header>
     {{ block "main" . }}
     <!-- The part of the page that begins to differ between templates -->

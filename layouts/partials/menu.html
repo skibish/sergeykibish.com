@@ -1,9 +1,9 @@
-<nav>
-  <ul class="list-none md:text-2xl text-right whitespace-nowrap">
+<nav class="box-content overflow-x-auto overflow-y-hidden">
+  <ul class="flex list-none text-2xl whitespace-nowrap">
     {{- $currentPage := . -}}
     {{- range .Site.Menus.main -}}
-    <li>
-      <a class="hover:underline{{if ($currentPage.HasMenuCurrent "main" .)}} underline{{end}}" href="{{ .URL }}">{{ .Name }}</a>
+    <li class="shrink-0">
+      <a class="inline-block m-1.5 bg-main dark:bg-darkMain text-txt dark:text-darkTxt rounded-md p-1 hover:underline{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} underline{{end}}" href="{{ .URL }}">{{ .Name }}</a>
     </li>
     {{- end -}}
   </ul>

@@ -30,7 +30,7 @@ body {
   @apply bg-main dark:bg-darkMain text-txt dark:text-darkTxt mt-3;
 }
 
-article h1,
+h1,
 h2,
 h3,
 h4,
@@ -51,11 +51,11 @@ article ol {
   @apply list-decimal list-outside pl-5 mb-5;
 }
 
-article a {
+a {
   @apply hover:underline text-accent dark:text-darkAccent;
 }
 
-article blockquote {
+blockquote {
   @apply italic border-l-4 border-txt dark:border-darkTxt pl-3;
 }
 
