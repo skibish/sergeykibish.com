@@ -10,6 +10,10 @@ social:
 - title: Twitter
   icon: fab fa-twitter
   link: https://twitter.com/skibish
+- title: Mastodon
+  icon: fab fa-mastodon
+  link: https://hachyderm.io/@skibish
 - title: YouTube
   icon: fab fa-youtube
   link: https://www.youtube.com/playlist?list=PL6U6iDFrKTE2ySiMLs2O77WOIpk3WepiZ
+
