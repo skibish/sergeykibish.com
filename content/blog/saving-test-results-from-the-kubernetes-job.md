@@ -10,6 +10,7 @@ blog/categories:
 blog/tags:
   - Docker
   - Kubernetes
+  - DevOps
 ---
 
 At some point in life you might find yourself running E2E (end-to-end) test suite using Kubernetes.

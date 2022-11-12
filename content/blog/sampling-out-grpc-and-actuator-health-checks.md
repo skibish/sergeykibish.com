@@ -10,6 +10,9 @@ blog/categories:
 blog/tags:
   - Azure
   - Azure Application Insights
+  - Java
+  - Development
+  - DevOps
 ---
 
 When [App Insights Java agent](https://github.com/microsoft/ApplicationInsights-Java) is added to the Spring Boot application with Actuator liveness / readiness endpoints enabled, it will log all probe requests done by Kubernetes to App Insights.
