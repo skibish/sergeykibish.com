@@ -1,32 +1,32 @@
 ---
 title: Sergey Kibish — Problem Solver. Sorting Chaos.
-about: >
-  The one who will help you to level up the game.
-  Who knows how to make product/relationships better.
-  Client focused, open-minded problem solver.
-  Out-of-the-box thinker.
-  Minimalist.
-  Gets Stuff Done.
-todo_next: >
-  Make products that people are delighted to use.
-  Build environment where individuals can open their full potential.
-  Creating "Wow" experiences.
-additionally:
-  - mentor and coach
-  - create teams that could solve any problems
-  - do research
-  - experiment
-  - automate as much as possible
+about: |
+  Solutions Architect with 10 years of experience in tech (mainly fintech and insurtech).
+  I create clarity where there was confusion/chaos before.
+  I am an expert in listening to customers, understanding their needs and requirements.
+  I make clients happy by solving problems in the simplest ways possible.
+
+  I'm walking the path of the Jedi.
+  I started as a young padawan and grew into who I am now, fighting with illogical and unneeded complexities.
+  Along the way gathered hard skills in the backend, DevOps, Cloud, QA, frontend and a little bit of mobile.
+  As a true Jedi, I've learned to manipulate abstractions (boxes and arrows).
+  I have an ability to identify the customer's needs and pain points.
+  I mentor peers and lead by example.
+todo_next: |
+  In my next endeavour, I want to leverage my experiences to help build a great product that people love.
+  Define vision, features, be the voice of the customer when communicating with other teams.
+
+  I would be happy to represent you at developer conferences, events, hackathons and with the technical press, blogs.
 good_at:
-  - dealing with change, surprises, and unexpected problems
-  - figuring out how different people can work together productively
-  - making unintelligible or complex ideas, plans, procedures, or regulations easy to understand
-  - remaining calm in the face of unexpected changes, obstacles, or challenges
-  - turning thoughts into action
-  - finding solutions
+  - Dealing with change, surprises, and unexpected problems
+  - Figuring out how different people can work together productively
+  - Making unintelligible or complex ideas, plans, procedures, or regulations easy to understand
+  - Remaining calm in the face of unexpected changes, obstacles, or challenges
+  - Turning thoughts into actions
+  - Finding solutions
 achievements:
   - title: Solutions Architect (2018 — Present)
-    description: Helping clients to solve their problems around the globe
+    description: Helping clients solving problems around the globe
   - title: GDG Riga organizer (2015 — 2019)
     description: Organized more than 25 different IT related meetups
   - title: DevFest Baltics core organizer (2017, 2018)

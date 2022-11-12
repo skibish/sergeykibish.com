@@ -8,7 +8,7 @@
   <div>
     <h1 class="my-3">Who am I</h1>
 
-    <p>{{ .Params.about }}</p>
+    {{ .Params.about | markdownify }}
   </div>
 
   <div>
@@ -24,14 +24,7 @@
   <div>
     <h1 class="my-3">What I'm looking to do next</h1>
 
-    <p>{{ .Params.todo_next }}</p>
-    <p>Additionally:
-      <ul class="list-disc pl-4">
-        {{- range .Params.additionally -}}
-        <li>{{ . }}</li>
-        {{- end -}}
-      </ul>
-    </p>
+    {{ .Params.todo_next | markdownify }}
     <p>
       <a class="underline" href="https://www.youtube.com/watch?v=TSNerxNwWtU" target="_blank" rel="noopener"
         data-play-video>
