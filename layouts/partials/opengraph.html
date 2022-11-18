@@ -1,0 +1,82 @@
+{{/* fork: https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/opengraph.html */}}
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+
+{{- if and (eq .Section "blog") .IsPage -}}
+
+{{- $fontRegular := resources.GetRemote "https://github.com/google/fonts/raw/5c3d8ef085f3084db38936d0dcd39a567dbc1e01/ofl/montserrat/Montserrat-Regular.ttf" -}}
+{{- $fontBold := resources.GetRemote "https://github.com/google/fonts/raw/5c3d8ef085f3084db38936d0dcd39a567dbc1e01/ofl/montserrat/Montserrat-Bold.ttf" -}}
+{{- $image := resources.Get "cover.png" -}}
+{{- $image = $image.Filter (images.Text .Title (dict
+  "font" $fontBold
+  "color" "#f8f5f3"
+  "size" 80
+  "linespacing" 2
+  "x" 40
+  "y" 60
+)) -}}
+{{- $date := dateFormat "Jan 2, 2006" .Date -}}
+{{- $b := printf "Sergey's Blog · %s (%d minutes to read)" $date .ReadingTime -}}
+{{- $image = $image.Filter (images.Text $b (dict
+  "font" $fontRegular
+  "color" "#f8f5f3"
+  "size" 40
+  "linespacing" 2
+  "x" 40
+  "y" 460
+)) -}}
+{{- $u := printf "%s" $.Site.BaseURL -}}
+{{- $image = $image.Filter (images.Text $u (dict
+  "font" $fontRegular
+  "color" "#f8f5f3"
+  "size" 40
+  "linespacing" 2
+  "x" 40
+  "y" 520
+))}}
+<meta property="og:image" content="{{ $image.Permalink }}"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="{{ $image.Permalink }}"/>
+{{- else -}}
+
+{{with $.Site.Params.images }}
+<meta property="og:image" content="{{ index . 0 | absURL }}" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
+{{- end -}}
+{{- end -}}
+
+{{- if .IsPage }}
+{{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+<meta property="article:section" content="{{ .Section }}" />
+{{ with .PublishDate }}<meta property="article:published_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />{{ end }}
+{{ with .Lastmod }}<meta property="article:modified_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />{{ end }}
+{{- end -}}
+
+{{- with .Params.audio }}<meta property="og:audio" content="{{ . }}" />{{ end }}
+{{- with .Params.locale }}<meta property="og:locale" content="{{ . }}" />{{ end }}
+{{- with .Site.Params.title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
+{{- with .Params.videos }}{{- range . }}
+<meta property="og:video" content="{{ . | absURL }}" />
+{{ end }}{{ end }}
+
+{{- /* If it is part of a series, link to related articles */}}
+{{- $permalink := .Permalink }}
+{{- $siteSeries := .Site.Taxonomies.series }}
+{{ with .Params.series }}{{- range $name := . }}
+  {{- $series := index $siteSeries ($name | urlize) }}
+  {{- range $page := first 6 $series.Pages }}
+    {{- if ne $page.Permalink $permalink }}<meta property="og:see_also" content="{{ $page.Permalink }}" />{{ end }}
+  {{- end }}
+{{ end }}{{ end }}
+
+{{- /* Facebook Page Admin ID for Domain Insights */}}
+{{- with .Site.Social.facebook_admin }}<meta property="fb:admins" content="{{ . }}" />{{ end }}
+
+{{- /* Twitter card */}}
+<meta name="twitter:title" content="{{ .Title }}"/>
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
+<meta name="twitter:site" content="@s_kibish"/>
+<meta name="twitter:creator" content="@s_kibish"/>

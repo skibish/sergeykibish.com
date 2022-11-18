@@ -14,9 +14,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="shortcut icon" href="/favicon.ico?v={{ readFile "static/favicon.ico" | md5 }}">
 
-{{- template "_internal/opengraph.html" . -}}
-
-{{- partial "twitter_card.html" . -}}
+{{- partial "opengraph.html" . -}}
 
 {{- if .Params.canonical -}}
 <link rel="canonical" href="{{.Params.canonical}}" />
