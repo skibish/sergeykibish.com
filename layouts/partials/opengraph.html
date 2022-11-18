@@ -37,13 +37,13 @@
   "y" 520
 ))}}
 <meta property="og:image" content="{{ $image.Permalink }}"/>
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{{ $image.Permalink }}"/>
 {{- else -}}
 
 {{with $.Site.Params.images }}
 <meta property="og:image" content="{{ index . 0 | absURL }}" />
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
 {{- end -}}
 {{- end -}}
