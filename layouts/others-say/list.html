@@ -7,6 +7,7 @@
   <article>
     <h1 id="{{.File.TranslationBaseName}}" class="mt-12">{{.Params.name}}</h1>
     <h1 class="font-normal">{{.Params.title}} at {{.Params.company}}</h1>
+    <blockquote class="after:content-['\2033'] before:content-['\2033'] mt-3 mb-3 text-2xl">{{.Params.quote}}</blockquote>
     {{.Content}}
   </article>
   {{ end }}
