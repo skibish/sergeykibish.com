@@ -4,7 +4,6 @@ company: "Swiss Re"
 name: "Richardson Soegito"
 quote: "His out-of-the-box thinking and technical recommendations are spot on and his contribution to the projects that we have been working on can be easily seen and felt."
 date: 2020-10-05T14:41:48+03:00
-featured: true
 ---
 
 I've been working together with Sergey on multiple systems integration projects and successfully delivered.
