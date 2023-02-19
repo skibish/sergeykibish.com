@@ -118,7 +118,7 @@ But this is not something you would like to have for "serverless" workloads.
 ## Azure Function App
 
 Azure Function is an [Azure Function **app**](https://learn.microsoft.com/en-us/azure/azure-functions/functions-create-function-app-portal#create-a-function-app).
-It is some compute (App Service) which holds *more than one* function to execute.
+It is some compute (App Service + WebJob) which holds *more than one* function to execute.
 Azure Function is *not designed* to run only one function.
 It expects to execute multiple functions within one compute.
 
