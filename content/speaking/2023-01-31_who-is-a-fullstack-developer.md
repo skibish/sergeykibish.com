@@ -7,7 +7,6 @@ country: "Estonia"
 countryISO2: "EE"
 city: "Tallinn"
 date: 2023-01-31
-publishDate: 2023-01-19
 ---
 
 In the constantly evolving world of technology, there are many different roles and titles that make up the field of engineering.
