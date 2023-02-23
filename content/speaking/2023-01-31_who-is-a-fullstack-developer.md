@@ -2,6 +2,7 @@
 title: "Who is a Full-Stack Developer?"
 name: "Devclub.eu meetup #162"
 website: "https://www.eventbrite.com/e/devclubeu-162-tickets-517364038767"
+video: "https://www.youtube.com/watch?v=f9DvfW48oBU"
 country: "Estonia"
 countryISO2: "EE"
 city: "Tallinn"
