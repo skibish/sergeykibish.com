@@ -2,7 +2,7 @@
 title: "Interview Process From Scratch"
 description: >
   In 2018, I gave a talk at DACHfest 2018 called "Interview Process From Scratch".
-  This article is based on that talk.
+  This post is based on that talk.
   I decided to finally put it in written form because I had learned a lot during that time and wanted to preserve that knowledge.
   As the saying goes, history often repeats itself, so it's better to have a written record of what you've done previously and why, rather than reinventing the wheel.
 date: 2023-04-23T16:05:02+03:00
@@ -14,13 +14,13 @@ draft: true
 ---
 
 In 2018, I gave a talk at [DACHfest 2018 called "Interview Process From Scratch"](https://www.youtube.com/watch?v=1u5griKyxzc).
-This article is based on that talk.
+This post is based on that talk.
 I decided to finally put it in written form because I had learned a lot during that time and wanted to preserve that knowledge.
 As the saying goes, history often repeats itself, so it's better to have a written record of what you've done previously and why, rather than reinventing the wheel.
 
 ## Introduction
 
-In this article, I want to share my experience of being involved in a large interview/hiring process that spanned over five months and involved over 200 engineers.
+In this post, I want to share my experience of being involved in a large interview/hiring process that spanned over five months and involved over 200 engineers.
 All of this happened in 2018.
 As someone who has been through [various interview processes]({{<relref "/blog/the-never-ending-search-for-an-interview-process-that-works.md">}}) myself, I had my own opinions about what a good interview process should look like from the interviewee perspective.
 But now, I found myself in the position of creating the process, conducting interviews, and assessing candidates from the other side.
@@ -29,7 +29,7 @@ This experience led me to question what a good interview process should actually
 I want to encourage you to think about your company interview process --- do you truly believe it's effective and well-structured?
 Or do you simply go through the motions without critically evaluating its strengths and weaknesses?
 
-If, after reading this article, you find yourself questioning the effectiveness of your current interview process, then I believe I have accomplished my goal.
+If, after reading this post, you find yourself questioning the effectiveness of your current interview process, then I believe I have accomplished my goal.
 
 One thing to note is that this is not a scientific research study --- it is simply my personal experience.
 As such, some of the practices and approaches I mention may not be suitable for your company environment.
