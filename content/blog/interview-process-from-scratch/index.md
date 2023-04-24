@@ -1,16 +1,15 @@
 ---
-title: "Interview Process From Scratch"
+title: "Interview Process from Scratch"
 description: >
   In 2018, I gave a talk at DACHfest 2018 called "Interview Process From Scratch".
   This post is based on that talk.
   I decided to finally put it in written form because I had learned a lot during that time and wanted to preserve that knowledge.
   As the saying goes, history often repeats itself, so it's better to have a written record of what you've done previously and why, rather than reinventing the wheel.
-date: 2023-04-23T16:05:02+03:00
+date: 2023-04-24T21:05:02+03:00
 blog/categories:
   - Talk Transcriptions
 blog/tags:
   - Interviews
-draft: true
 ---
 
 In 2018, I gave a talk at [DACHfest 2018 called "Interview Process From Scratch"](https://www.youtube.com/watch?v=1u5griKyxzc).
@@ -140,7 +139,7 @@ public void increaseValue(int amount, boolean isCredit) {
 We then ask, "What problems do you see here?" and listen to the candidate's response.
 Open-Ended Questions, on the other hand, are questions without a correct answer.
 They help us to understand how the candidate thinks.
-Examples of Open-Ended Questions include, "What do you love/hate about `technology`?" and "You've implemented a feature. How will you make sure that it is working as expected?"
+Examples of Open-Ended Questions include, "What do you love/hate about `technology`?" and "You've implemented a feature. How will you make sure that it works as expected?"
 
 As a result of these changes, we have seen fewer false positives with candidates, and we are better able to recognize cheaters.
 However, we still struggle to identify Senior candidates within the one-hour interview timeframe.
