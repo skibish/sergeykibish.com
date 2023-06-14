@@ -13,10 +13,9 @@ about: |
   I have an ability to identify the customer's needs and pain points.
   I mentor peers and lead by example.
 todo_next: |
-  In my next endeavour, I want to leverage my experiences to help build a great product that people love.
-  Define vision, features, be the voice of the customer when communicating with other teams.
+  In my next endeavor, I aim to leverage my experiences to help build great teams that can create products loved by many. I will define the vision and serve as the voice of the customer when communicating with others.
 
-  I would be happy to represent you at developer conferences, events, hackathons and with the technical press, blogs.
+  Additionally, I would be delighted to represent you at developer conferences, events, hackathons, and with the technical press and educational blogs.
 good_at:
   - Dealing with change, surprises, and unexpected problems
   - Figuring out how different people can work together productively
