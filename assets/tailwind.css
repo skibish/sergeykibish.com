@@ -75,6 +75,27 @@ img {
   @apply dark:brightness-90 dark:contrast-75
 }
 
+table {
+  @apply w-full table-auto border-spacing-2 my-6;
+}
+
+table tr {
+  @apply border-b border-txt dark:border-darkTxt;
+}
+
+table tr:first-child {
+  @apply border-t-4 border-txt dark:border-darkTxt;
+}
+
+table tr:last-child {
+  @apply border-b-4 border-txt dark:border-darkTxt;
+}
+
+table tr td {
+  @apply py-3;
+}
+
+
 /*
 ======================================================================
 CODE HIGHLIGHTING
