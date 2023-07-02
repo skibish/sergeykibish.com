@@ -5,6 +5,12 @@ description: >
   It helps you lint Protofiles, ensure backward compatibility and generate code.
   Follow these tips to get started with Buf.
 date: 2023-05-05T10:19:01+03:00
+blog/categories:
+  - How tos
+blog/tags:
+  - gRPC
+  - Protobuf
+  - Development
 ---
 
 In one project, it was decided to use [gPRC](https://grpc.io)  for communication between backend components.
