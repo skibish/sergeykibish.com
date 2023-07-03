@@ -96,8 +96,8 @@ There were rules applicable to our reality:
 Let's take a look at the numbers.
 "Index" column indicates what index rules where set:
 
-- "No" --- no indexes (index on `_id` is present).
-- "Only needed" --- index on created data time and `a.b.c.d.e.f` field.
+- "No" --- no indexes (only default for `_id` is present).
+- "Only needed" --- index on created date time and `a.b.c.d.e.f` field.
 - "Wildcard" --- index on all document properties.
 
 ### Test Group 1, Insert
@@ -205,4 +205,3 @@ Based on the numbers collected, here is a summary and interpretation of the find
 In essence, the only similarity between Cosmos DB API for MongoDB and MongoDB itself is the name and some shared APIs.
 For small applications with low loads and simple functionality, the differences between the two may not be significant.
 However, for applications with higher demands as in our use case, Cosmos DB may not be the optimal choice.
-These findings suggest that Cosmos DB might not provide the same level of performance as MongoDB when it comes to handling complex workloads.
