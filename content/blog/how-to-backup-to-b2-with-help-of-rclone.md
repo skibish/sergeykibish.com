@@ -175,7 +175,7 @@ So, if you have access to the data centre or fibre network, you will have more l
 [^2]: https://en.wikipedia.org/wiki/Backup#3-2-1_rule
 [^3]: https://nextcloud.com
 [^4]: https://linux.die.net/man/1/rsync
-[^5]: https://www.backblaze.com/b2/cloud-storage.html
+[^5]: https://www.backblaze.com/cloud-storage
 [^6]: https://forum.rclone.org/t/rclone-crashing-internet/4593
 [^7]: https://en.wikipedia.org/wiki/Bufferbloat
 [^8]: https://rclone.org/b2/#transfers
