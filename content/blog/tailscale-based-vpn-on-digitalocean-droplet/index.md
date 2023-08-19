@@ -91,6 +91,11 @@ With command `tailscale up --advertise-exit-node` we registered node as "exit no
 
 ![Step 3. Use as exit node](images/step31_flip-switch.png)
 
+> 2023-08-19 update
+>
+> Tailscale rolled out [Auto Approvers](https://tailscale.com/kb/1018/acls/#auto-approvers-for-routes-and-exit-nodes) feature in beta which means that
+> it is no longer required to perform manual confirmation in the Tailscale admin UI.
+
 Bonus points!
 If you do not want to re-auth the node manually after key expiration, you can click on three dots again and select "Disable key expiry".
 
