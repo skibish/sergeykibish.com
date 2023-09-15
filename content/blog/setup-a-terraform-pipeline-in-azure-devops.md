@@ -4,6 +4,13 @@ description: >
   Are you ready to automate your Terraform deployments using Azure DevOps?
   In this short post, I'll walk you through creating a Terraform pipeline using Azure YAML Pipelines.
 date: 2023-09-16T10:16:03+03:00
+blog/categories:
+  - How tos
+blog/tags:
+  - Azure
+  - Azure DevOps
+  - DevOps
+  - Terraform
 ---
 
 Are you ready to automate your Terraform deployments using Azure DevOps?
