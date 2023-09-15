@@ -6,7 +6,7 @@ description: >
   Let's get started.
 date: 2023-09-15T10:00:00+03:00
 blog/categories:
-  - Observations
+  - How tos
 blog/tags:
   - Azure
   - Azure Cosmos DB
