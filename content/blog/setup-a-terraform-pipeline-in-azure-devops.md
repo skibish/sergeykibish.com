@@ -76,7 +76,7 @@ variables:
     value: "1.5.5"
   - name: terraform_sha
     value: "ad0c696c870c8525357b5127680cd79c0bdf58179af9acd091d43b1d6482da4a"
-  - ${{ if eq(parameters.environment, 'dev') }}
+  - ${{ if eq(parameters.environment, 'dev') }}:
     - name: storage_account_name
       value: ""
     - name: storage_account_resource_group_name
