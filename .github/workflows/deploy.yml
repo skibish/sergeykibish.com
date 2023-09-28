@@ -27,13 +27,18 @@ jobs:
         hugo --minify
 
     - name: Publish
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: storage.bunnycdn.com
-        username: ${{ secrets.BUNNY_STORAGE }}
-        password: ${{ secrets.BUNNY_API_STORAGE }}
-        local-dir: ./public/
-        server-dir: ./${{ secrets.BUNNY_STORAGE }}/
+      run: |
+        set -e
+        find public -type f | while read -r file
+        do
+          raw_file=${file##public/}
+          curl --request PUT \
+              --url https://storage.bunnycdn.com/${{ secrets.BUNNY_STORAGE }}/$raw_file
+              --header 'AccessKey: ${{ secrets.BUNNY_API_STORAGE }}' \
+              --header 'Content-Type: application/octet-stream' \
+              --header 'accept: application/json'  \
+              --data-binary @$file
+        done
 
     - name: Refresh
       run: |
