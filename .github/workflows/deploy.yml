@@ -37,6 +37,8 @@ jobs:
 
     - name: Refresh
       run: |
+        set -e
         curl --request POST \
-             --url 'https://api.bunny.net/purge?url=${{ secrets.BUNNY_PULL_ZONE }}.b-cdn.net&async=false' \
-             --header 'AccessKey: ${{ secrets.BUNNY_API }}'
+            --url https://api.bunny.net/pullzone/${{ secrets.BUNNY_PULL_ZONE }}/purgeCache \
+            --header 'AccessKey: ${{ secrets.BUNNY_API }}' \
+            --header 'content-type: application/json'
