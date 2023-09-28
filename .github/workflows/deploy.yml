@@ -33,7 +33,7 @@ jobs:
         do
           raw_file=${file##public/}
           curl --request PUT \
-              --url https://storage.bunnycdn.com/${{ secrets.BUNNY_STORAGE }}/$raw_file
+              --url https://storage.bunnycdn.com/${{ secrets.BUNNY_STORAGE }}/$raw_file \
               --header 'AccessKey: ${{ secrets.BUNNY_API_STORAGE }}' \
               --header 'Content-Type: application/octet-stream' \
               --header 'accept: application/json'  \
