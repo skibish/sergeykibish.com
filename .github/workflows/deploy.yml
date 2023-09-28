@@ -31,8 +31,12 @@ jobs:
         set -e
         find public -type f | while read -r file
         do
+          echo "uploading: $file"
           raw_file=${file##public/}
-          curl --request PUT \
+          curl --silent \
+              --show-error \
+              --output /dev/null \
+              --request PUT \
               --url https://storage.bunnycdn.com/${{ secrets.BUNNY_STORAGE }}/$raw_file \
               --header 'AccessKey: ${{ secrets.BUNNY_API_STORAGE }}' \
               --header 'Content-Type: application/octet-stream' \
