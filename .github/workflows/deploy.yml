@@ -27,9 +27,16 @@ jobs:
         hugo --minify
 
     - name: Publish
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: storage.bunnycdn.com
+        username: ${{ secrets.BUNNY_STORAGE }}
+        password: ${{ secrets.BUNNY_API_STORAGE }}
+        local-dir: ./public/
+        server-dir: ./${{ secrets.BUNNY_STORAGE }}/
+
+    - name: Refresh
       run: |
-        npm install -g bnycdn
-        bnycdn key set default $BUNNY_API
-        bnycdn key set $BUNNY_STORAGE $BUNNY_API_STORAGE --type=storages
-        bnycdn cp -R -s $BUNNY_STORAGE public /$BUNNY_STORAGE/
-        bnycdn pz purge -t $BUNNY_PULL_ZONE
+        curl --request POST \
+             --url 'https://api.bunny.net/purge?url=${{ secrets.BUNNY_PULL_ZONE }}.b-cdn.net&async=false' \
+             --header 'AccessKey: ${{ secrets.BUNNY_API }}'
