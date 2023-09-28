@@ -28,6 +28,8 @@ jobs:
 
     - name: Publish
       run: |
-        echo ${{ secrets.FIREBASE_SERVICE_ACCOUNT }} | base64 -d > sa.json
-        GOOGLE_APPLICATION_CREDENTIALS=$GITHUB_WORKSPACE/sa.json ./node_modules/.bin/firebase deploy --message $GITHUB_SHA --project ${{ secrets.FIREBASE_PROJECT }}
-        rm sa.json
+        npm install -g bnycdn
+        bnycdn key set default $BUNNY_API
+        bnycdn key set $BUNNY_STORAGE $BUNNY_API_STORAGE --type=storages
+        bnycdn cp -R -s $BUNNY_STORAGE public /$BUNNY_STORAGE/
+        bnycdn pz purge -t $BUNNY_PULL_ZONE
