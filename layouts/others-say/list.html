@@ -1,13 +1,13 @@
 {{define "main" }}
 
-<div class="max-w-screen-md mx-auto">
-  {{ .Content }}
+{{ .Content }}
 
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
   {{ range .Pages.ByDate.Reverse }}
   <article>
-    <h1 id="{{.File.TranslationBaseName}}" class="mt-12">{{.Params.name}}</h1>
-    <h1 class="font-normal">{{.Params.title}} at {{.Params.company}}</h1>
-    <blockquote class="after:content-['\2033'] before:content-['\2033'] mt-3 mb-3 text-2xl">{{.Params.quote}}</blockquote>
+    <h1 id="{{.File.TranslationBaseName}}">{{.Params.name}}</h1>
+    <div class="text-2xl font-normal">{{.Params.title}} at {{.Params.company}}</div>
+    <blockquote class="after:content-['\2033'] before:content-['\2033'] mt-3 mb-3">{{.Params.quote}}</blockquote>
     {{.Content}}
   </article>
   {{ end }}

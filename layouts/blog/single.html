@@ -31,7 +31,7 @@
   <div class="max-w-screen-md mx-auto">
     {{ .Content }}
 
-    <p>✨ If you found this post helpful and want to say "Thank you! 💖", <a href="https://www.buymeacoffee.com/skibish" target="_blank">you can treat me with a cup of tea.</a></p>
+    <div class="border-4 border-yellow-700 dark:border-yellow-300 rounded p-9">✨ If you found this post helpful and want to say "Thank you! 💖", <a href="https://www.buymeacoffee.com/skibish" target="_blank">you can treat me with a cup of tea.</a></div>
 
     <div class="flex justify-between my-12">
       {{- with .PrevInSection -}}
@@ -47,7 +47,7 @@
 {{end}}
 
 {{define "scripts"}}
-<script>
+<script defer>
   document.querySelectorAll('.footnote-backref').forEach(el => el.text = '[return]');
 </script>
 {{end}}

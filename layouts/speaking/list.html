@@ -1,25 +1,29 @@
 {{define "main" }}
 
-<div class="max-w-screen-md mx-auto">
-  {{ .Content }}
+{{ .Content }}
 
-  {{ range (.Pages.GroupByDate "2006") }}
-    <h1 class="text-9xl font-bold mt-20">{{ .Key }}</h1>
+<div class="grid grid-cols-1 md:grid-cols-6">
+{{ range (.Pages.GroupByDate "2006") }}
+  <div class="md:col-span-2">
+    <div class="md:sticky md:top-0 text-7xl font-bold">{{ .Key }}</div>
+  </div>
 
-    {{ range .Pages }}
+  <div class="md:col-span-4">
+  {{ range .Pages }}
     <article>
-      <h1 id="{{.File.TranslationBaseName}}" class="mt-12">{{ if lt now .Date}}[UPCOMING] {{end}}{{ .Params.title }} ({{ dateFormat "Jan 2, 2006" .Date }})</h1>
-      <h1 class="font-normal">
+      <h1 id="{{.File.TranslationBaseName}}">{{ .Params.title }}</h1>
+      <div class="text-2xl"><time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ if lt now .Date}}[UPCOMING] {{end}} {{ dateFormat "Jan 2" .Date }}</time></div>
+      <div class="text-2xl">
         {{ .Params.name }}
         · {{ .Params.city }}, {{ .Params.country }}
         {{ if isset .Params "website" }} · <a href="{{ .Params.website }}" target="_blank" rel="noopener">Website</a> {{ end }}
         {{ if isset .Params "video" }} · <a href="{{ .Params.video }}" target="_blank" rel="noopener">Video</a> {{ end }}
-      </h1> 
+      </div> 
       {{.Content}}
     </article>
-    {{ end }}
   {{ end }}
-
+  </div>
+{{ end }}
 
 </div>
 {{end}}

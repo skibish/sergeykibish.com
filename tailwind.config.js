@@ -1,3 +1,5 @@
+import harmonyPalette from "@evilmartians/harmony/tailwind";
+
 module.exports = {
   content: [
     './layouts/**/*.html'
@@ -5,17 +7,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: "Montserrat"
+        sans: "Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
+        mono: "Fira Code, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace"
       },
-      colors: {
-        main: "#2171a4",
-        accent: "#fff3b0",
-        txt: "#f8f5f3",
-        darkMain: "#0e131f",
-        darkAccent: "#ab966d",
-        darkTxt: "#909cc2"
-      }
+      colors: harmonyPalette
     },
-  },
-  plugins: [],
+  }
 }

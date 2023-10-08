@@ -1,7 +1,7 @@
 ---
 title: Sergey Kibish — Problem Solver. Sorting Chaos.
 about: |
-  Solutions Architect with 10 years of experience in tech (mainly fintech and insurtech).
+  Software Engineer with 10 years of experience in tech (mainly fintech and insurtech).
   I create clarity where there was confusion/chaos before.
   I am an expert in listening to customers, understanding their needs and requirements.
   I make clients happy by solving problems in the simplest ways possible.

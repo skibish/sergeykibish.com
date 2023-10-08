@@ -1,9 +1,16 @@
 {{/* https://gohugo.io/getting-started/configuration-markup#image-markdown-example */}}
+{{- $u := .Destination }}
+{{- with .Page.Resources.GetMatch .Destination }}
+  {{- $webp := .Process "webp" }}
+  {{- $u = $webp.RelPermalink }}
+{{- end }}
+
 <div>
-    <img
-      src="{{ .Destination | safeURL }}"
-      alt="{{ .Text }}"
-      decoding="auto"
-    />
-    <p><em>{{ .Text }}</em></p>
+  <img
+    src="{{ $u | safeURL }}"
+    alt="{{ .Text }}"
+    decoding="auto"
+    loading="lazy"
+  />
+  <p><em>{{ .Text }}</em></p>
 </div>

@@ -27,9 +27,6 @@ markup:
     noClasses: false
     tabWidth: 4
 
-build:
-  writeStats: true
-
 menu:
   main:
   - name: Blog
@@ -52,8 +49,3 @@ params:
   images:
     - /img/social-share.png
   description: "Problem solver. Sorting chaos."
-  styles:
-    # Mint
-    mainColor: "#2171a4"
-    secondColor: "#c7ba9d"
-    textColor: "#f8f5f3"

@@ -1,11 +1,11 @@
-<footer class="flex flex-col md:flex-row justify-between mt-3">
-  <a class="btn-contactme flex-initial grow block py-14 text-center border-4 md:mr-3" href="mailto:{{.Site.Author.email}}">Contact me</a>
-  <nav class="flex-initial mt-3 md:mr-12 md:mt-0">
-    <h1 class="font-bold">Navigation</h1>
+<footer class="grid grid-cols-1 md:grid-cols-6 md:gap-6 auto-cols-max mt-3">
+  <a class="md:col-span-3 btn-contactme border-4 flex justify-center items-center" href="mailto:{{.Site.Author.email}}"><div class="m-9">Contact me</div></a>
+  <nav class="mt-3 md:mt-0">
+    <h1 class="font-bold">Nav</h1>
     <ul class="list-none">
       {{- range .Site.Menus.main -}}
-      <li class="py-1 md:py-0">
-        <a class="text-txt dark:text-darkTxt hover:underline" href="{{ .URL }}" rel="me">
+      <li>
+        <a class="text-violet-900 dark:text-violet-100 hover:underline" href="{{ .URL }}" rel="me">
           {{- .Name -}}
         </a>
       </li>
@@ -13,12 +13,12 @@
     </ul>
   </nav>
 
-  <div class="flex-initial mt-3 md:mr-12 md:mt-0">
+  <div class="mt-3 md:mt-0">
     <h1 class="font-bold">Social</h1>
     <ul class="list-none">
       {{- range .Site.Data.footerLinks.social -}}
-      <li class="py-1 md:py-0">
-        <a class="text-txt dark:text-darkTxt hover:underline" href="{{ .link }}" rel="me">
+      <li>
+        <a class="text-violet-900 dark:text-violet-100 hover:underline" href="{{ .link }}" rel="me">
           {{- .title -}}
         </a>
       </li>
@@ -26,25 +26,27 @@
     </ul>
   </div>
 
-  <div class="flex-initial mt-3 md:mt-0">
+  <div class=" mt-3 md:mt-0">
     <h1 class="font-bold">Various</h1>
     <ul class="list-none">
     {{- $b := .Site.GetPage "/blog" -}}
     {{- $rss := $b.OutputFormats.Get "rss" -}}
-      <li class="py-1 md:py-0">
-        <a class="text-txt dark:text-darkTxt hover:underline" href="{{ $rss.Permalink }}">Blog RSS Feed</a>
+      <li>
+        <a class="text-violet-900 dark:text-violet-100 hover:underline" href="{{ $rss.Permalink }}">Blog RSS Feed</a>
       </li>
     {{ range $k, $v := .Site.Taxonomies }}
-      <li class="py-1 md:py-0">
-        <a class="text-txt dark:text-darkTxt hover:underline" href="{{ $k | absURL }}" rel="me">
+      <li>
+        <a class="text-violet-900 dark:text-violet-100 hover:underline" href="{{ $k | absURL }}" rel="me">
           {{- delimit (split $k "/") " " | title -}}
         </a>
       </li>
     {{ end }}
     </ul>
   </div>
+
+  <div class="md:col-span-6 my-6">
+    {{- .Site.Copyright | safeHTML -}}
+  </div>
 </footer>
 
-<div class="my-6">
-  {{- .Site.Copyright | safeHTML -}}
-</div>
+

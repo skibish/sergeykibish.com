@@ -2,8 +2,8 @@
   <ul class="flex list-none text-2xl whitespace-nowrap">
     {{- $currentPage := . -}}
     {{- range .Site.Menus.main -}}
-    <li class="shrink-0">
-      <a class="inline-block m-1.5 bg-main dark:bg-darkMain text-txt dark:text-darkTxt rounded-md p-1 hover:underline{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} underline{{end}}" href="{{ .URL }}">{{ .Name }}</a>
+    <li>
+      <a class="inline-block m-1.5 text-violet-900 dark:text-violet-100 p-1{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} underline{{else}} no-underline{{end}}" href="{{ .URL }}">{{ .Name }}</a>
     </li>
     {{- end -}}
   </ul>

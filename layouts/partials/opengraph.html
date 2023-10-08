@@ -11,7 +11,7 @@
 {{- $image := resources.Get "cover.png" -}}
 {{- $image = $image.Filter (images.Text .Title (dict
   "font" $fontBold
-  "color" "#f8f5f3"
+  "color" "#292a4f"
   "size" 80
   "linespacing" 2
   "x" 40
@@ -21,7 +21,7 @@
 {{- $b := printf "Sergey's Blog · %s (%d minutes to read)" $date .ReadingTime -}}
 {{- $image = $image.Filter (images.Text $b (dict
   "font" $fontRegular
-  "color" "#f8f5f3"
+  "color" "#292a4f"
   "size" 40
   "linespacing" 2
   "x" 40
@@ -30,7 +30,7 @@
 {{- $u := printf "%s" $.Site.BaseURL -}}
 {{- $image = $image.Filter (images.Text $u (dict
   "font" $fontRegular
-  "color" "#f8f5f3"
+  "color" "#292a4f"
   "size" 40
   "linespacing" 2
   "x" 40

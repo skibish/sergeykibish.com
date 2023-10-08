@@ -2,18 +2,15 @@
 # Can be social, hobby or partOf
 social:
 - title: LinkedIn
-  icon: fab fa-linkedin
   link: https://linkedin.com/in/skibish
 - title: GitHub
-  icon: fab fa-github
   link: https://github.com/skibish
 - title: Twitter
-  icon: fab fa-twitter
   link: https://twitter.com/skibish
 - title: Mastodon
-  icon: fab fa-mastodon
   link: https://hachyderm.io/@skibish
+- title: Bluesky
+  link: https://bsky.app/profile/sergeykibish.com
 - title: YouTube
-  icon: fab fa-youtube
   link: https://www.youtube.com/playlist?list=PL6U6iDFrKTE2ySiMLs2O77WOIpk3WepiZ
 
