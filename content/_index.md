@@ -1,5 +1,7 @@
 ---
 title: Sergey Kibish — Problem Solver. Sorting Chaos.
+outputs:
+  - html
 about: |
   Software Engineer with 10 years of experience in tech (mainly fintech and insurtech).
   I create clarity where there was confusion/chaos before.

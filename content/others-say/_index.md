@@ -1,5 +1,7 @@
 ---
 title: What Others Say About Sergey
+outputs:
+  - html
 description: What others say about me
 _build:
   render: true
