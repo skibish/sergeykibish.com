@@ -5,44 +5,54 @@ on:
     - cron: '0 7 * * *'
   workflow_dispatch:
 
+env:
+  BUNNYSYNC_SHA265: "691e36fc2e2a94f68c86d55913f46f11e61709e3e2f8132f329d73b7d338043a"
+  BUNNYSYNC_VERSION: "0.0.1"
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
     - uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: "0.111.3"
+        hugo-version: "0.119.0"
         extended: true
 
     - uses: actions/setup-node@v3
       with:
-        node-version: "18"
+        node-version: "20"
         cache: "npm"
+
+    - uses: actions/cache@v3
+      with:
+        path: resources
+        key: ${{ runner.os }}-hugo-${{ github.run_id }}
+        restore-keys: |
+          ${{ runner.os }}-hugo
 
     - name: Build
       run: |
-        npm i
+        npm install-clean
         hugo --minify
 
     - name: Publish
       run: |
         set -e
-        find public -type f | while read -r file
-        do
-          echo "uploading: $file"
-          raw_file=${file##public/}
-          curl --silent \
-              --show-error \
-              --output /dev/null \
-              --request PUT \
-              --url https://storage.bunnycdn.com/${{ secrets.BUNNY_STORAGE }}/$raw_file \
-              --header 'AccessKey: ${{ secrets.BUNNY_API_STORAGE }}' \
-              --header 'Content-Type: application/octet-stream' \
-              --header 'accept: application/json'  \
-              --data-binary @$file
-        done
+
+        curl --silent \
+            --show-error \
+            --output bunnysync \
+            --url https://github.com/skibish/bunnysync/releases/download/${{ env.BUNNYSYNC_VERSION }}/bunnysync_${{ env.BUNNYSYNC_VERSION }}_linux_386
+
+        echo "${{ env.BUNNYSYNC_SHA265 }} bunnysync" | sha256sum -c
+
+        chmod +x bunnysync
+        ./bunnysync -src ./public -storage-zone ${{ secrets.BUNNY_STORAGE }} -storage-api-key ${{ secrets.BUNNY_API_STORAGE }}
 
     - name: Refresh
       run: |
