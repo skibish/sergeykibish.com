@@ -45,6 +45,7 @@ jobs:
         set -e
 
         curl --silent \
+            --location \
             --show-error \
             --output bunnysync \
             --url https://github.com/skibish/bunnysync/releases/download/${{ env.BUNNYSYNC_VERSION }}/bunnysync_${{ env.BUNNYSYNC_VERSION }}_linux_386
