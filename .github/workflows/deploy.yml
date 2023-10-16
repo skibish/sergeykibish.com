@@ -53,11 +53,19 @@ jobs:
         echo "${{ env.BUNNYSYNC_SHA265 }} bunnysync" | sha256sum -c
 
         chmod +x bunnysync
-        ./bunnysync -src ./public -storage-zone ${{ secrets.BUNNY_STORAGE }} -storage-api-key ${{ secrets.BUNNY_API_STORAGE }}
+        ./bunnysync -src ./public -storage-zone ${{ secrets.BUNNY_STORAGE }} -storage-api-key ${{ secrets.BUNNY_API_STORAGE }} | tee bunnysync.log
 
     - name: Refresh
       run: |
         set -e
+
+        line_count=$(wc -l < bunnysync.log)
+
+        if [ "$line_count" -eq 0 ]; then
+          echo "Nothing to refresh"
+          exit 0
+        fi
+
         curl --silent \
             --show-error \
             --output /dev/null \
