@@ -60,7 +60,7 @@
 
 <h1 class="my-3">Others say</h1>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 leading-7">
-  {{- range first 3 (shuffle (where (where .Site.RegularPages "Section" "others-say") "Params.featured" "==" true)) -}}
+  {{- range first 3 (where (where .Site.RegularPages "Section" "others-say") "Params.featured" "==" true) -}}
   <div class="flex flex-col">
     <blockquote class="h-full after:content-['\2033'] before:content-['\2033']" cite="/others-say/#{{ .File.TranslationBaseName }}">{{ .Params.quote }}</blockquote>
     <div class="mt-3">
