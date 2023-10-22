@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 env:
-  BUNNYSYNC_SHA265: "54f0d28ff9ddabc9b453a9d0cacce747bd98ff0b96c5a6f4e86e21e685702e10"
-  BUNNYSYNC_VERSION: "0.0.1"
+  BUNNYSYNC_SHA265: "b408e83eeb616611fc0f86f02065ae9969918a792a13d11616fed64476c9d55d"
+  BUNNYSYNC_VERSION: "0.0.2"
 
 jobs:
   deploy:
@@ -53,7 +53,7 @@ jobs:
         echo "${{ env.BUNNYSYNC_SHA265 }} bunnysync" | sha256sum -c
 
         chmod +x bunnysync
-        ./bunnysync -src ./public -storage-zone ${{ secrets.BUNNY_STORAGE }} -storage-api-key ${{ secrets.BUNNY_API_STORAGE }} | tee bunnysync.log
+        ./bunnysync -src ./public -zone-name ${{ secrets.BUNNY_STORAGE }} -password ${{ secrets.BUNNY_API_STORAGE }} | tee bunnysync.log
 
     - name: Refresh
       run: |
