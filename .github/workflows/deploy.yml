@@ -41,9 +41,8 @@ jobs:
         hugo --gc --minify
 
     - name: Publish
+      shell: bash
       run: |
-        set -e
-
         curl --silent \
             --location \
             --show-error \
@@ -56,9 +55,8 @@ jobs:
         ./bunnysync -src ./public -zone-name ${{ secrets.BUNNY_STORAGE }} -password ${{ secrets.BUNNY_API_STORAGE }} | tee bunnysync.log
 
     - name: Refresh
+      shell: bash
       run: |
-        set -e
-
         line_count=$(wc -l < bunnysync.log)
 
         if [ "$line_count" -eq 0 ]; then
