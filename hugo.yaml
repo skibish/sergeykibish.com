@@ -27,6 +27,10 @@ markup:
     noClasses: false
     tabWidth: 4
 
+services:
+  rss:
+    limit: 12
+
 menu:
   main:
   - name: Blog
