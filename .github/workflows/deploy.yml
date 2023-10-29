@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 env:
-  BUNNYSYNC_SHA265: "b408e83eeb616611fc0f86f02065ae9969918a792a13d11616fed64476c9d55d"
-  BUNNYSYNC_VERSION: "0.0.2"
+  BUNNYSYNC_SHA256: "bc3188e0e55c1a9915713f4e7741e3daf56b7064962089884c7c7636d4383044"
+  BUNNYSYNC_VERSION: "0.0.3"
 
 jobs:
   deploy:
@@ -49,7 +49,7 @@ jobs:
             --output bunnysync \
             --url https://github.com/skibish/bunnysync/releases/download/${{ env.BUNNYSYNC_VERSION }}/bunnysync_${{ env.BUNNYSYNC_VERSION }}_linux_amd64
 
-        echo "${{ env.BUNNYSYNC_SHA265 }} bunnysync" | sha256sum -c
+        echo "${{ env.BUNNYSYNC_SHA256 }} bunnysync" | sha256sum -c
 
         chmod +x bunnysync
         ./bunnysync -src ./public -zone-name ${{ secrets.BUNNY_STORAGE }} -password ${{ secrets.BUNNY_API_STORAGE }} | tee bunnysync.log
