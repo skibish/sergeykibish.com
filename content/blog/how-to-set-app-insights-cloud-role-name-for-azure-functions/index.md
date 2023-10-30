@@ -22,7 +22,7 @@ Use `WEBSITE_CLOUD_ROLENAME` environment variable ([source](https://github.com/A
 In Azure, recommended way to collect logs from apps is to use [Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) (which is pretty cool by the way).
 You even can construct the [application maps](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-map?tabs=net) to see how they communicate with each other.
 
-![App Insights Application Map](https://docs.microsoft.com/en-us/azure/azure-monitor/app/media/app-map/app-map-001.png)
+![App Insights Application Map. Image taken from Microsoft docs website.](images/app-map-001.png)
 
 To create such map you will instruct your applications to use the same Application Insights Instance.
 But how to segregate logs to understand that they are coming from different apps?
