@@ -26,6 +26,10 @@ hr {
   @apply mb-6;
 }
 
+.footnotes p {
+  @apply break-words;
+}
+
 body {
   @apply bg-violet-100 dark:bg-violet-900 text-violet-900 dark:text-violet-100 mt-3;
 }
