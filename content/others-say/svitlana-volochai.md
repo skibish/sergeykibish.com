@@ -1,5 +1,5 @@
 ---
-title: "Manager"
+title: "Senior Manager"
 company: "BearingPoint"
 name: "Svitlana Volochai"
 quote: "I was impressed with his knowledge and his ability to quickly adjust to client’s needs and to handle daily requests from the client very efficiently and fast."

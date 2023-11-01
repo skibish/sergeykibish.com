@@ -1,6 +1,6 @@
 ---
 title: "CTO"
-company: "Paydoo"
+company: "MultiPass"
 name: "Dmitry Morozov"
 quote: "Impressed by his skill to explain his concepts, ideas and solutions to other team members."
 date: 2017-11-23T00:00:00+02:00

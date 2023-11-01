@@ -1,5 +1,5 @@
 ---
-title: "Head Magnum APAC a.i."
+title: "Product Area Lead L&H Pricing & Experience Studies RE CIDO"
 company: "Swiss Re"
 name: "Christian Liechti"
 quote: "His problem-solving skills, client centricity and technical knowhow are very impressive."

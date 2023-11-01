@@ -1,5 +1,5 @@
 ---
-title: "Director"
+title: "Founder & Executive Director"
 company: "Neueda"
 name: "David Bole"
 quote: "Exceptionally talented developer who understands what it takes to put an overall solution/architecture in place."

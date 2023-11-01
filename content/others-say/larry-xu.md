@@ -1,5 +1,5 @@
 ---
-title: "Senior Solutions Architect"
+title: "Senior Solution Architect"
 company: "Swiss Re"
 name: "Larry Xu"
 quote: "His ability to solve complex problems with simple and elegant solutions clearly demonstrates his mastery of the modern software architecture discipline."

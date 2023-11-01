@@ -1,6 +1,6 @@
 ---
-title: "Project Manager"
-company: "Swiss Re"
+title: "Head of Business Admin and Claims"
+company: "VIG Re"
 name: "Shinji Shirai"
 quote: "Sergey stands out, not only thanks to his technical capability but always with an easy way to explain for everyone to comprehend."
 date: 2020-11-10T21:33:25+02:00

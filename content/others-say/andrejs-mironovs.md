@@ -1,6 +1,6 @@
 ---
-title: "Senior Software Engineer"
-company: "Luminor"
+title: "Software Engineer"
+company: "Gravity Team"
 name: "Andrejs Mironovs"
 quote: "Great team-player — responsive, reliable, ready to help and open for constructive critics."
 date: 2017-05-07T00:00:00+03:00

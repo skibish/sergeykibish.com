@@ -1,6 +1,6 @@
 ---
 title: Software Engineer
-company: "FAST TRACK"
+company: "Top Gaming"
 name: "Aleksandrs Antonovs"
 quote: "An obsession with exploring and learning new technologies makes him a team member you'd love to work with."
 date: 2017-06-11T00:00:00+03:00

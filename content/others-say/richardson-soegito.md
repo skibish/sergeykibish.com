@@ -1,5 +1,5 @@
 ---
-title: "Technical Consultant"
+title: "Vice President Information Technology"
 company: "Swiss Re"
 name: "Richardson Soegito"
 quote: "His out-of-the-box thinking and technical recommendations are spot on and his contribution to the projects that we have been working on can be easily seen and felt."

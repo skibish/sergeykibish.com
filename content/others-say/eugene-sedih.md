@@ -1,5 +1,5 @@
 ---
-title: "Senior Project Manager / Scrum Master"
+title: "Senior Project Manager/Scrum Master"
 company: "C.T.Co"
 name: "Eugene Sedih"
 quote: "Sergey is someone who always impressed me. I found him a highly skilled and dedicated professional."
