@@ -1,9 +1,6 @@
 baseURL: "https://sergeykibish.com"
 languageCode: "en-us"
 copyright: "&#169; Sergey Kibish"
-author:
-  name: "Sergey Kibish"
-  email: "contact@sergeykibish.com"
 
 enableRobotsTXT: true
 enableEmoji: true
@@ -50,6 +47,9 @@ menu:
     weight: -70
 
 params:
+  author:
+    name: "Sergey Kibish"
+    email: "contact@sergeykibish.com"
   images:
     - /img/social-share.png
   description: "Problem solver. Sorting chaos."
