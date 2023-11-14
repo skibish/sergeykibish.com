@@ -166,7 +166,7 @@ Let's explore how we can build a Full-Stack Developer using these roadmaps:
 
 - The [Backend Developer roadmap](https://roadmap.sh/backend) spans approximately 3 screens.
 It covers essential skills for backend development.
-- Understanding proper application development requires knowledge of [Sofware Design and Architecture princpiples](https://roadmap.sh/software-design-architecture), which is another 2 screens worth of roadmap.
+- Understanding proper application development requires knowledge of [Software Design and Architecture principles](https://roadmap.sh/software-design-architecture), which is another 2 screens worth of roadmap.
 - Deploying applications in today's world necessitates familiarity with [DevOps](https://roadmap.sh/devops).
 Another 2.5 screens of content.
 - Now, what's missing? Frontend skills! The
@@ -174,7 +174,6 @@ Another 2.5 screens of content.
 - Additionally, considering the prevalence of mobile applications, it's beneficial to explore mobile development.
 However, for the sake of brevity, I'll stop here.
 
-// TODO
 I assume, you either, after learning everything in theory and practice will find zen, piece inside yourself and with everyone around...
 or you'll burnout to hell.
 From my personal experience, second has more chances to happen than the first one.
