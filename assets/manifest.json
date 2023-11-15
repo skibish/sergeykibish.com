@@ -1,5 +1,5 @@
 {
-  "name": "{{ .Param "author" }}",
+  "name": "{{ .Param "author.name" }}",
   "display": "standalone",
   "orientation": "portrait",
   "start_url": "/",
