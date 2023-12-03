@@ -26,7 +26,7 @@ good_at:
   - Turning thoughts into actions
   - Finding solutions
 achievements:
-  - title: Solutions Architect (2018 — Present)
+  - title: Solutions Architect (2018 — 2023)
     description: Helping clients solving problems around the globe
   - title: GDG Riga organizer (2015 — 2019)
     description: Organized more than 25 different IT related meetups
