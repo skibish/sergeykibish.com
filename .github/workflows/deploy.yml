@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 env:
-  BUNNYSYNC_SHA256: "98b864eeae0876c68ddf8232782c2e8d4991abfd5392a9345e5cad3ae08d0af5"
-  BUNNYSYNC_VERSION: "0.0.4"
+  BUNNYSYNC_SHA256: "a8bb0d5d2b8fe04da90cb97cd9a879935b3eba460819bead8e763f26c3691847"
+  BUNNYSYNC_VERSION: "0.0.5"
 
 jobs:
   deploy:
