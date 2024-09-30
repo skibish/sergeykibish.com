@@ -73,7 +73,7 @@
 {{ end }}{{ end }}
 
 {{- /* Facebook Page Admin ID for Domain Insights */}}
-{{- with .Site.Social.facebook_admin }}<meta property="fb:admins" content="{{ . }}" />{{ end }}
+{{- with .Site.Params.Social.facebook_admin }}<meta property="fb:admins" content="{{ . }}" />{{ end }}
 
 {{- /* Twitter card */}}
 <meta name="twitter:title" content="{{ .Title }}"/>
