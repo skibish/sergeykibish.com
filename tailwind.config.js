@@ -1,6 +1,6 @@
 import harmonyPalette from "@evilmartians/harmony/tailwind";
 
-module.exports = {
+export default {
   content: [
     './layouts/**/*.html'
   ],

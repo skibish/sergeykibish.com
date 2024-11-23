@@ -14,6 +14,6 @@ if (process.env.HUGO_ENVIRONMENT == 'production') {
   };
 }
 
-module.exports = {
+export default {
   plugins: plugins,
 }
