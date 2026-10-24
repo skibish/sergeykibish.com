@@ -1,13 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@config "./tailwind.config.js";
+@import "tailwindcss";
+@source "hugo_stats.json";
 
 .btn {
-  @apply block px-12 py-4 text-center border-4 border-yellow-700 dark:border-yellow-300 font-bold hover:bg-yellow-700 dark:hover:bg-yellow-300 hover:bg-opacity-10 dark:hover:bg-opacity-10 rounded no-underline;
+  @apply block px-12 py-4 text-center border-4 border-yellow-700 dark:border-yellow-300 font-bold hover:bg-yellow-700/10 dark:hover:bg-yellow-300/10 rounded no-underline;
 }
 
 .btn-contactme {
-  @apply border-yellow-700 dark:border-yellow-300 text-yellow-700 dark:text-yellow-300 font-bold text-2xl hover:bg-yellow-700 dark:hover:bg-yellow-300 hover:bg-opacity-10 dark:hover:bg-opacity-10 rounded no-underline;
+  @apply border-yellow-700 dark:border-yellow-300 text-yellow-700 dark:text-yellow-300 font-bold text-2xl hover:bg-yellow-700/10 dark:hover:bg-yellow-300/10 rounded no-underline;
 }
 
 hr {

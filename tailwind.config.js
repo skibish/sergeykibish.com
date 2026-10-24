@@ -1,9 +1,6 @@
 import harmonyPalette from "@evilmartians/harmony/tailwind";
 
 export default {
-  content: [
-    './layouts/**/*.html'
-  ],
   theme: {
     extend: {
       fontFamily: {
