@@ -1,5 +1,5 @@
 baseURL: "https://sergeykibish.com"
-languageCode: "en-us"
+locale: "en-us"
 copyright: "&#169; Sergey Kibish"
 
 enableRobotsTXT: true
@@ -45,6 +45,12 @@ menu:
   - name: Music
     pageRef: music
     weight: -70
+
+security:
+  node:
+    permissions:
+      allowRead:
+        - "*"
 
 params:
   author:

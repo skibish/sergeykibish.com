@@ -3,11 +3,11 @@ title: What Others Say About Sergey
 outputs:
   - html
 description: What others say about me
-_build:
+build:
   render: true
 # children build options with cascade
 cascade:
-  _build:
+  build:
     render: false
     list: true
 ---

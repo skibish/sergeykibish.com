@@ -3,11 +3,11 @@ title: Speaking
 description: Conferences, meetups, workshops which I did or plan to do
 outputs:
   - html
-_build:
+build:
   render: true
 # children build options with cascade
 cascade:
-  _build:
+  build:
     render: false
     list: true
 ---

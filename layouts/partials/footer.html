@@ -16,7 +16,7 @@
   <div class="mt-3 md:mt-0">
     <h1 class="font-bold">Social</h1>
     <ul class="list-none">
-      {{- range .Site.Data.footerLinks.social -}}
+      {{- range hugo.Data.footerLinks.social -}}
       <li>
         <a class="text-violet-900 dark:text-violet-100 hover:underline" href="{{ .link }}" rel="me">
           {{- .title -}}
