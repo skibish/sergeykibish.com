@@ -11,24 +11,24 @@ env:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
       with:
         fetch-depth: 0
 
-    - uses: peaceiris/actions-hugo@v3
+    - uses: peaceiris/actions-hugo@v3.2.1
       with:
         hugo-version: "0.168.0"
         extended: true
 
-    - uses: actions/setup-node@v4
+    - uses: actions/setup-node@v7
       with:
-        node-version: "23"
+        node-version: "24"
         cache: "npm"
 
-    - uses: actions/cache@v4
+    - uses: actions/cache@v6
       with:
         path: resources
         key: ${{ runner.os }}-hugo-${{ github.run_id }}
